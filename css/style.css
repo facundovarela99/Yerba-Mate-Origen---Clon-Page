@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    font-family: "Fjalla One";
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+.containerGird{
+    display: grid;
+    font-size: 2rem;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}   
+
+header{
+        position:sticky;
+        top:0;
+        z-index:1000;
+        grid-area: header;
+        background-color: #1A1A1A;
+        display: flex;
+        flex-direction: row;
+        .titulo{
+            padding-top: 10px;
+            padding-left: 80px;
+            h1,a{
+                text-decoration: none;
+                font-size: 2.5rem;
+                color: white;
+            }
+            p{
+                text-transform: uppercase;
+                padding-left: 35px;
+                font-size: xx-small;
+                color: white;
+            }
+        }
+        nav{
+            width: 100%;
+            ul{
+                height: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                padding-top: 10px;
+                padding-right: 100px;
+                li{
+                    list-style: none;
+                    padding-left: 70px;
+                    a{
+                        text-decoration: none;
+                        font-size: 0.9rem;
+                        font-weight: 900;
+                        text-transform: uppercase;
+                        color: rgb(255, 255, 255);
+                    }
+                }
+            }
+        }
+
+}
+ 
+@media screen and (max-width:768px) {
+    header{
+        .titulo{
+            padding-top: 5px;
+            padding-left: 30px;
+            h1,a{
+                text-decoration: none;
+                font-size: 1rem;
+                color: white;
+            }
+            p{
+                text-transform: uppercase;
+                font-size: 0.5rem;
+                color: white;
+            }
+        }
+    }
+}
+
+/* INDEX INDEX INDEX */
+
+main{
+    grid-area: main;
+    background-image: url(../assets/img/Fondo-Mate-Origen.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    .seccionFondoPantallaMain{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 35px;
+        margin-bottom: 75px;
+        .palabrasGrandesMain{
+            display: flex;
+            flex-direction: column; 
+            
+            .preparoUnos{
+                color: white;
+                font-size: 35px;
+                text-align: center;
+                text-shadow: 5px 5px 0px #A37F41;
+                color: white;
+            }
+            .mates{
+                font-size: 150px;
+                text-shadow: 5px 5px 0px #A37F41;
+                color: white;
+                
+            }
+            .luego{
+                color: white;
+                text-align: center;
+                font-size: 35px;
+                text-shadow: 5px 5px 0px #A37F41;
+                color: white;
+            }
+            .existo{
+                font-size: 150px;
+                text-shadow: 5px 5px 0px #A37F41;
+                color: white;
+            }
+            .separadorIndex{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                
+                
+            }
+            span{
+                color: white;
+                font-size: medium;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 500;
+            }
+            hr{
+                margin-left: 15px;
+                margin-right: 15px;
+                width: 10%;
+                height: 2px;
+                background-color: sandybrown;
+                border: none;
+            }
+            .yerbaMateOrigen{
+                color: white;
+                font-size: 25px;
+                padding-left: 40px;
+                margin-left: 55px;
+                
+            }
+            .verdaderamentePremium{
+                color: white;
+                font-size: 25px;
+                font-weight: 700;
+                margin-left: 55px;
+            }
+        }
+        .botonesFondoPantallaMain{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            .compraOnline{
+                font-size: 1.5rem;
+                margin-left: 130px;
+                margin-bottom: 15px;
+                
+                a{
+                    color: rgb(255, 255, 255);
+                    text-decoration: none;
+                    background-color: #a37f41;
+                    padding-right: 130px;
+                    padding-left: 130px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    img{
+                        width: 25px;
+                        height: 25px;
+                    }
+                }
+            }
+            .conoceOrigen{
+                font-size: 1.5rem;
+                margin-top: 15px;
+                margin-left: 130px;
+                margin-bottom: 15px;
+               
+                a{
+                    color: rgb(255, 255, 255);
+                    background-color: #03594d;
+                    text-decoration: none;
+                    padding-right: 130px;
+                    padding-left: 130px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    img{
+                        width: 28px;
+                        height: 25px;
+                    }
+                }
+
+            }
+        }
+    }
+    .infoOrigen{
+        display: flex;
+        flex-direction: column;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 65px;
+        padding-right: 65px;
+        background-color: #1A1A1A;
+
+        .bordeado{
+            display: flex;
+            flex-direction: row;
+            border: 1px solid rgba(244, 165, 96, 0.496);
+            img{
+                width: 50% !important;
+            }
+            .parrafosInfo{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+                padding-left: 100px;
+                padding-right: 100px;
+                h2{
+                    color: #A37F41;
+                    padding-top: 20px;
+                    width: 100%;
+                    text-align: left;
+                    font-size: 32px;
+                    
+                }
+                h3{
+                    color: white;
+                    padding-top: 20px;
+                    width: 100%;
+                    text-align: left;
+                    font-size: 60px;
+                    text-shadow: 5px 5px 0px #A37F41;
+                    color: white;
+                }
+                p{
+                    color: white;
+                    font-size: 25px;
+                    padding-top: 25px;
+                }
+                .separador{
+                    
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row-reverse;
+                    align-items: center;
+                    justify-content: left;
+                    padding-top: 15px;
+                    span{
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: large;
+                        color: white;
+                        padding-right: 15px;
+                        font-weight: 600;
+                    }
+                }
+                hr{
+                   
+                    width: 90%;
+                    height: 1px;
+                    background-color: sandybrown;
+                    border: none;
+                }
+                .parrafosBajoSeparador{
+                    p{
+                        font-size: 15px;
+                    }
+                }
+                a{
+                    width: 40%;
+                    margin-top: 50px;
+                    text-decoration: none;
+                    color: white;
+                    display: block;
+                    font-size: x-large;
+                    
+                }
+            }
+        }
+    }
+    .iconos{
+        background-color:#1A1A1A ;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        
+        div{
+            display: flex;
+            flex-direction: column;
+            width: 215px;
+            height: 215px;
+            margin-bottom: 30px;
+            img{
+                width: 214px;
+                height: 234px;
+            }
+            p{
+                font-family: Montserrat;
+                font-weight: 200;
+                text-align: center;
+                font-size: medium;
+                color: white;
+            }
+        }
+    }
+
+    .infoBarbacua{
+        display: flex;
+        flex-direction: column;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 65px;
+        padding-right: 65px;
+        background-color: #1A1A1A;
+
+        .bordeadoBarbacua{
+            display: flex;
+            flex-direction: row-reverse;
+            border: 1px solid rgba(244, 165, 96, 0.496);
+            .imagenFondoNextToTexto{
+                background-image: url(../assets/img/barbacua.jpg);
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: sticky;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                p{
+                    font-size: 109%;
+                    color: rgba(255, 255, 255, 0);
+                }
+                img{
+                    margin-top: 60px;
+                    width: 300px;
+                    height: 300px;
+                }
+            }
+            .parrafosInfoBarbacua{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-left: 100px;
+                padding-right: 100px;
+                padding-bottom: 40px;
+                h2{
+                    color: #A37F41;
+                    padding-top: 20px;
+                    width: 100%;
+                    text-align: left;
+                    font-size: 32px;
+                }
+                h3{
+                    color: white;
+                    padding-top: 20px;
+                    width: 100%;
+                    text-align: left;
+                    font-size: 60px;
+                    text-shadow: 5px 5px 0px #A37F41;
+                    color: white;
+                }
+                p{
+                    color: white;
+                    font-size: 25px;
+                    padding-top: 35px;
+                }
+                .separador{
+                    
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row-reverse;
+                    align-items: center;
+                    justify-content: left;
+                    padding-top: 15px;
+                    span{
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: large;
+                        color: white;
+                        padding-right: 15px;
+                        font-weight: 600;
+                    }
+                }
+                hr{
+                   
+                    width: 90%;
+                    height: 1px;
+                    background-color: sandybrown;
+                    border: none;
+                }
+                .parrafosBajoSeparador{
+                    p{
+                        font-size: 15px;
+                    }
+                    a{
+                        width: 40%;
+                        margin-top: 50px;
+                        text-decoration: none;
+                        color: white;
+                        display: block;
+                        font-size: x-large;
+                        
+                    }
+                }
+            }
+        }
+    }
+
+    .guiaPreparacionMate{
+        background-color: #1A1A1A;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-bottom: 50px;
+        
+        
+        .video{
+            padding-top: 25px;
+            h4{
+                color: white;
+                font-size: 3rem;
+                text-align: center;
+            }
+        }
+
+        .pasosASeguir{
+            padding-top: 30px;
+            color: white;
+            h4{
+                color: #A37F41;
+                font-size: 3rem;
+                letter-spacing: 5px;
+            }
+            p{
+                padding-top: 20px;
+            }
+            
+            
+        }
+    }
+    
+}
+
+/* INDEX INDEX INDEX */
+
+footer{
+        grid-area: footer;
+        background-color: rgb(124, 124, 255);
+    }
