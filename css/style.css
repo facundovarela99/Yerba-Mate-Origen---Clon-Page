@@ -7,16 +7,6 @@
     margin: 0px;
 }
 
-.containerGird{
-    display: grid;
-    font-size: 2rem;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto;
-    grid-template-areas: 
-    "header"
-    "main"
-    "footer";
-}   
 
 header{
         position:sticky;
@@ -26,6 +16,7 @@ header{
         background-color: #1A1A1A;
         display: flex;
         flex-direction: row;
+        align-items: center;
         .titulo{
             padding-top: 10px;
             padding-left: 80px;
@@ -40,14 +31,26 @@ header{
                 font-size: xx-small;
                 color: white;
             }
+
+            .imgTitulo{
+                width: 140px;
+            }
         }
-        nav{
-            width: 100%;
+
+        .divNavbarHeader{
+            width: 75%;
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+        }
+
+        .navHeader{
+            width: 85%;
             ul{
                 height: 100%;
                 display: flex;
                 flex-direction: row;
-                justify-content: flex-end;
+                justify-content: space-between;
                 padding-top: 10px;
                 padding-right: 100px;
                 li{
@@ -88,7 +91,6 @@ header{
 /* INDEX INDEX INDEX */
 
 main{
-    grid-area: main;
     background-image: url(../assets/img/Fondo-Mate-Origen.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
@@ -98,7 +100,7 @@ main{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        margin-top: 35px;
+        padding-top: 50px;
         margin-bottom: 75px;
         .palabrasGrandesMain{
             display: flex;
@@ -309,8 +311,8 @@ main{
             height: 215px;
             margin-bottom: 30px;
             img{
-                width: 214px;
-                height: 234px;
+                width: 180px;
+                height: 180px;
             }
             p{
                 font-family: Montserrat;
@@ -423,39 +425,25 @@ main{
         }
     }
 
-    .guiaPreparacionMate{
-        background-color: #1A1A1A;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        padding-bottom: 50px;
-        
-        
-        .video{
-            padding-top: 25px;
-            h4{
-                color: white;
-                font-size: 3rem;
-                text-align: center;
-            }
+    .carruselProductos{
+        width: 100%;
+        background-color: white;
+        .tituloCarruselProductos{
+            font-size: 5.1rem;
+            text-shadow: 5px 5px 0px #b5a3827e;
         }
 
-        .pasosASeguir{
-            padding-top: 30px;
-            color: white;
-            h4{
-                color: #A37F41;
-                font-size: 3rem;
-                letter-spacing: 5px;
-            }
-            p{
-                padding-top: 20px;
-            }
-            
-            
+        .anclaCarruselParrafo{
+            color: #A37F41;
+            text-decoration: none;
+            font-size: 2.55rem;
         }
+
     }
-    
+}
+
+.bordeadoCarrusel1, .bordeadoCarrusel2{
+    border: 1px solid rgba(244, 165, 96, 0.496);
 }
 
 /* INDEX INDEX INDEX */
