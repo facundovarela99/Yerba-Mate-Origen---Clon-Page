@@ -1,151 +1,135 @@
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-*{
+
+* {
     font-family: "Fjalla One";
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
 }
 
-
-header{
-        position:sticky;
-        top:0;
-        z-index:1000;
-        grid-area: header;
-        background-color: #1A1A1A;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        .titulo{
-            padding-top: 10px;
-            padding-left: 80px;
-            h1,a{
-                text-decoration: none;
-                font-size: 2.5rem;
-                color: white;
-            }
-            p{
-                text-transform: uppercase;
-                padding-left: 35px;
-                font-size: xx-small;
-                color: white;
-            }
-
-            .imgTitulo{
-                width: 140px;
-            }
-        }
-
-        .divNavbarHeader{
-            width: 75%;
-            display: flex;
-            flex-direction: row;
-            justify-content: end;
-        }
-
-        .navHeader{
-            width: 85%;
-            ul{
-                height: 100%;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                padding-top: 10px;
-                padding-right: 100px;
-                li{
-                    list-style: none;
-                    padding-left: 70px;
-                    a{
-                        text-decoration: none;
-                        font-size: 0.9rem;
-                        font-weight: 900;
-                        text-transform: uppercase;
-                        color: rgb(255, 255, 255);
-                    }
-                }
-            }
-        }
-
+header {
+    background-color: #1A1A1A;
+    width: 100%;
+    height: auto;
 }
- 
-@media screen and (max-width:768px) {
-    header{
-        .titulo{
-            padding-top: 5px;
+
+.navbarHeader {
+    height: fit-content;
+}
+
+#navbarSupportedContent {
+    ul {
+        margin-left: 22%;
+        .home:hover,
+        .productos:hover,
+        .sucursales:hover,
+        .acercaDe:hover,
+        .contacto:hover {
+            border: 1px solid #A37F41;
+            background-color: #ffe9c400;
+            color: #fab731cc;
+            box-shadow: 5px 5px 0px #A37F41;
+        }
+        a{
+            font-size: 1.050rem;
             padding-left: 30px;
-            h1,a{
-                text-decoration: none;
-                font-size: 1rem;
-                color: white;
-            }
-            p{
-                text-transform: uppercase;
-                font-size: 0.5rem;
-                color: white;
-            }
+            padding-right: 30px;
+            color: white;
+            border: 1px solid #1a1a1a00;
+            box-shadow: 5px 5px 0px #1a1a1a00;
         }
     }
+
+}
+@media screen and (max-width: 768px) {
+    #navbarSupportedContent ul {
+        margin-left: 0;
+        flex-direction: column;
+        align-items: start;
+    }
+    #navbarSupportedContent ul li {
+        width: fit-content;
+    }
+}
+
+.imgTitulo {
+    width: 150px;
+}
+
+.anclaHeader {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: rgb(255, 255, 255) !important;
 }
 
 /* INDEX INDEX INDEX */
 
-main{
+main {
     background-image: url(../assets/img/Fondo-Mate-Origen.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    .seccionFondoPantallaMain{
+
+    .seccionFondoPantallaMain {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         padding-top: 50px;
         margin-bottom: 75px;
-        .palabrasGrandesMain{
+
+        .palabrasGrandesMain {
             display: flex;
-            flex-direction: column; 
-            
-            .preparoUnos{
+            flex-direction: column;
+
+            .preparoUnos {
                 color: white;
                 font-size: 35px;
                 text-align: center;
                 text-shadow: 5px 5px 0px #A37F41;
                 color: white;
             }
-            .mates{
+
+            .mates {
                 font-size: 150px;
                 text-shadow: 5px 5px 0px #A37F41;
                 color: white;
-                
+
             }
-            .luego{
+
+            .luego {
                 color: white;
                 text-align: center;
                 font-size: 35px;
                 text-shadow: 5px 5px 0px #A37F41;
                 color: white;
             }
-            .existo{
+
+            .existo {
                 font-size: 150px;
                 text-shadow: 5px 5px 0px #A37F41;
                 color: white;
             }
-            .separadorIndex{
+
+            .separadorIndex {
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
-                
-                
+
+
             }
-            span{
+
+            span {
                 color: white;
                 font-size: medium;
                 font-family: Arial, Helvetica, sans-serif;
                 font-weight: 500;
             }
-            hr{
+
+            hr {
                 margin-left: 15px;
                 margin-right: 15px;
                 width: 10%;
@@ -153,30 +137,34 @@ main{
                 background-color: sandybrown;
                 border: none;
             }
-            .yerbaMateOrigen{
+
+            .yerbaMateOrigen {
                 color: white;
                 font-size: 25px;
                 padding-left: 40px;
                 margin-left: 55px;
-                
+
             }
-            .verdaderamentePremium{
+
+            .verdaderamentePremium {
                 color: white;
                 font-size: 25px;
                 font-weight: 700;
                 margin-left: 55px;
             }
         }
-        .botonesFondoPantallaMain{
+
+        .botonesFondoPantallaMain {
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-            .compraOnline{
+
+            .compraOnline {
                 font-size: 1.5rem;
                 margin-left: 130px;
                 margin-bottom: 15px;
-                
-                a{
+
+                a {
                     color: rgb(255, 255, 255);
                     text-decoration: none;
                     background-color: #a37f41;
@@ -184,19 +172,21 @@ main{
                     padding-left: 130px;
                     padding-top: 10px;
                     padding-bottom: 10px;
-                    img{
+
+                    img {
                         width: 25px;
                         height: 25px;
                     }
                 }
             }
-            .conoceOrigen{
+
+            .conoceOrigen {
                 font-size: 1.5rem;
                 margin-top: 15px;
                 margin-left: 130px;
                 margin-bottom: 15px;
-               
-                a{
+
+                a {
                     color: rgb(255, 255, 255);
                     background-color: #03594d;
                     text-decoration: none;
@@ -204,7 +194,8 @@ main{
                     padding-left: 130px;
                     padding-top: 10px;
                     padding-bottom: 10px;
-                    img{
+
+                    img {
                         width: 28px;
                         height: 25px;
                     }
@@ -213,7 +204,8 @@ main{
             }
         }
     }
-    .infoOrigen{
+
+    .infoOrigen {
         display: flex;
         flex-direction: column;
         padding-top: 50px;
@@ -222,29 +214,33 @@ main{
         padding-right: 65px;
         background-color: #1A1A1A;
 
-        .bordeado{
+        .bordeado {
             display: flex;
             flex-direction: row;
             border: 1px solid rgba(244, 165, 96, 0.496);
-            img{
+
+            img {
                 width: 50% !important;
             }
-            .parrafosInfo{
+
+            .parrafosInfo {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                
+
                 padding-left: 100px;
                 padding-right: 100px;
-                h2{
+
+                h2 {
                     color: #A37F41;
                     padding-top: 20px;
                     width: 100%;
                     text-align: left;
                     font-size: 32px;
-                    
+
                 }
-                h3{
+
+                h3 {
                     color: white;
                     padding-top: 20px;
                     width: 100%;
@@ -253,20 +249,23 @@ main{
                     text-shadow: 5px 5px 0px #A37F41;
                     color: white;
                 }
-                p{
+
+                p {
                     color: white;
                     font-size: 25px;
                     padding-top: 25px;
                 }
-                .separador{
-                    
+
+                .separador {
+
                     width: 100%;
                     display: flex;
                     flex-direction: row-reverse;
                     align-items: center;
                     justify-content: left;
                     padding-top: 15px;
-                    span{
+
+                    span {
                         font-family: Arial, Helvetica, sans-serif;
                         font-size: large;
                         color: white;
@@ -274,47 +273,53 @@ main{
                         font-weight: 600;
                     }
                 }
-                hr{
-                   
+
+                hr {
+
                     width: 90%;
                     height: 1px;
                     background-color: sandybrown;
                     border: none;
                 }
-                .parrafosBajoSeparador{
-                    p{
+
+                .parrafosBajoSeparador {
+                    p {
                         font-size: 15px;
                     }
                 }
-                a{
+
+                a {
                     width: 40%;
                     margin-top: 50px;
                     text-decoration: none;
                     color: white;
                     display: block;
                     font-size: x-large;
-                    
+
                 }
             }
         }
     }
-    .iconos{
-        background-color:#1A1A1A ;
+
+    .iconos {
+        background-color: #1A1A1A;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        
-        div{
+
+        div {
             display: flex;
             flex-direction: column;
             width: 215px;
             height: 215px;
             margin-bottom: 30px;
-            img{
+
+            img {
                 width: 180px;
                 height: 180px;
             }
-            p{
+
+            p {
                 font-family: Montserrat;
                 font-weight: 200;
                 text-align: center;
@@ -324,7 +329,7 @@ main{
         }
     }
 
-    .infoBarbacua{
+    .infoBarbacua {
         display: flex;
         flex-direction: column;
         padding-top: 50px;
@@ -333,11 +338,12 @@ main{
         padding-right: 65px;
         background-color: #1A1A1A;
 
-        .bordeadoBarbacua{
+        .bordeadoBarbacua {
             display: flex;
             flex-direction: row-reverse;
             border: 1px solid rgba(244, 165, 96, 0.496);
-            .imagenFondoNextToTexto{
+
+            .imagenFondoNextToTexto {
                 background-image: url(../assets/img/barbacua.jpg);
                 background-position: center center;
                 background-repeat: no-repeat;
@@ -346,31 +352,36 @@ main{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                p{
+
+                p {
                     font-size: 109%;
                     color: rgba(255, 255, 255, 0);
                 }
-                img{
+
+                img {
                     margin-top: 60px;
                     width: 300px;
                     height: 300px;
                 }
             }
-            .parrafosInfoBarbacua{
+
+            .parrafosInfoBarbacua {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 padding-left: 100px;
                 padding-right: 100px;
                 padding-bottom: 40px;
-                h2{
+
+                h2 {
                     color: #A37F41;
                     padding-top: 20px;
                     width: 100%;
                     text-align: left;
                     font-size: 32px;
                 }
-                h3{
+
+                h3 {
                     color: white;
                     padding-top: 20px;
                     width: 100%;
@@ -379,20 +390,23 @@ main{
                     text-shadow: 5px 5px 0px #A37F41;
                     color: white;
                 }
-                p{
+
+                p {
                     color: white;
                     font-size: 25px;
                     padding-top: 35px;
                 }
-                .separador{
-                    
+
+                .separador {
+
                     width: 100%;
                     display: flex;
                     flex-direction: row-reverse;
                     align-items: center;
                     justify-content: left;
                     padding-top: 15px;
-                    span{
+
+                    span {
                         font-family: Arial, Helvetica, sans-serif;
                         font-size: large;
                         color: white;
@@ -400,40 +414,44 @@ main{
                         font-weight: 600;
                     }
                 }
-                hr{
-                   
+
+                hr {
+
                     width: 90%;
                     height: 1px;
                     background-color: sandybrown;
                     border: none;
                 }
-                .parrafosBajoSeparador{
-                    p{
+
+                .parrafosBajoSeparador {
+                    p {
                         font-size: 15px;
                     }
-                    a{
+
+                    a {
                         width: 40%;
                         margin-top: 50px;
                         text-decoration: none;
                         color: white;
                         display: block;
                         font-size: x-large;
-                        
+
                     }
                 }
             }
         }
     }
 
-    .carruselProductos{
+    .carruselProductos {
         width: 100%;
         background-color: white;
-        .tituloCarruselProductos{
+
+        .tituloCarruselProductos {
             font-size: 5.1rem;
             text-shadow: 5px 5px 0px #b5a3827e;
         }
 
-        .anclaCarruselParrafo{
+        .anclaCarruselParrafo {
             color: #A37F41;
             text-decoration: none;
             font-size: 2.55rem;
@@ -442,13 +460,14 @@ main{
     }
 }
 
-.bordeadoCarrusel1, .bordeadoCarrusel2{
+.bordeadoCarrusel1,
+.bordeadoCarrusel2 {
     border: 1px solid rgba(244, 165, 96, 0.496);
 }
 
 /* INDEX INDEX INDEX */
 
-footer{
-        grid-area: footer;
-        background-color: rgb(124, 124, 255);
-    }
+footer {
+    grid-area: footer;
+    background-color: rgb(124, 124, 255);
+}
