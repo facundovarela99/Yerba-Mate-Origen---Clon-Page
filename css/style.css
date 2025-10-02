@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 * {
     font-family: "Fjalla One";
@@ -269,7 +270,7 @@ main {
                 padding-left: 100px;
                 padding-right: 100px;
 
-                h2 {
+                .sobre {
                     color: #A37F41;
                     padding-top: 20px;
                     width: 100%;
@@ -278,9 +279,8 @@ main {
 
                 }
 
-                h3 {
+                .origen {
                     color: white;
-                    padding-top: 20px;
                     width: 100%;
                     text-align: left;
                     font-size: 60px;
@@ -288,20 +288,21 @@ main {
                     color: white;
                 }
 
-                p {
+                .parrafoInfoOrigen {
+                    font-family: 'Quicksand';
                     color: white;
-                    font-size: 25px;
+                    font-size: 20px;
                     padding-top: 25px;
                 }
 
                 .separador {
-
                     width: 100%;
                     display: flex;
                     flex-direction: row-reverse;
                     align-items: center;
                     justify-content: left;
-                    padding-top: 15px;
+                    padding-top: 30px;
+                    padding-bottom: 30px;
 
                     span {
                         font-family: Arial, Helvetica, sans-serif;
@@ -313,16 +314,18 @@ main {
                 }
 
                 hr {
-
                     width: 90%;
                     height: 1px;
-                    background-color: sandybrown;
+                    background-color: #ffa915;
                     border: none;
                 }
 
                 .parrafosBajoSeparador {
                     p {
+                        font-family: "Quicksand";
+                        color: white;
                         font-size: 15px;
+                        font-weight: lighter;
                     }
                 }
 
@@ -336,6 +339,13 @@ main {
 
                 }
             }
+        }
+    }
+
+    #todoTieneSuOrigen{
+        letter-spacing: 5px;
+        &:hover{
+            color: #A37F41;
         }
     }
 
