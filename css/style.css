@@ -21,6 +21,7 @@ header {
 #navbarSupportedContent {
     ul {
         margin-left: 22%;
+
         .home:hover,
         .productos:hover,
         .sucursales:hover,
@@ -30,24 +31,29 @@ header {
             background-color: #ffe9c400;
             color: #fab731cc;
             box-shadow: 5px 5px 0px #A37F41;
+            transition: none;
         }
-        a{
+
+        a {
             font-size: 1.050rem;
             padding-left: 30px;
             padding-right: 30px;
             color: white;
             border: 1px solid #1a1a1a00;
             box-shadow: 5px 5px 0px #1a1a1a00;
+            transition: none;
         }
     }
 
 }
+
 @media screen and (max-width: 768px) {
     #navbarSupportedContent ul {
         margin-left: 0;
         flex-direction: column;
         align-items: start;
     }
+
     #navbarSupportedContent ul li {
         width: fit-content;
     }
@@ -67,7 +73,7 @@ header {
 /* INDEX INDEX INDEX */
 
 main {
-    background-image: url(../assets/img/Fondo-Mate-Origen.jpg);
+    background-image: linear-gradient(to right top, #00000050, #00000050), url(../assets/img/Fondo-Mate-Origen.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -78,39 +84,45 @@ main {
         flex-direction: row;
         justify-content: space-around;
         padding-top: 50px;
-        margin-bottom: 75px;
 
         .palabrasGrandesMain {
             display: flex;
             flex-direction: column;
+            padding-left: 20px;
 
             .preparoUnos {
                 color: white;
-                font-size: 35px;
+                font-size: 2vw;
                 text-align: center;
                 text-shadow: 5px 5px 0px #A37F41;
-                color: white;
+                letter-spacing: 4px;
+                line-height: 1;
             }
 
             .mates {
-                font-size: 150px;
-                text-shadow: 5px 5px 0px #A37F41;
                 color: white;
+                font-size: 10vw;
+                text-shadow: 5px 5px 0px #a37f41;
+                letter-spacing: 10px;
+                line-height: 1;
 
             }
 
             .luego {
                 color: white;
                 text-align: center;
-                font-size: 35px;
+                font-size: 2vw;
                 text-shadow: 5px 5px 0px #A37F41;
-                color: white;
+                letter-spacing: 4px;
+                line-height: 1;
             }
 
             .existo {
-                font-size: 150px;
-                text-shadow: 5px 5px 0px #A37F41;
                 color: white;
+                font-size: 10vw;
+                text-shadow: 5px 5px 0px #A37F41;
+                letter-spacing: 10px;
+                line-height: 1;
             }
 
             .separadorIndex {
@@ -118,8 +130,6 @@ main {
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
-
-
             }
 
             span {
@@ -138,19 +148,28 @@ main {
                 border: none;
             }
 
+            .palabrasChicasMain {
+                text-align: center;
+            }
+
             .yerbaMateOrigen {
                 color: white;
-                font-size: 25px;
-                padding-left: 40px;
-                margin-left: 55px;
-
+                font-size: 21px;
+                font-weight: 700;
+                text-transform: uppercase;
+                line-height: 1.2em;
+                letter-spacing: 5px;
+                text-shadow: 0px 0px 11px #000000;
             }
 
             .verdaderamentePremium {
                 color: white;
-                font-size: 25px;
-                font-weight: 700;
-                margin-left: 55px;
+                font-size: 21px;
+                font-weight: 400;
+                text-transform: uppercase;
+                line-height: 1.2em;
+                letter-spacing: 5px;
+                text-shadow: 0px 0px 11px #000000;
             }
         }
 
@@ -158,20 +177,30 @@ main {
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
+            margin-bottom: 60px;
 
             .compraOnline {
                 font-size: 1.5rem;
                 margin-left: 130px;
-                margin-bottom: 15px;
+                margin-bottom: 20px;
+                &:hover {
+                    box-shadow: 10px 20px 0px #a37f41;
+                    transition: ease-in-out 0.21s;
+                }
 
                 a {
                     color: rgb(255, 255, 255);
                     text-decoration: none;
                     background-color: #a37f41;
-                    padding-right: 130px;
-                    padding-left: 130px;
-                    padding-top: 10px;
-                    padding-bottom: 10px;
+                    padding-right: 175px;
+                    padding-left: 175px;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+
+                    &:hover {
+                        background-color: #574320;
+                        transition: 0.2s;
+                    }
 
                     img {
                         width: 25px;
@@ -184,16 +213,25 @@ main {
                 font-size: 1.5rem;
                 margin-top: 15px;
                 margin-left: 130px;
-                margin-bottom: 15px;
+                margin-bottom: 20px;
+                &:hover {
+                    box-shadow: 10px 20px 0px #03594d;
+                    transition: ease-in-out 0.21s;
+                }
 
                 a {
                     color: rgb(255, 255, 255);
                     background-color: #03594d;
                     text-decoration: none;
-                    padding-right: 130px;
-                    padding-left: 130px;
-                    padding-top: 10px;
-                    padding-bottom: 10px;
+                    padding-right: 175px;
+                    padding-left: 175px;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+
+                    &:hover {
+                        background-color: #14423d;
+                        transition: 0.2s;
+                    }
 
                     img {
                         width: 28px;
