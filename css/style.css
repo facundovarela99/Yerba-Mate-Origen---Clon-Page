@@ -586,16 +586,23 @@ main {
     }
 }
 
+.card-wrapper{
+    max-width: 1100px;
+    margin: 0 60px 35px;
+    padding: 20px 10px;
+    overflow: hidden;
+}
+
 .card-list .card-item{
     list-style: none;
 }
 
 .card-list .card-item .card-link{
-    width: 400px;
+    width: 100%;
+    max-width: 350px;
     display: block;
     background-color: #fff;
     padding: 18px;
-    /* border-radius: 12px; */
     text-decoration: none;
     border: 1px solid #d7d7d7;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
@@ -632,20 +639,51 @@ main {
 
 .card-list .card-link .card-button{
     height: 35px;
-    width: 35px;
+    /* width: 35px; */
     margin: 30px 0 5px;
-    background: none;
+    /* background: none; */
     cursor: pointer;
     border: 2px solid #1A1A1A;
-    transform: rotate(-45deg);
 }
 
-.card-list .card-link:hover .card-button{
+.card-button{
+    width: 90%;
+}
+
+.card-button:hover{
+    color: white;
+    background-color: #1A1A1A;
+}
+
+ .card-list{
+    color: #fff;
+} 
+
+/* .card-list .card-link:hover .card-button{
     color: #fff;
     background: #1A1A1A;
+}  */
 
+.card-wrapper .swiper-pagination-bullet{
+    height: 13px;
+    width: 13px;
+    opacity: 0.5;
+    background: #1A1A1A;
 }
 
+.card-wrapper .swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+.card-wrapper .swiper-slide-button{
+    color: #1A1A1A;
+    background-color: #1A1A1A26;
+    margin-top: -35px;
+    &:hover{
+        color: white;
+        background-color: #1A1A1A;
+    }
+}
 
 /* INDEX INDEX INDEX */
 
