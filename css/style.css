@@ -612,13 +612,16 @@ main {
 }
 
 .card-list .card-link .badge{
-    color: #5372f0;
+    color: #1A1A1A;
     padding: 8px 16px;
     font-size: 0.95rem;
     font-weight: 500;
     margin: 16px 0px 18px;
-    background: #DDE4FF;
     width: fit-content;
+}
+
+.card-list .card-link .badge.yerbaOrigenVerdeNegro{
+    color: black;
 }
 
 .card-list .card-link .card-title{
