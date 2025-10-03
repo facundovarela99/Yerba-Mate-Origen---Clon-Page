@@ -343,7 +343,9 @@ main {
     }
 
     #todoTieneSuOrigen{
+        font-size: 20px;
         letter-spacing: 5px;
+        padding-bottom: 20px;
         &:hover{
             color: #A37F41;
         }
@@ -417,42 +419,49 @@ main {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                padding-left: 100px;
-                padding-right: 100px;
                 padding-bottom: 40px;
+                width: 60%;
 
-                h2 {
+                .metodo {
                     color: #A37F41;
                     padding-top: 20px;
-                    width: 100%;
+                    width: 80%;
                     text-align: left;
-                    font-size: 32px;
+                    font-size: 30px;
+                    letter-spacing: 5px;
                 }
 
-                h3 {
+                .barbacua {
                     color: white;
-                    padding-top: 20px;
-                    width: 100%;
+                    width: 80%;
                     text-align: left;
                     font-size: 60px;
                     text-shadow: 5px 5px 0px #A37F41;
                     color: white;
+                    letter-spacing: 6px;
                 }
 
-                p {
+                .parrafoInfoBarbacua {
+                    width: 97%;
+                    font-family: 'Quicksand';
                     color: white;
-                    font-size: 25px;
+                    font-size: 22px;
                     padding-top: 35px;
+                }
+
+                .contenedorInfoBarbacua{
+                    width: 80%;
                 }
 
                 .separador {
 
-                    width: 100%;
+                    width: 90%;
                     display: flex;
                     flex-direction: row-reverse;
                     align-items: center;
                     justify-content: left;
-                    padding-top: 15px;
+                    padding-top: 30px;
+                    padding-bottom: 30px;
 
                     span {
                         font-family: Arial, Helvetica, sans-serif;
@@ -467,13 +476,20 @@ main {
 
                     width: 90%;
                     height: 1px;
-                    background-color: sandybrown;
+                    background-color: #fbab21;
                     border: none;
                 }
 
                 .parrafosBajoSeparador {
-                    p {
-                        font-size: 15px;
+                    .p1,.p2,.p3 {
+                        font-family: 'Quicksand';
+                        font-size: 16px;
+                        font-weight: 400;
+                        color: white;
+                    }
+
+                    .p3{
+                        margin-bottom: 0;
                     }
 
                     a {
