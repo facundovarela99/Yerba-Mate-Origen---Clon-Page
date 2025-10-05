@@ -77,7 +77,7 @@ main {
     background-image: linear-gradient(to right top, #00000050, #00000050), url(../assets/img/home-bg-3.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
-    background-position:top;
+    background-position: top;
     background-attachment: fixed;
 
     .seccionFondoPantallaMain {
@@ -514,7 +514,7 @@ main {
 
     .carruselProductos {
         width: 100%;
-       /* background: linear-gradient(#ECEFFE, #CED6FB);  COLOR DE FONDO OPCIONAL DEL TUTORIAL DEL CARRUSEL */
+        /* background: linear-gradient(#ECEFFE, #CED6FB);  COLOR DE FONDO OPCIONAL DEL TUTORIAL DEL CARRUSEL */
         background-color: white;
         display: flex;
         flex-direction: column;
@@ -543,7 +543,7 @@ main {
     }
 }
 
-.bordeadoCarrusel1{
+.bordeadoCarrusel1 {
     width: 100%;
 }
 
@@ -562,42 +562,45 @@ main {
     }
 }
 
-.anclaCodigosPostales{
+.anclaCodigosPostales {
     padding: 2.5px;
 }
 
-.anclaCodigosPostales:hover{
+.anclaCodigosPostales:hover {
     background-color: #a37f41;
     transition: 0.2s;
 }
 
-.spanAnclaCodigosPostales{
+.spanAnclaCodigosPostales {
     color: #000000;
     text-decoration: underline;
     text-decoration-color: #000000;
     font-size: 18px;
     letter-spacing: 2px;
     height: 100%;
-    &:hover{
+
+    &:hover {
         color: white;
         transition: 0.2s;
-            text-decoration: underline;
+        text-decoration: underline;
         text-decoration-color: white;
     }
 }
 
-.card-wrapper{
+/* SLIDER */
+
+.card-wrapper {
     max-width: 1100px;
     margin: 0 60px 35px;
     padding: 20px 10px;
     overflow: hidden;
 }
 
-.card-list .card-item{
+.card-list .card-item {
     list-style: none;
 }
 
-.card-list .card-item .card-link{
+.card-list .card-item .card-link {
     width: 100%;
     max-width: 350px;
     display: block;
@@ -609,16 +612,16 @@ main {
     transition: 0.3s ease;
 }
 
-.card-list .card-item .card-link:hover{
+.card-list .card-item .card-link:hover {
     border-color: #1A1A1A;
 }
 
-.card-list .card-link .card-image{
+.card-list .card-link .card-image {
     width: 100%;
     object-fit: cover;
 }
 
-.card-list .card-link .badge{
+.card-list .card-link .badge {
     color: #1A1A1A;
     padding: 8px 16px;
     font-size: 0.95rem;
@@ -627,17 +630,17 @@ main {
     width: fit-content;
 }
 
-.card-list .card-link .badge.yerbaOrigenVerdeNegro{
+.card-list .card-link .badge.yerbaOrigenVerdeNegro {
     color: black;
 }
 
-.card-list .card-link .card-title{
+.card-list .card-link .card-title {
     font-size: 1.19rem;
     color: #000;
     font-weight: 600;
 }
 
-.card-list .card-link .card-button{
+.card-list .card-link .card-button {
     height: 35px;
     /* width: 35px; */
     margin: 30px 0 5px;
@@ -646,25 +649,20 @@ main {
     border: 2px solid #1A1A1A;
 }
 
-.card-button{
+.card-button {
     width: 90%;
 }
 
-.card-button:hover{
+.card-button:hover {
     color: white;
     background-color: #1A1A1A;
 }
 
- .card-list{
+.card-list {
     color: #fff;
-} 
+}
 
-/* .card-list .card-link:hover .card-button{
-    color: #fff;
-    background: #1A1A1A;
-}  */
-
-.card-wrapper .swiper-pagination-bullet{
+.card-wrapper .swiper-pagination-bullet {
     height: 13px;
     width: 13px;
     opacity: 0.5;
@@ -675,15 +673,243 @@ main {
     opacity: 1;
 }
 
-.card-wrapper .swiper-slide-button{
+.card-wrapper .swiper-slide-button {
     color: #1A1A1A;
     background-color: #1A1A1A26;
     margin-top: -35px;
-    &:hover{
+
+    &:hover {
         color: white;
         background-color: #1A1A1A;
     }
 }
+
+/* SLIDER */
+
+.compraEnvioPaga {
+    width: 100%;
+    background-color: white;
+}
+
+.div1CompraEnvioPaga {
+    width: 80%;
+    gap: 20px;
+    margin-bottom: 100px;
+}
+
+.card1,
+.card2,
+.card3 {
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 50px;
+    box-sizing: border-box;
+
+    .texto {
+        padding-left: 20px;
+
+        h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.anclaCard2 {
+    text-decoration: none;
+    color: black;
+}
+
+.card2:hover {
+    background: rgba(0, 0, 0, 0.05);
+    transition: ease 0.2s;
+}
+
+.div2CompraEnvioPaga {
+    width: 90%;
+    background-color: #03594d;
+    margin-top: 40px;
+
+    .card21,
+    .card22,
+    .card23 {
+        width: 33.3%;
+        height: 240px;
+
+        h3 {
+            font-size: 2.1rem;
+            color: #FFFFFF;
+            text-transform: uppercase;
+        }
+
+        a {
+            color: #FFFFFF;
+            font-size: 1.48rem;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+    }
+}
+
+.card21 {
+    background-color: #03594D;
+}
+
+.card22 {
+    background-color: #A37F41;
+}
+
+.card23 {
+    background-color: #1A1A1A;
+}
+
+.divAnclaImagen1,
+.divAnclaImagen3 {
+    border: 1px solid #FFFFFF;
+}
+
+.divAnclaImagen2 {
+    border: 1px solid #ffffffab;
+    background-color: #ffffff2a;
+}
+
+.divAnclaImagen1:hover {
+    background-color: #3c7870;
+    transition: ease 0.21s;
+    box-shadow: 5px 5px 0px #3c7870;
+
+}
+
+.divAnclaImagen3:hover {
+    background-color: #494949;
+    transition: ease 0.21s;
+    box-shadow: 5px 5px 0px #494949;
+
+}
+
+.Nuevo {
+    background-color: white;
+}
+
+.divPadre {
+    width: 90%;
+    border: 1px solid #d7d7d7;
+
+    .divTextos {
+        width: 50%;
+        padding-top: 40px;
+
+        h4{
+            color: #A37F41;
+            letter-spacing: 5px;
+            margin-bottom: 0 !important;
+        }
+
+        .spanYara{
+            font-size: 4rem;
+            letter-spacing: 5px;
+        }
+
+        .p1{
+            font-size: 26px;
+            width: 70%;
+            font-family: 'Quicksand';
+            font-weight: 600;
+        }
+        .p2{
+            font-size: 14px;
+            width: 88%;
+            font-family: 'Quicksand';
+            font-weight: 600;
+        }
+        ul{
+            list-style-type: square;
+            li{
+                font-family: 'Quicksand';
+                font-weight: 500;
+            }
+        }
+        .anclaCompraYara{
+            width: fit-content;
+            margin-top: 60px;
+            a{
+                background-color: #A37F41;
+                transition: background-color 0.23s ease-in-out, color 0.23s ease-in-out, box-shadow 0.23s ease-in-out, border 0.23s ease-in-out;
+                font-size: 1.3rem;
+                padding: 20px 35px;;
+                text-decoration: none;
+                color: white
+            }
+        }
+    }
+
+    .anclaCompraYara a:hover{
+        border: 1px solid #A37F41;
+        background-color: #fdf4e5;
+        box-shadow: 5px 5px 0 #A37F41;
+        color: #A37F41;
+        transition: ease-in-out 0.23s;
+    }
+
+    .divImagen {
+        width: 50%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+}
+
+
+.separadorYara {
+    width: 90%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: left;
+    padding: 30px 0;
+
+}
+
+.separadorYara span {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    color: black;
+    padding-right: 15px;
+    font-weight: 600;
+}
+.separadorYara hr {
+    width: 8%;
+    height: 1.4px;
+    background-color: #cc8509;
+    border: none;
+    margin: 0;
+}
+
+.hashSomosYara{
+    width: fit-content;
+}
+
+.hashSomosYara a{
+    text-decoration: none;
+    color: #000;
+}
+
+.hashSomosYara p{
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+    font-weight: 400;
+    text-transform: uppercase;
+    &:hover{
+        color: #A37F41;
+    }
+}
+
 
 /* INDEX INDEX INDEX */
 

@@ -35,3 +35,20 @@ new Swiper('.card-wrapper', {
     }
   }
 });
+
+
+const anclaCompraYara = document.querySelector('.anclaComprarYara');
+
+anclaCompraYara.addEventListener('mouseover',()=>{
+  document.querySelector('.anclaComprarYara').innerHTML=`
+  COMPRÁ YARÁ
+  <img id="imgCarritoYara" src="./assets/img/carritoComprasMarron.png" alt="" style="width: 24px;">
+`
+});
+
+anclaCompraYara.addEventListener('mouseout',()=>{
+  document.querySelector('.anclaComprarYara').innerHTML = `
+    COMPRÁ YARÁ
+    <img id="imgCarritoYara" src="./assets/img/carritoComprasBlanco.png" alt="" style="width: 24px;">
+  `
+})
