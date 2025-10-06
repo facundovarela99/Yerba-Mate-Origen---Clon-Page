@@ -99,6 +99,8 @@ main {
             display: flex;
             flex-direction: column;
             padding-left: 20px;
+            padding: 0 6vw;
+
 
             .preparoUnos {
                 color: white;
@@ -970,7 +972,8 @@ main {
 .divContactos a {
     text-decoration: none;
     color: white;
-    &:hover{
+
+    &:hover {
         color: #A37F41;
         transition: 0.2s;
     }
@@ -994,7 +997,7 @@ main {
     width: 100px;
 }
 
-.logoMatecito{
+.logoMatecito {
     background-color: #1A1A1A;
 }
 
@@ -1002,38 +1005,41 @@ main {
     width: 50px;
 }
 
-.anclasFooter{
+.anclasFooter {
     list-style: none;
 }
 
-.anclasFooter a{
+.anclasFooter a {
     text-decoration: none;
     color: white;
-    &:hover{
+
+    &:hover {
         color: white;
     }
 }
 
-.anclasFooter .nav-link.active{
+.anclasFooter .nav-link.active {
     color: #A37F41 !important;
     font-weight: bold
 }
 
-.anclasFooter hr{
+.anclasFooter hr {
     background-color: #a37f41;
     width: 2%;
     height: 2px;
     transform: rotate(90deg);
 }
 
-.fa-instagram,.fa-facebook{
+.fa-instagram,
+.fa-facebook {
     font-size: 1.2rem !important;
     color: white;
-    &:hover{
+
+    &:hover {
         color: #A37F41;
     }
 }
 
-.Parrafo p{
+.Parrafo p {
     margin-bottom: 0 !important;
 }
