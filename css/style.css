@@ -19,6 +19,12 @@ header {
     height: fit-content;
 }
 
+.navbar-nav .nav-link.active {
+    color: #A37F41 !important;   /* elegí el color que quieras */
+    font-weight: bold;           /* opcional, resaltar más */
+    border-bottom: 2px solid #ffa915; /* opcional, subrayado */
+}
+
 #navbarSupportedContent {
     ul {
         margin-left: 22%;
@@ -30,7 +36,7 @@ header {
         .contacto:hover {
             border: 1px solid #A37F41;
             background-color: #ffe9c400;
-            color: #fab731cc;
+            color: #A37F41;
             box-shadow: 5px 5px 0px #A37F41;
             transition: none;
         }
@@ -812,6 +818,7 @@ main {
         .spanYara{
             font-size: 4rem;
             letter-spacing: 5px;
+            text-shadow: 5px 5px 0px #a37f4133;
         }
 
         .p1{
@@ -913,7 +920,26 @@ main {
 
 /* INDEX INDEX INDEX */
 
-footer {
-    grid-area: footer;
-    background-color: rgb(124, 124, 255);
+
+/* FOOTER FOOTER FOOTER */
+
+.seccionFondoNegro {
+    background-color: #000;
+}
+
+.seccionFondoMarron{
+    background-color: #A37F41;
+}
+
+.divContactos ul{
+    list-style: none;
+}
+
+.divContactos a{
+    text-decoration: none;
+    color: white;
+}
+
+.divImgCirculo img{
+    width: 100px;
 }
