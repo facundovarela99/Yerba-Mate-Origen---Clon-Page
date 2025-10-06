@@ -20,9 +20,12 @@ header {
 }
 
 .navbar-nav .nav-link.active {
-    color: #A37F41 !important;   /* elegí el color que quieras */
-    font-weight: bold;           /* opcional, resaltar más */
-    border-bottom: 2px solid #ffa915; /* opcional, subrayado */
+    color: #A37F41 !important;
+    /* elegí el color que quieras */
+    font-weight: bold;
+    /* opcional, resaltar más */
+    border-bottom: 2px solid #ffa915;
+    /* opcional, subrayado */
 }
 
 #navbarSupportedContent {
@@ -809,52 +812,58 @@ main {
         width: 50%;
         padding-top: 40px;
 
-        h4{
+        h4 {
             color: #A37F41;
             letter-spacing: 5px;
             margin-bottom: 0 !important;
         }
 
-        .spanYara{
+        .spanYara {
             font-size: 4rem;
             letter-spacing: 5px;
             text-shadow: 5px 5px 0px #a37f4133;
         }
 
-        .p1{
+        .p1 {
             font-size: 26px;
             width: 70%;
             font-family: 'Quicksand';
             font-weight: 600;
         }
-        .p2{
+
+        .p2 {
             font-size: 14px;
             width: 88%;
             font-family: 'Quicksand';
             font-weight: 600;
         }
-        ul{
+
+        ul {
             list-style-type: square;
-            li{
+
+            li {
                 font-family: 'Quicksand';
                 font-weight: 500;
             }
         }
-        .anclaCompraYara{
+
+        .anclaCompraYara {
             width: fit-content;
             margin-top: 60px;
-            a{
+
+            a {
                 background-color: #A37F41;
                 transition: background-color 0.23s ease-in-out, color 0.23s ease-in-out, box-shadow 0.23s ease-in-out, border 0.23s ease-in-out;
                 font-size: 1.3rem;
-                padding: 20px 35px;;
+                padding: 20px 35px;
+                ;
                 text-decoration: none;
                 color: white
             }
         }
     }
 
-    .anclaCompraYara a:hover{
+    .anclaCompraYara a:hover {
         border: 1px solid #A37F41;
         background-color: #fdf4e5;
         box-shadow: 5px 5px 0 #A37F41;
@@ -890,6 +899,7 @@ main {
     padding-right: 15px;
     font-weight: 600;
 }
+
 .separadorYara hr {
     width: 8%;
     height: 1.4px;
@@ -898,21 +908,22 @@ main {
     margin: 0;
 }
 
-.hashSomosYara{
+.hashSomosYara {
     width: fit-content;
 }
 
-.hashSomosYara a{
+.hashSomosYara a {
     text-decoration: none;
     color: #000;
 }
 
-.hashSomosYara p{
+.hashSomosYara p {
     font-size: 1.4rem;
     letter-spacing: 3px;
     font-weight: 400;
     text-transform: uppercase;
-    &:hover{
+
+    &:hover {
         color: #A37F41;
     }
 }
@@ -924,22 +935,105 @@ main {
 /* FOOTER FOOTER FOOTER */
 
 .seccionFondoNegro {
-    background-color: #000;
+    background-color: #1A1A1A;
+    display: flex;
+    justify-content: center;
 }
 
-.seccionFondoMarron{
+.seccionFondoMarron {
     background-color: #A37F41;
 }
 
-.divContactos ul{
+.seccionFondoMarron p {
+    color: #1A1A1A;
+    letter-spacing: 2.2px;
+    margin: 0.8rem 0;
+}
+
+.divPadreFooter {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.divHijo1 {
+    padding-top: 100px;
+    padding-bottom: 25px;
+}
+
+.divContactos ul {
+    list-style: none;
+    padding-left: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.divContactos a {
+    text-decoration: none;
+    color: white;
+    &:hover{
+        color: #A37F41;
+        transition: 0.2s;
+    }
+}
+
+.separadorFooter span {
+    padding: 0 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    color: white;
+    font-weight: 600;
+}
+
+.separadorFooter hr {
+    background-color: #A37F41;
+    height: 2.3px;
+    width: 100%;
+}
+
+.divImgCirculo img {
+    width: 100px;
+}
+
+.logoMatecito{
+    background-color: #1A1A1A;
+}
+
+.logoMatecito img {
+    width: 50px;
+}
+
+.anclasFooter{
     list-style: none;
 }
 
-.divContactos a{
+.anclasFooter a{
     text-decoration: none;
     color: white;
+    &:hover{
+        color: white;
+    }
 }
 
-.divImgCirculo img{
-    width: 100px;
+.anclasFooter .nav-link.active{
+    color: #A37F41 !important;
+    font-weight: bold
+}
+
+.anclasFooter hr{
+    background-color: #a37f41;
+    width: 2%;
+    height: 2px;
+    transform: rotate(90deg);
+}
+
+.fa-instagram,.fa-facebook{
+    font-size: 1.2rem !important;
+    color: white;
+    &:hover{
+        color: #A37F41;
+    }
+}
+
+.Parrafo p{
+    margin-bottom: 0 !important;
 }

@@ -455,15 +455,12 @@
     <footer>
         <section class="seccionFondoNegro">
             <div class="divPadreFooter">
-                <div class="divHijo1">
-                    <div class="divContactos">
-                        <ul>
+                <div class="divHijo1 d-flex flex-row justify-content-around align-items-center pe-5">
+                    <div class="divContactos h-100 d-flex align-items-end">
+                        <ul class="d-flex flex-column align-items-center">
                             <li class="contacto1"><a href="tel:+5491147121998"><span>+54 9 11 4712-1998</span></a></li>
-                            <li class="contacto2"><a
-                                    href="https://outlook.office365.com/"><span>hola@yerbamateorigen.com.ar</span></a>
-                            </li>
-                            <li class="contacto3"><a href="mailto:ventas@yerbamateorigen.com.ar"><span
-                                        class="elementor-icon-list-text">ventas@yerbamateorigen.com.ar</span></a></li>
+                            <li class="contacto2"><a href="https://outlook.office365.com/"><span>hola@yerbamateorigen.com.ar</span></a></li>
+                            <li class="contacto3"><a href="mailto:ventas@yerbamateorigen.com.ar"><span class="elementor-icon-list-text">ventas@yerbamateorigen.com.ar</span></a></li>
                         </ul>
                     </div>
                     <div class="logoCirculo">
@@ -471,44 +468,66 @@
                             <img src="./assets/img/yerba-mate-origen-hoja-circulo.svg" alt="Origen y Hoja círculo">
                         </div>
                     </div>
-                    <div class="redes">
-                        <div>
-                            <div class="iconos">
+                    <div class="redes h-100 d-flex align-items-end">
+                        <div class="d-flex flex-column">
+                            <div class="iconos d-flex flex-row justify-content-evenly mb-3">
                                 <div class="iconoIG">
                                     <a href="https://www.instagram.com/" target="_blank">
-                                        <i class="fa-brands fa-instagram"></i>
+                                        <i class="fa-brands fa-instagram fs-2 ps-2"></i>
                                     </a>
                                 </div>
                                 <div class="iconoFB">
                                     <a href="https://www.facebook.com/" target="_blank">
-                                        <i class="fa-brands fa-facebook"></i>
+                                        <i class="fa-brands fa-facebook fs-2 pe-2"></i>
                                     </a>
                                 </div>
                             </div>
                             <div class="Parrafo">
-                                <p>SEGUINOS EN LAS REDES</p>
+                                <p class="text-white">SEGUINOS EN LAS REDES</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="separador">
+                <div class="separadorFooter d-flex flex-row justify-content-center align-items-center pb-3">
                     <hr>
-                    <span>x</span>
+                    <span class="text-white">x</span>
                     <hr>
                 </div>
                 <div class="divHijo2">
-                    <div class="anclasFooter">
-                        <a href="">HOME</a>
-                        <a href="">SHOP</a>
-                        <a href="">DÓNDE COMPRAR</a>
-                        <a href="">VENDÉ ORIGEN</a>
-                        <a href="">CONTACTO</a>
-                        <a href="">INGRESAR / CREAR CUENTA</a>
-                    </div>
+                    <ul class="anclasFooter d-flex justify-content-evenly">
+                        <li>
+                            <a class="nav-link active" href="#">HOME</a>
+                        </li>
+                        <hr>
+                        <li>
+                            <a class="nav-link" href="">SHOP</a>
+                        </li>
+                        <hr>
+                        <li>
+                            <a class="nav-link" href="">DÓNDE COMPRAR</a>
+                        </li>
+                        <hr>
+                        <li>
+                            <a class="nav-link" href="">VENDÉ ORIGEN</a>
+                        </li>
+                        <hr>
+                        <li>
+                            <a class="nav-link" href="">CONTACTO</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="">INGRESAR / CREAR CUENTA</a>
+                        </li>
+                        <hr>
+                    </ul>
                 </div>
             </div>
         </section>
-        <section class="seccionFondoMarron">FOOTER FOOTER FOOTER FOOTER </section>
+        <div class="logoMatecito d-flex justify-content-center">
+            <img src="./assets/img/matecito.svg" alt="matecito">
+        </div>
+        <section class="seccionFondoMarron d-flex flex-column align-items-center">
+            <p class="w-100 text-center">#TODOTIENESUORIGEN</p>
+        </section>
     </footer>
     <!--SwiperJS Script-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
