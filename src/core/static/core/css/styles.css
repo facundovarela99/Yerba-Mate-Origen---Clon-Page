@@ -1,14 +1,6 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
-* {
-  font-family: "Fjalla One";
-  box-sizing: border-box;
-  padding: 0px;
-  margin: 0px;
-}
-
 header {
   background-color: #1A1A1A;
   width: 100%;
@@ -22,11 +14,8 @@ header {
 
 .navbar-nav .nav-link.active {
   color: #A37F41 !important;
-  /* elegí el color que quieras */
   font-weight: bold;
-  /* opcional, resaltar más */
   border-bottom: 2px solid #ffa915;
-  /* opcional, subrayado */
 }
 
 #navbarSupportedContent ul {
@@ -75,7 +64,115 @@ header {
   color: rgb(255, 255, 255) !important;
 }
 
-/* INDEX INDEX INDEX */
+/* FOOTER FOOTER FOOTER */
+.seccionFondoNegro {
+  background-color: #1A1A1A;
+  display: flex;
+  justify-content: center;
+}
+
+.seccionFondoMarron {
+  background-color: #A37F41;
+}
+
+.seccionFondoMarron p {
+  color: #1A1A1A;
+  letter-spacing: 2.2px;
+  margin: 0.8rem 0;
+}
+
+.divPadreFooter {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.divHijo1 {
+  padding-top: 100px;
+  padding-bottom: 25px;
+}
+
+.divContactos ul {
+  list-style: none;
+  padding-left: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.divContactos a {
+  text-decoration: none;
+  color: white;
+}
+
+.divContactos a:hover {
+  color: #A37F41;
+  transition: 0.2s;
+}
+
+.separadorFooter span {
+  padding: 0 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  color: white;
+  font-weight: 600;
+}
+
+.separadorFooter hr {
+  background-color: #A37F41;
+  height: 2.3px;
+  width: 100%;
+}
+
+.divImgCirculo img {
+  width: 100px;
+}
+
+.logoMatecito {
+  background-color: #1A1A1A;
+}
+
+.logoMatecito img {
+  width: 50px;
+}
+
+.anclasFooter {
+  list-style: none;
+}
+
+.anclasFooter a {
+  text-decoration: none;
+  color: white;
+}
+
+.anclasFooter a:hover {
+  color: white;
+}
+
+.anclasFooter .nav-link.active {
+  color: #A37F41 !important;
+  font-weight: bold;
+}
+
+.anclasFooter hr {
+  background-color: #a37f41;
+  width: 2%;
+  height: 2px;
+  transform: rotate(90deg);
+}
+
+.fa-instagram,
+.fa-facebook {
+  font-size: 1.2rem !important;
+  color: white;
+}
+.fa-instagram:hover,
+.fa-facebook:hover {
+  color: #A37F41;
+}
+
+.Parrafo p {
+  margin-bottom: 0 !important;
+}
+
 .mainIndex {
   background-image: linear-gradient(to right top, rgba(0, 0, 0, 0.3137254902), rgba(0, 0, 0, 0.3137254902)), url(../assets/img/home-bg-3.jpg);
   background-size: 100%;
@@ -857,111 +954,11 @@ header {
 }
 
 /* INDEX INDEX INDEX */
-/* FOOTER FOOTER FOOTER */
-.seccionFondoNegro {
-  background-color: #1A1A1A;
-  display: flex;
-  justify-content: center;
+* {
+  font-family: "Fjalla One";
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
 }
 
-.seccionFondoMarron {
-  background-color: #A37F41;
-}
-
-.seccionFondoMarron p {
-  color: #1A1A1A;
-  letter-spacing: 2.2px;
-  margin: 0.8rem 0;
-}
-
-.divPadreFooter {
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-}
-
-.divHijo1 {
-  padding-top: 100px;
-  padding-bottom: 25px;
-}
-
-.divContactos ul {
-  list-style: none;
-  padding-left: 0 !important;
-  margin-bottom: 0 !important;
-}
-
-.divContactos a {
-  text-decoration: none;
-  color: white;
-}
-
-.divContactos a:hover {
-  color: #A37F41;
-  transition: 0.2s;
-}
-
-.separadorFooter span {
-  padding: 0 10px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: large;
-  color: white;
-  font-weight: 600;
-}
-
-.separadorFooter hr {
-  background-color: #A37F41;
-  height: 2.3px;
-  width: 100%;
-}
-
-.divImgCirculo img {
-  width: 100px;
-}
-
-.logoMatecito {
-  background-color: #1A1A1A;
-}
-
-.logoMatecito img {
-  width: 50px;
-}
-
-.anclasFooter {
-  list-style: none;
-}
-
-.anclasFooter a {
-  text-decoration: none;
-  color: white;
-}
-
-.anclasFooter a:hover {
-  color: white;
-}
-
-.anclasFooter .nav-link.active {
-  color: #A37F41 !important;
-  font-weight: bold;
-}
-
-.anclasFooter hr {
-  background-color: #a37f41;
-  width: 2%;
-  height: 2px;
-  transform: rotate(90deg);
-}
-
-.fa-instagram,
-.fa-facebook {
-  font-size: 1.2rem !important;
-  color: white;
-}
-.fa-instagram:hover,
-.fa-facebook:hover {
-  color: #A37F41;
-}
-
-.Parrafo p {
-  margin-bottom: 0 !important;
-}/*# sourceMappingURL=styles.css.map */
+/* INDEX INDEX INDEX *//*# sourceMappingURL=styles.css.map */

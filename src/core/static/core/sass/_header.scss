@@ -1,0 +1,67 @@
+header {
+    background-color: #1A1A1A;
+    width: 100%;
+    height: auto;
+}
+
+.navbarHeader {
+    height: fit-content;
+}
+
+.navbar-nav .nav-link.active {
+    color: #A37F41 !important;
+    font-weight: bold;
+    border-bottom: 2px solid #ffa915;
+}
+
+#navbarSupportedContent {
+    ul {
+        margin-left: 22%;
+
+        .home:hover,
+        .productos:hover,
+        .sucursales:hover,
+        .acercaDe:hover,
+        .contacto:hover {
+            border: 1px solid #A37F41;
+            background-color: #ffe9c400;
+            color: #A37F41;
+            box-shadow: 5px 5px 0px #A37F41;
+            transition: none;
+        }
+
+        a {
+            font-size: 1.050rem;
+            padding-left: 30px;
+            padding-right: 30px;
+            color: white;
+            border: 1px solid #1a1a1a00;
+            box-shadow: 5px 5px 0px #1a1a1a00;
+            transition: none;
+        }
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    #navbarSupportedContent ul {
+        margin-left: 0;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    #navbarSupportedContent ul li {
+        width: fit-content;
+    }
+}
+
+.imgTitulo {
+    width: 150px;
+}
+
+.anclaHeader {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: rgb(255, 255, 255) !important;
+}

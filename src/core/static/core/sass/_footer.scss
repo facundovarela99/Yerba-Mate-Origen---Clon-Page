@@ -1,0 +1,109 @@
+/* FOOTER FOOTER FOOTER */
+
+.seccionFondoNegro {
+    background-color: #1A1A1A;
+    display: flex;
+    justify-content: center;
+}
+
+.seccionFondoMarron {
+    background-color: #A37F41;
+}
+
+.seccionFondoMarron p {
+    color: #1A1A1A;
+    letter-spacing: 2.2px;
+    margin: 0.8rem 0;
+}
+
+.divPadreFooter {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.divHijo1 {
+    padding-top: 100px;
+    padding-bottom: 25px;
+}
+
+.divContactos ul {
+    list-style: none;
+    padding-left: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.divContactos a {
+    text-decoration: none;
+    color: white;
+}
+
+.divContactos a:hover {
+    color: #A37F41;
+    transition: 0.2s;
+}
+
+.separadorFooter span {
+    padding: 0 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    color: white;
+    font-weight: 600;
+}
+
+.separadorFooter hr {
+    background-color: #A37F41;
+    height: 2.3px;
+    width: 100%;
+}
+
+.divImgCirculo img {
+    width: 100px;
+}
+
+.logoMatecito {
+    background-color: #1A1A1A;
+}
+
+.logoMatecito img {
+    width: 50px;
+}
+
+.anclasFooter {
+    list-style: none;
+}
+
+.anclasFooter a {
+    text-decoration: none;
+    color: white;
+}
+
+.anclasFooter a:hover {
+    color: white;
+}
+
+.anclasFooter .nav-link.active {
+    color: #A37F41 !important;
+    font-weight: bold
+}
+
+.anclasFooter hr {
+    background-color: #a37f41;
+    width: 2%;
+    height: 2px;
+    transform: rotate(90deg);
+}
+
+.fa-instagram,
+.fa-facebook {
+    font-size: 1.2rem !important;
+    color: white;
+
+    &:hover {
+        color: #A37F41;
+    }
+}
+
+.Parrafo p {
+    margin-bottom: 0 !important;
+}
