@@ -133,7 +133,7 @@ main {
     line-height: 1;
 }
 
-.separadorIndex{
+.separadorIndex {
     gap: 10px;
 }
 
@@ -196,7 +196,7 @@ main {
     transition: ease-in-out 0.21s;
     border: 1px solid #a37f41;
 
-    span{
+    span {
         background-color: #71582d;
         transition: ease-in-out 0.21s;
     }
@@ -234,7 +234,7 @@ main {
     transition: ease-in-out 0.21s;
     border: 1px solid #03594D;
 
-    span{
+    span {
         background-color: #034139;
         transition: ease-in-out 0.21s;
     }
@@ -368,27 +368,27 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
 
-    div {
-        display: flex;
-        flex-direction: column;
-        width: 215px;
-        height: 215px;
-        margin-bottom: 30px;
+.iconos div {
+    display: flex;
+    flex-direction: column;
+    width: 215px;
+    height: 215px;
+    margin-bottom: 30px;
+}
 
-        img {
-            width: 180px;
-            height: 180px;
-        }
+.iconos div p {
+    font-family: Montserrat;
+    font-weight: 200;
+    text-align: center;
+    font-size: medium;
+    color: white;
+}
 
-        p {
-            font-family: Montserrat;
-            font-weight: 200;
-            text-align: center;
-            font-size: medium;
-            color: white;
-        }
-    }
+.iconos div img {
+    width: 180px;
+    height: 180px;
 }
 
 .infoBarbacua {
@@ -970,11 +970,11 @@ main {
 .divContactos a {
     text-decoration: none;
     color: white;
+}
 
-    &:hover {
-        color: #A37F41;
-        transition: 0.2s;
-    }
+.divContactos a:hover {
+    color: #A37F41;
+    transition: 0.2s;
 }
 
 .separadorFooter span {
@@ -1010,10 +1010,10 @@ main {
 .anclasFooter a {
     text-decoration: none;
     color: white;
+}
 
-    &:hover {
-        color: white;
-    }
+.anclasFooter a:hover {
+    color: white;
 }
 
 .anclasFooter .nav-link.active {
