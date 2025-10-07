@@ -1,0 +1,967 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+* {
+  font-family: "Fjalla One";
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+header {
+  background-color: #1A1A1A;
+  width: 100%;
+  height: auto;
+}
+
+.navbarHeader {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.navbar-nav .nav-link.active {
+  color: #A37F41 !important;
+  /* elegí el color que quieras */
+  font-weight: bold;
+  /* opcional, resaltar más */
+  border-bottom: 2px solid #ffa915;
+  /* opcional, subrayado */
+}
+
+#navbarSupportedContent ul {
+  margin-left: 22%;
+}
+#navbarSupportedContent ul .home:hover,
+#navbarSupportedContent ul .productos:hover,
+#navbarSupportedContent ul .sucursales:hover,
+#navbarSupportedContent ul .acercaDe:hover,
+#navbarSupportedContent ul .contacto:hover {
+  border: 1px solid #A37F41;
+  background-color: rgba(255, 233, 196, 0);
+  color: #A37F41;
+  box-shadow: 5px 5px 0px #A37F41;
+  transition: none;
+}
+#navbarSupportedContent ul a {
+  font-size: 1.05rem;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: white;
+  border: 1px solid rgba(26, 26, 26, 0);
+  box-shadow: 5px 5px 0px rgba(26, 26, 26, 0);
+  transition: none;
+}
+
+@media screen and (max-width: 768px) {
+  #navbarSupportedContent ul {
+    margin-left: 0;
+    flex-direction: column;
+    align-items: start;
+  }
+  #navbarSupportedContent ul li {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+.imgTitulo {
+  width: 150px;
+}
+
+.anclaHeader {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: rgb(255, 255, 255) !important;
+}
+
+/* INDEX INDEX INDEX */
+.mainIndex {
+  background-image: linear-gradient(to right top, rgba(0, 0, 0, 0.3137254902), rgba(0, 0, 0, 0.3137254902)), url(../assets/img/home-bg-3.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+}
+
+.seccionFondoPantallaMain {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+
+.preparoUnos {
+  color: white;
+  font-size: 2vw;
+  text-align: center;
+  text-shadow: 5px 5px 0px #A37F41;
+  letter-spacing: 4px;
+  line-height: 1;
+}
+
+.mates {
+  color: white;
+  font-size: 10vw;
+  text-shadow: 5px 5px 0px #a37f41;
+  letter-spacing: 10px;
+  line-height: 1;
+}
+
+.luego {
+  color: white;
+  text-align: center;
+  font-size: 2vw;
+  text-shadow: 5px 5px 0px #A37F41;
+  letter-spacing: 4px;
+  line-height: 1;
+}
+
+.existo {
+  color: white;
+  font-size: 10vw;
+  text-shadow: 5px 5px 0px #A37F41;
+  letter-spacing: 10px;
+  line-height: 1;
+}
+
+.separadorIndex {
+  gap: 10px;
+}
+
+.separadorIndex span {
+  color: white;
+  font-size: medium;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+
+.separadorIndex hr {
+  flex: 0.03;
+  height: 2px;
+  background-color: sandybrown;
+  border: none;
+}
+
+.palabrasChicasMain {
+  text-align: center;
+}
+
+.yerbaMateOrigen {
+  color: white;
+  font-size: 21px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.2em;
+  letter-spacing: 5px;
+  text-shadow: 0px 0px 11px #000000;
+}
+
+.verdaderamentePremium {
+  color: white;
+  font-size: 21px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.2em;
+  letter-spacing: 5px;
+  text-shadow: 0px 0px 11px #000000;
+}
+
+.divContenedorBotones {
+  margin-bottom: 8%;
+  width: 65%;
+}
+
+.compraOnline {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  background-color: #A37F41;
+  border: 1px solid transparent;
+  transition: ease-in-out 0.21s;
+}
+
+.compraOnline:hover {
+  background-color: #71582d;
+  box-shadow: 5px 5px 0px #a37f41;
+  transition: ease-in-out 0.21s;
+  border: 1px solid #a37f41;
+}
+.compraOnline:hover span {
+  background-color: #71582d;
+  transition: ease-in-out 0.21s;
+}
+
+.compraOnline img {
+  width: 25px;
+  height: 25px;
+}
+
+.compraOnline span {
+  font-size: 1.35rem;
+  letter-spacing: 1.5px;
+  font-family: "Fjalla One";
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  background-color: #a37f41;
+  transition: ease-in-out 0.21s;
+}
+
+.conoceOrigen {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  background-color: #03594D;
+  border: 1px solid transparent;
+  transition: ease-in-out 0.21s;
+  margin-top: 15px;
+}
+
+.conoceOrigen:hover {
+  background-color: #034139;
+  box-shadow: 5px 5px 0px #03594d;
+  transition: ease-in-out 0.21s;
+  border: 1px solid #03594D;
+}
+.conoceOrigen:hover span {
+  background-color: #034139;
+  transition: ease-in-out 0.21s;
+}
+
+.conoceOrigen span {
+  font-size: 1.35rem;
+  letter-spacing: 1.5px;
+  font-family: "Fjalla One";
+  color: rgb(255, 255, 255);
+  background-color: #03594d;
+  text-decoration: none;
+  transition: ease-in-out 0.21s;
+}
+
+.conoceOrigen img {
+  width: 28px;
+  height: 25px;
+}
+
+.infoOrigen {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 65px;
+  padding-right: 65px;
+  background-color: #1A1A1A;
+}
+.infoOrigen .bordeado {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid rgba(244, 165, 96, 0.496);
+}
+.infoOrigen .bordeado img {
+  width: 50% !important;
+}
+.infoOrigen .bordeado .parrafosInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.infoOrigen .bordeado .parrafosInfo .sobre {
+  color: #A37F41;
+  padding-top: 20px;
+  width: 100%;
+  text-align: left;
+  font-size: 32px;
+}
+.infoOrigen .bordeado .parrafosInfo .origen {
+  color: white;
+  width: 100%;
+  text-align: left;
+  font-size: 60px;
+  text-shadow: 5px 5px 0px #A37F41;
+  color: white;
+}
+.infoOrigen .bordeado .parrafosInfo .parrafoInfoOrigen {
+  font-family: "Quicksand";
+  color: white;
+  font-size: 20px;
+  padding-top: 25px;
+}
+.infoOrigen .bordeado .parrafosInfo .separador {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: left;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.infoOrigen .bordeado .parrafosInfo .separador span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  color: white;
+  padding-right: 15px;
+  font-weight: 600;
+}
+.infoOrigen .bordeado .parrafosInfo hr {
+  width: 90%;
+  height: 1px;
+  background-color: #ffa915;
+  border: none;
+}
+.infoOrigen .bordeado .parrafosInfo .parrafosBajoSeparador p {
+  font-family: "Quicksand";
+  color: white;
+  font-size: 15px;
+  font-weight: lighter;
+}
+.infoOrigen .bordeado .parrafosInfo a {
+  width: 40%;
+  margin-top: 50px;
+  text-decoration: none;
+  color: white;
+  display: block;
+  font-size: x-large;
+}
+
+#todoTieneSuOrigen {
+  font-size: 20px;
+  letter-spacing: 5px;
+  padding-bottom: 20px;
+}
+#todoTieneSuOrigen:hover {
+  color: #A37F41;
+}
+
+.iconos {
+  background-color: #1A1A1A;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.iconos div {
+  display: flex;
+  flex-direction: column;
+  width: 215px;
+  height: 215px;
+  margin-bottom: 30px;
+}
+
+.iconos div p {
+  font-family: Montserrat;
+  font-weight: 200;
+  text-align: center;
+  font-size: medium;
+  color: white;
+}
+
+.iconos div img {
+  width: 180px;
+  height: 180px;
+}
+
+.infoBarbacua {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 65px;
+  padding-right: 65px;
+  background-color: #1A1A1A;
+}
+.infoBarbacua .bordeadoBarbacua {
+  display: flex;
+  flex-direction: row-reverse;
+  border: 1px solid rgba(244, 165, 96, 0.496);
+}
+.infoBarbacua .bordeadoBarbacua .imagenFondoNextToTexto {
+  background-image: url(../assets/img/barbacua.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.infoBarbacua .bordeadoBarbacua .imagenFondoNextToTexto p {
+  font-size: 109%;
+  color: rgba(255, 255, 255, 0);
+}
+.infoBarbacua .bordeadoBarbacua .imagenFondoNextToTexto img {
+  margin-top: 60px;
+  width: 300px;
+  height: 300px;
+}
+.infoBarbacua .bordeadoBarbacua .parrafosInfoBarbacua {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 40px;
+  width: 60%;
+}
+.infoBarbacua .bordeadoBarbacua .parrafosInfoBarbacua .metodo {
+  color: #A37F41;
+  padding-top: 20px;
+  width: 80%;
+  text-align: left;
+  font-size: 30px;
+  letter-spacing: 5px;
+}
+.infoBarbacua .bordeadoBarbacua .parrafosInfoBarbacua .barbacua {
+  color: white;
+  width: 80%;
+  text-align: left;
+  font-size: 60px;
+  text-shadow: 5px 5px 0px #A37F41;
+  color: white;
+  letter-spacing: 6px;
+}
+.infoBarbacua .bordeadoBarbacua .parrafosInfoBarbacua .parrafoInfoBarbacua {
+  width: 97%;
+  font-family: "Quicksand";
+  color: white;
+  font-size: 22px;
+  padding-top: 35px;
+}
+.infoBarbacua .bordeadoBarbacua .parrafosInfoBarbacua .contenedorInfoBarbacua {
+  width: 80%;
+}
+.infoBarbacua .bordeadoBarbacua .parrafosInfoBarbacua .separador {
+  width: 90%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: left;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.infoBarbacua .bordeadoBarbacua .parrafosInfoBarbacua .separador span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  color: white;
+  padding-right: 15px;
+  font-weight: 600;
+}
+.infoBarbacua .bordeadoBarbacua .parrafosInfoBarbacua hr {
+  width: 90%;
+  height: 1px;
+  background-color: #fbab21;
+  border: none;
+}
+.infoBarbacua .bordeadoBarbacua .parrafosInfoBarbacua .parrafosBajoSeparador .p1,
+.infoBarbacua .bordeadoBarbacua .parrafosInfoBarbacua .parrafosBajoSeparador .p2,
+.infoBarbacua .bordeadoBarbacua .parrafosInfoBarbacua .parrafosBajoSeparador .p3 {
+  font-family: "Quicksand";
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+}
+.infoBarbacua .bordeadoBarbacua .parrafosInfoBarbacua .parrafosBajoSeparador .p3 {
+  margin-bottom: 0;
+}
+.infoBarbacua .bordeadoBarbacua .parrafosInfoBarbacua .parrafosBajoSeparador a {
+  width: 40%;
+  margin-top: 50px;
+  text-decoration: none;
+  color: white;
+  display: block;
+  font-size: x-large;
+}
+
+.carruselProductos {
+  width: 100%;
+  /* background: linear-gradient(#ECEFFE, #CED6FB);  COLOR DE FONDO OPCIONAL DEL TUTORIAL DEL CARRUSEL */
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.carruselProductos .divCarruselProductos {
+  width: 90%;
+}
+.carruselProductos .tituloCarruselProductos {
+  font-size: 5.1rem;
+  text-shadow: 5px 5px 0px rgba(181, 163, 130, 0.4941176471);
+}
+.carruselProductos .anclaCarruselParrafo {
+  color: #A37F41;
+  text-decoration: none;
+  font-size: 2.55rem;
+}
+.carruselProductos .anclaCarruselParrafo:hover {
+  color: black;
+  transition: 0.3s;
+}
+
+.bordeadoCarrusel1 {
+  width: 100%;
+}
+
+.parrafoYancla {
+  border: 1px solid #A37F41;
+}
+.parrafoYancla .bordeadoCarrusel2 p {
+  margin-bottom: 0;
+  font-family: "The Foregen", Sans-serif;
+  font-weight: normal;
+  line-height: 1em;
+  letter-spacing: 2px;
+  color: white;
+}
+
+.anclaCodigosPostales {
+  padding: 2.5px;
+}
+
+.anclaCodigosPostales:hover {
+  background-color: #a37f41;
+  transition: 0.2s;
+}
+
+.spanAnclaCodigosPostales {
+  color: #000000;
+  text-decoration: underline;
+  text-decoration-color: #000000;
+  font-size: 18px;
+  letter-spacing: 2px;
+  height: 100%;
+}
+.spanAnclaCodigosPostales:hover {
+  color: white;
+  transition: 0.2s;
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+
+/* SLIDER */
+.card-wrapper {
+  max-width: 1100px;
+  margin: 0 60px 35px;
+  padding: 20px 10px;
+  overflow: hidden;
+}
+
+.card-list .card-item {
+  list-style: none;
+}
+
+.card-list .card-item .card-link {
+  width: 100%;
+  max-width: 350px;
+  display: block;
+  background-color: #fff;
+  padding: 18px;
+  text-decoration: none;
+  border: 1px solid #d7d7d7;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+}
+
+.card-list .card-item .card-link:hover {
+  border-color: #1A1A1A;
+}
+
+.card-list .card-link .card-image {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card-list .card-link .badge {
+  color: #1A1A1A;
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 16px 0px 18px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.card-list .card-link .badge.yerbaOrigenVerdeNegro {
+  color: black;
+}
+
+.card-list .card-link .card-title {
+  font-size: 1.19rem;
+  color: #000;
+  font-weight: 600;
+}
+
+.card-list .card-link .card-button {
+  height: 35px;
+  /* width: 35px; */
+  margin: 30px 0 5px;
+  /* background: none; */
+  cursor: pointer;
+  border: 2px solid #1A1A1A;
+}
+
+.card-button {
+  width: 90%;
+}
+
+.card-button:hover {
+  color: white;
+  background-color: #1A1A1A;
+}
+
+.card-list {
+  color: #fff;
+}
+
+.card-wrapper .swiper-pagination-bullet {
+  height: 13px;
+  width: 13px;
+  opacity: 0.5;
+  background: #1A1A1A;
+}
+
+.card-wrapper .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+.card-wrapper .swiper-slide-button {
+  color: #1A1A1A;
+  background-color: rgba(26, 26, 26, 0.1490196078);
+  margin-top: -35px;
+}
+.card-wrapper .swiper-slide-button:hover {
+  color: white;
+  background-color: #1A1A1A;
+}
+
+/* SLIDER */
+.compraEnvioPaga {
+  width: 100%;
+  background-color: white;
+}
+
+.div1CompraEnvioPaga {
+  width: 80%;
+  gap: 20px;
+  margin-bottom: 100px;
+}
+
+.card1,
+.card2,
+.card3 {
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 50px;
+  box-sizing: border-box;
+}
+.card1 .texto,
+.card2 .texto,
+.card3 .texto {
+  padding-left: 20px;
+}
+.card1 .texto h3,
+.card2 .texto h3,
+.card3 .texto h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0;
+}
+.card1 .texto p,
+.card2 .texto p,
+.card3 .texto p {
+  margin-bottom: 0;
+}
+
+.anclaCard2 {
+  text-decoration: none;
+  color: black;
+}
+
+.card2:hover {
+  background: rgba(0, 0, 0, 0.05);
+  transition: ease 0.2s;
+}
+
+.div2CompraEnvioPaga {
+  width: 90%;
+  background-color: #03594d;
+  margin-top: 40px;
+}
+.div2CompraEnvioPaga .card21,
+.div2CompraEnvioPaga .card22,
+.div2CompraEnvioPaga .card23 {
+  width: 33.3%;
+  height: 240px;
+}
+.div2CompraEnvioPaga .card21 h3,
+.div2CompraEnvioPaga .card22 h3,
+.div2CompraEnvioPaga .card23 h3 {
+  font-size: 2.1rem;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+.div2CompraEnvioPaga .card21 a,
+.div2CompraEnvioPaga .card22 a,
+.div2CompraEnvioPaga .card23 a {
+  color: #FFFFFF;
+  font-size: 1.48rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.card21 {
+  background-color: #03594D;
+}
+
+.card22 {
+  background-color: #A37F41;
+}
+
+.card23 {
+  background-color: #1A1A1A;
+}
+
+.divAnclaImagen1,
+.divAnclaImagen3 {
+  border: 1px solid #FFFFFF;
+}
+
+.divAnclaImagen2 {
+  border: 1px solid rgba(255, 255, 255, 0.6705882353);
+  background-color: rgba(255, 255, 255, 0.1647058824);
+}
+
+.divAnclaImagen1:hover {
+  background-color: #3c7870;
+  transition: ease 0.21s;
+  box-shadow: 5px 5px 0px #3c7870;
+}
+
+.divAnclaImagen3:hover {
+  background-color: #494949;
+  transition: ease 0.21s;
+  box-shadow: 5px 5px 0px #494949;
+}
+
+.Nuevo {
+  background-color: white;
+}
+
+.divPadre {
+  width: 90%;
+  border: 1px solid #d7d7d7;
+}
+.divPadre .divTextos {
+  width: 50%;
+  padding-top: 40px;
+}
+.divPadre .divTextos h4 {
+  color: #A37F41;
+  letter-spacing: 5px;
+  margin-bottom: 0 !important;
+}
+.divPadre .divTextos .spanYara {
+  font-size: 4rem;
+  letter-spacing: 5px;
+  text-shadow: 5px 5px 0px rgba(163, 127, 65, 0.2);
+}
+.divPadre .divTextos .p1 {
+  font-size: 26px;
+  width: 70%;
+  font-family: "Quicksand";
+  font-weight: 600;
+}
+.divPadre .divTextos .p2 {
+  font-size: 14px;
+  width: 88%;
+  font-family: "Quicksand";
+  font-weight: 600;
+}
+.divPadre .divTextos ul {
+  list-style-type: square;
+}
+.divPadre .divTextos ul li {
+  font-family: "Quicksand";
+  font-weight: 500;
+}
+.divPadre .divTextos .anclaCompraYara {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 60px;
+}
+.divPadre .divTextos .anclaCompraYara a {
+  background-color: #A37F41;
+  transition: background-color 0.23s ease-in-out, color 0.23s ease-in-out, box-shadow 0.23s ease-in-out, border 0.23s ease-in-out;
+  font-size: 1.3rem;
+  padding: 20px 35px;
+  text-decoration: none;
+  color: white;
+}
+.divPadre .anclaCompraYara a:hover {
+  border: 1px solid #A37F41;
+  background-color: #fdf4e5;
+  box-shadow: 5px 5px 0 #A37F41;
+  color: #A37F41;
+  transition: ease-in-out 0.23s;
+}
+.divPadre .divImagen {
+  width: 50%;
+}
+.divPadre .divImagen img {
+  width: 100%;
+}
+
+.separadorYara {
+  width: 90%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: left;
+  padding: 30px 0;
+}
+
+.separadorYara span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  color: black;
+  padding-right: 15px;
+  font-weight: 600;
+}
+
+.separadorYara hr {
+  width: 8%;
+  height: 1.4px;
+  background-color: #cc8509;
+  border: none;
+  margin: 0;
+}
+
+.hashSomosYara {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.hashSomosYara a {
+  text-decoration: none;
+  color: #000;
+}
+
+.hashSomosYara p {
+  font-size: 1.4rem;
+  letter-spacing: 3px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.hashSomosYara p:hover {
+  color: #A37F41;
+}
+
+/* INDEX INDEX INDEX */
+/* FOOTER FOOTER FOOTER */
+.seccionFondoNegro {
+  background-color: #1A1A1A;
+  display: flex;
+  justify-content: center;
+}
+
+.seccionFondoMarron {
+  background-color: #A37F41;
+}
+
+.seccionFondoMarron p {
+  color: #1A1A1A;
+  letter-spacing: 2.2px;
+  margin: 0.8rem 0;
+}
+
+.divPadreFooter {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.divHijo1 {
+  padding-top: 100px;
+  padding-bottom: 25px;
+}
+
+.divContactos ul {
+  list-style: none;
+  padding-left: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.divContactos a {
+  text-decoration: none;
+  color: white;
+}
+
+.divContactos a:hover {
+  color: #A37F41;
+  transition: 0.2s;
+}
+
+.separadorFooter span {
+  padding: 0 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  color: white;
+  font-weight: 600;
+}
+
+.separadorFooter hr {
+  background-color: #A37F41;
+  height: 2.3px;
+  width: 100%;
+}
+
+.divImgCirculo img {
+  width: 100px;
+}
+
+.logoMatecito {
+  background-color: #1A1A1A;
+}
+
+.logoMatecito img {
+  width: 50px;
+}
+
+.anclasFooter {
+  list-style: none;
+}
+
+.anclasFooter a {
+  text-decoration: none;
+  color: white;
+}
+
+.anclasFooter a:hover {
+  color: white;
+}
+
+.anclasFooter .nav-link.active {
+  color: #A37F41 !important;
+  font-weight: bold;
+}
+
+.anclasFooter hr {
+  background-color: #a37f41;
+  width: 2%;
+  height: 2px;
+  transform: rotate(90deg);
+}
+
+.fa-instagram,
+.fa-facebook {
+  font-size: 1.2rem !important;
+  color: white;
+}
+.fa-instagram:hover,
+.fa-facebook:hover {
+  color: #A37F41;
+}
+
+.Parrafo p {
+  margin-bottom: 0 !important;
+}/*# sourceMappingURL=styles.css.map */
