@@ -82,7 +82,7 @@ header {
 
 /* INDEX INDEX INDEX */
 
-main {
+.mainIndex {
     background-image: linear-gradient(to right top, #00000050, #00000050), url(../assets/img/home-bg-3.jpg);
     background-size: 100%;
     background-repeat: no-repeat;

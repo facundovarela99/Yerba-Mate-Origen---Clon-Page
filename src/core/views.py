@@ -4,4 +4,7 @@ from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
-    return render(request, 'core/main_templates/index.html')
+    return render(request, 'core/main_templates/index.html', { 'active_page': 'home' })
+
+def shop(request):
+    return render (request, 'core/main_templates/shop.html', { 'active_page': 'shop' })

@@ -1,383 +1,385 @@
 {% extends 'core/base.html' %}
 {% load static %}
 {% block content %}
-<section class="seccionFondoPantallaMain w-100">
-    <div class="palabrasGrandesMain mt-4 mb-5 w-50 d-flex flex-column align-items-center">
-        <h2 class="preparoUnos">PREPARO UNOS</h2>
-        <h2 class="mates">MATES</h2>
-        <h2 class="luego">LUEGO</h2>
-        <h2 class="existo">EXISTO</h2>
-        <div class="mt-4"></div>
-        <div class="separadorIndex mt-5 w-100 d-flex flex-row align-items-center justify-content-center">
-            <hr>
-            <span>x</span>
-            <hr>
+<main class="mainIndex container-fluid p-0">
+    <section class="seccionFondoPantallaMain w-100">
+        <div class="palabrasGrandesMain mt-4 mb-5 w-50 d-flex flex-column align-items-center">
+            <h2 class="preparoUnos">PREPARO UNOS</h2>
+            <h2 class="mates">MATES</h2>
+            <h2 class="luego">LUEGO</h2>
+            <h2 class="existo">EXISTO</h2>
+            <div class="mt-4"></div>
+            <div class="separadorIndex mt-5 w-100 d-flex flex-row align-items-center justify-content-center">
+                <hr>
+                <span>x</span>
+                <hr>
+            </div>
+            <div class="palabrasChicasMain">
+                <p class="yerbaMateOrigen">Yerba Mate Origen</p>
+                <p class="verdaderamentePremium">Verdaderamente Premium</p>
+            </div>
         </div>
-        <div class="palabrasChicasMain">
-            <p class="yerbaMateOrigen">Yerba Mate Origen</p>
-            <p class="verdaderamentePremium">Verdaderamente Premium</p>
+        <div class="botonesFondoPantallaMain w-50 d-flex align-items-end justify-content-center">
+            <div class="divContenedorBotones text-center d-flex flex-column">
+                <a href="#" class="compraOnline">
+                    <span>COMPRÁ ONLINE <img src="{% static 'core/assets/img/carrito-de-compras.png' %}" alt="Carrito negro"></span>
+                </a>
+                <a href="#" class="conoceOrigen">
+                    <span>CONOCÉ ORIGEN <img src="{% static 'core/assets/img/flechas-hacia-abajo.png' %}" alt="Flecha hacia abajo"></span>
+                </a>
+            </div>
         </div>
-    </div>
-    <div class="botonesFondoPantallaMain w-50 d-flex align-items-end justify-content-center">
-        <div class="divContenedorBotones text-center d-flex flex-column">
-            <a href="#" class="compraOnline">
-                <span>COMPRÁ ONLINE <img src="{% static 'core/assets/img/carrito-de-compras.png' %}" alt="Carrito negro"></span>
-            </a>
-            <a href="#" class="conoceOrigen">
-                <span>CONOCÉ ORIGEN <img src="{% static 'core/assets/img/flechas-hacia-abajo.png' %}" alt="Flecha hacia abajo"></span>
-            </a>
-        </div>
-    </div>
-</section>
-<section>
-    <div class="infoOrigen">
-        <div class="bordeado">
-            <img src="{% static 'core/assets/img/mateorigen.jpg' %}" alt="">
-            <div class="parrafosInfo">
-                <h2 class="sobre">SOBRE</h2>
-                <h3 class="origen">ORIGEN</h3>
-                <p class="parrafoInfoOrigen"><strong>ORIGEN</strong> es una yerba mate de <strong>calidad
-                        premium</strong>, desarrollada bajo los más altos <strong>estándares de calidad y
-                        responsabilidad.</strong></p>
-                <div class="separador">
-                    <hr>
-                    <span>x</span>
-                </div>
-                <div class="parrafosBajoSeparador">
-                    <p>Producida y envasada en el sur de la provincia de <strong>Misiones</strong>, zona en la
-                        que se
-                        encuentra <strong>la mejor calidad de materia prima.</strong></p>
-                    <p>De <strong>sabor intenso</strong>, con <strong>tonos ahumados</strong> y un <strong>leve
-                            amargor</strong>, Origen nace inspirada en el
-                        trabajo y la pasión de los antiguos productores de yerba mate.</p>
-                    <p>Nuestro <strong>exclusivo blend</strong> es el resultado de la cuidadosa selección de
-                        materias primas,
-                        el tradicional <strong>secado barbacuá</strong> y el prolongado <strong>estacionamiento
-                            natural.</strong></p>
-                    <p>Es la opción ideal para quienes buscan el <strong>sabor tradicional</strong> y las
-                        <strong>propiedades
-                            energizantes</strong> y <strong>antioxidantes</strong> de la yerba mate.
-                    </p>
-                    <a id="todoTieneSuOrigen" href="https://www.instagram.com/accounts/login/"
-                        target="_blank">#TODOTIENESUORIGEN</a>
+    </section>
+    <section>
+        <div class="infoOrigen">
+            <div class="bordeado">
+                <img src="{% static 'core/assets/img/mateorigen.jpg' %}" alt="">
+                <div class="parrafosInfo">
+                    <h2 class="sobre">SOBRE</h2>
+                    <h3 class="origen">ORIGEN</h3>
+                    <p class="parrafoInfoOrigen"><strong>ORIGEN</strong> es una yerba mate de <strong>calidad
+                            premium</strong>, desarrollada bajo los más altos <strong>estándares de calidad y
+                            responsabilidad.</strong></p>
+                    <div class="separador">
+                        <hr>
+                        <span>x</span>
+                    </div>
+                    <div class="parrafosBajoSeparador">
+                        <p>Producida y envasada en el sur de la provincia de <strong>Misiones</strong>, zona en la
+                            que se
+                            encuentra <strong>la mejor calidad de materia prima.</strong></p>
+                        <p>De <strong>sabor intenso</strong>, con <strong>tonos ahumados</strong> y un <strong>leve
+                                amargor</strong>, Origen nace inspirada en el
+                            trabajo y la pasión de los antiguos productores de yerba mate.</p>
+                        <p>Nuestro <strong>exclusivo blend</strong> es el resultado de la cuidadosa selección de
+                            materias primas,
+                            el tradicional <strong>secado barbacuá</strong> y el prolongado <strong>estacionamiento
+                                natural.</strong></p>
+                        <p>Es la opción ideal para quienes buscan el <strong>sabor tradicional</strong> y las
+                            <strong>propiedades
+                                energizantes</strong> y <strong>antioxidantes</strong> de la yerba mate.
+                        </p>
+                        <a id="todoTieneSuOrigen" href="https://www.instagram.com/accounts/login/"
+                            target="_blank">#TODOTIENESUORIGEN</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="iconos">
-        <div>
-            <img src="{% static 'core/assets/img/Untitled-2_metodo-barbacua.svg' %}" alt="metodoBarbacua">
-            <p>Le aporta el sabor característico.</p>
+        <div class="iconos">
+            <div>
+                <img src="{% static 'core/assets/img/Untitled-2_metodo-barbacua.svg' %}" alt="metodoBarbacua">
+                <p>Le aporta el sabor característico.</p>
+            </div>
+            <div>
+                <img src="{% static 'core/assets/img/Untitled-2_estacionamiento-natural.svg' %}"
+                    alt="estacionamientoNatural">
+                <p>Más de 18 meses.</p>
+            </div>
+            <div>
+                <img src="{% static 'core/assets/img/Untitled-2_proceso-artesanal.svg' %}" alt="procesosArtesanales">
+                <p>Garantiza la calidad del producto.</p>
+            </div>
+            <div>
+                <img src="{% static 'core/assets/img/Untitled-2_100x100-natural.svg' %}" alt="100%natural">
+                <p>Sin conservantes ni aditivos.</p>
+            </div>
         </div>
-        <div>
-            <img src="{% static 'core/assets/img/Untitled-2_estacionamiento-natural.svg' %}"
-                alt="estacionamientoNatural">
-            <p>Más de 18 meses.</p>
-        </div>
-        <div>
-            <img src="{% static 'core/assets/img/Untitled-2_proceso-artesanal.svg' %}" alt="procesosArtesanales">
-            <p>Garantiza la calidad del producto.</p>
-        </div>
-        <div>
-            <img src="{% static 'core/assets/img/Untitled-2_100x100-natural.svg' %}" alt="100%natural">
-            <p>Sin conservantes ni aditivos.</p>
-        </div>
-    </div>
-    <div class="metodoBarbacua">
-        <div class="infoBarbacua">
-            <div class="bordeadoBarbacua">
-                <div class="imagenFondoNextToTexto">
-                    <p>
-                        El método de secado Barbacuá se remonta a más de 400 años de historia, es más, su
-                        nombre significa “tostado” en guaraní.
-                    </p>
-                    <img src="{% static 'core/assets/img/logo-misiones.svg' %}" alt="">
-                </div>
-                <div class="parrafosInfoBarbacua">
-                    <div class="contenedorInfoBarbacua">
-                        <h2 class="metodo">MÉTODO</h2>
-                        <h3 class="barbacua">BARBACUÁ</h3>
-                        <p class="parrafoInfoBarbacua">El método de secado Barbacuá se remonta a <strong>más de
-                                400 años de historia</strong>, es más, su
-                            nombre significa <strong>“tostado”</strong> en guaraní.</p>
-                        <div class="separador">
-                            <hr>
-                            <span>x</span>
-                        </div>
-                        <div class="parrafosBajoSeparador">
-                            <p class="p1">A partir de un <b>secado lento y constante</b> las hojas de yerba mate
-                                se exponen al
-                                calor de la leña durante <b>más de 24 horas.</b></p>
-                            <p class="p2">El resultado de este proceso son producciones <b>limitadas de una
-                                    yerba de altísima
-                                    calidad</b>, con su característico sabor intenso y levemente ahumado.</p>
-                            <p class="p3">En <b>ORIGEN</b> reivindicamos los métodos tradicionales de
-                                producción, creemos en la
-                                sustentabilidad y el trabajo en conjunto con los pequeños productores para
-                                ofrecer productos de alta calidad a nuestros consumidores.</p>
+        <div class="metodoBarbacua">
+            <div class="infoBarbacua">
+                <div class="bordeadoBarbacua">
+                    <div class="imagenFondoNextToTexto">
+                        <p>
+                            El método de secado Barbacuá se remonta a más de 400 años de historia, es más, su
+                            nombre significa “tostado” en guaraní.
+                        </p>
+                        <img src="{% static 'core/assets/img/logo-misiones.svg' %}" alt="">
+                    </div>
+                    <div class="parrafosInfoBarbacua">
+                        <div class="contenedorInfoBarbacua">
+                            <h2 class="metodo">MÉTODO</h2>
+                            <h3 class="barbacua">BARBACUÁ</h3>
+                            <p class="parrafoInfoBarbacua">El método de secado Barbacuá se remonta a <strong>más de
+                                    400 años de historia</strong>, es más, su
+                                nombre significa <strong>“tostado”</strong> en guaraní.</p>
+                            <div class="separador">
+                                <hr>
+                                <span>x</span>
+                            </div>
+                            <div class="parrafosBajoSeparador">
+                                <p class="p1">A partir de un <b>secado lento y constante</b> las hojas de yerba mate
+                                    se exponen al
+                                    calor de la leña durante <b>más de 24 horas.</b></p>
+                                <p class="p2">El resultado de este proceso son producciones <b>limitadas de una
+                                        yerba de altísima
+                                        calidad</b>, con su característico sabor intenso y levemente ahumado.</p>
+                                <p class="p3">En <b>ORIGEN</b> reivindicamos los métodos tradicionales de
+                                    producción, creemos en la
+                                    sustentabilidad y el trabajo en conjunto con los pequeños productores para
+                                    ofrecer productos de alta calidad a nuestros consumidores.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<section class="carruselProductos">
-    <div class="divCarruselProductos justify-content-center pt-5">
-        <div class="bordeadoCarrusel1">
-            <div class="tituloCarrusel d-flex flex-row justify-content-between align-items-center pt-5 pb-3">
-                <div class="divTituloCarrusel">
-                    <h3 class="tituloCarruselProductos">SHOP ORIGEN</h3>
+    </section>
+    <section class="carruselProductos">
+        <div class="divCarruselProductos justify-content-center pt-5">
+            <div class="bordeadoCarrusel1">
+                <div class="tituloCarrusel d-flex flex-row justify-content-between align-items-center pt-5 pb-3">
+                    <div class="divTituloCarrusel">
+                        <h3 class="tituloCarruselProductos">SHOP ORIGEN</h3>
+                    </div>
+                    <div class="imagenFlechaCarrusel">
+                        <img class="imgFlechaDerecha" src="{% static 'core/assets/img/Icon-metro-arrow-right.svg' %}"
+                            alt="flecha hacia la derecha">
+                    </div>
+                    <div class="divAnclaCarrusel">
+                        <a href="#" class="anclaCarruselParrafo">COMPRÁ ONLINE A PRECIO ESPECIAL</a>
+                    </div>
                 </div>
-                <div class="imagenFlechaCarrusel">
-                    <img class="imgFlechaDerecha" src="{% static 'core/assets/img/Icon-metro-arrow-right.svg' %}"
-                        alt="flecha hacia la derecha">
-                </div>
-                <div class="divAnclaCarrusel">
-                    <a href="#" class="anclaCarruselParrafo">COMPRÁ ONLINE A PRECIO ESPECIAL</a>
+            </div>
+            <div class="parrafoYancla mt-4 mb-4 py-3">
+                <div class="bordeadoCarrusel2 d-flex flex-row justify-content-center">
+                    <div style="background-color: black;">
+                        <p class="mt-1">Envíos a AMBA sin cargo a partir de $30.000 -</p>
+                    </div>
+                    <div>
+                        <a class="anclaCodigosPostales" href="#">
+                            <span class="spanAnclaCodigosPostales">VER CÓDIGOS POSTALES APLICABLES.</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="parrafoYancla mt-4 mb-4 py-3">
-            <div class="bordeadoCarrusel2 d-flex flex-row justify-content-center">
-                <div style="background-color: black;">
-                    <p class="mt-1">Envíos a AMBA sin cargo a partir de $30.000 -</p>
-                </div>
-                <div>
-                    <a class="anclaCodigosPostales" href="#">
-                        <span class="spanAnclaCodigosPostales">VER CÓDIGOS POSTALES APLICABLES.</span>
-                    </a>
-                </div>
+        <div class="carrusel container swiper">
+            <div class="card-wrapper">
+                <ul class="card-list swiper-wrapper">
+                    <li class="card-item swiper-slide">
+                        <a href="#" class="card-link">
+                            <img src="{% static 'core/assets/img/Yara-Limon-500ml.jpg' %}" alt="Card Image"
+                                class="card-image">
+                            <hr>
+                            <p class="badge">YARÁ YERBA MATE Y LIMÓN 500 ML</p>
+                            <button class="card-button">
+                                VER PRODUCTO
+                            </button>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="#" class="card-link">
+                            <img src="{% static 'core/assets/img/Origen-Frente-Fondo-Blanco.jpg' %}" alt="Card Image"
+                                class="card-image">
+                            <hr>
+                            <p class="badge yerbaOrigenVerdeNegro">YERBA MATE ORIGEN X 500G</p>
+                            <button class="card-button">
+                                VER PRODUCTO
+                            </button>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="#" class="card-link">
+                            <img src="{% static 'core/assets/img/Yara-Frutos-Rojos-500ml.jpg' %}" alt="Card Image"
+                                class="card-image">
+                            <hr>
+                            <p class="badge YarafrutosRojos">YARÁ YERBA MATE Y FRUTOS ROJOS 500ML</p>
+                            <button class="card-button">
+                                VER PRODUCTO
+                            </button>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="#" class="card-link">
+                            <img src="{% static 'core/assets/img/Yara-Anaa-500ml.jpg' %}" alt="Card Image"
+                                class="card-image">
+                            <hr>
+                            <p class="badge yaraAnana">YARÁ YERBA MATE Y ANANA 500ML</p>
+                            <button class="card-button">
+                                VER PRODUCTO
+                            </button>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="#" class="card-link">
+                            <img src="{% static 'core/assets/img/Grito-Sagrado-Fondo-Blanco.jpg' %}" alt="Card Image"
+                                class="card-image">
+                            <hr>
+                            <p class="badge yerbaGritoSagradoAzul">YERBA MATE GRITO SAGRADO X 500 G - HECHO POR
+                                ORIGEN</p>
+                            <button class="card-button">
+                                VER PRODUCTO
+                            </button>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="#" class="card-link">
+                            <img src="{% static 'core/assets/img/Kits-2-Colores.jpg' %}" alt="Card Image"
+                                class="card-image">
+                            <hr>
+                            <p class="badge kitVerdeNegro">KIT MATERO ORIGEN</p>
+                            <button class="card-button">
+                                VER PRODUCTO
+                            </button>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="#" class="card-link">
+                            <img src="{% static 'core/assets/img/matebombilla.jpg' %}" alt="Card Image" class="card-image">
+                            <hr>
+                            <p class="badge kitBlancoNegro">MATE Y BOMBILLA ORIGEN</p>
+                            <button class="card-button">
+                                VER PRODUCTO
+                            </button>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="#" class="card-link">
+                            <img src="{% static 'core/assets/img/Bombilla-Origen-Caja.jpeg' %}" alt="Card Image"
+                                class="card-image">
+                            <hr>
+                            <p class="badge bombillaCaja">BOMBILLA GRABADA ORIGEN</p>
+                            <button class="card-button">
+                                VER PRODUCTO
+                            </button>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="#" class="card-link">
+                            <img src="{% static 'core/assets/img/mochila-matera-camuflada.jpg' %}" alt="Card Image"
+                                class="card-image">
+                            <hr>
+                            <p class="badge mochilaCamuflada">MOCHILA MATERA</p>
+                            <button class="card-button">
+                                VER PRODUCTO
+                            </button>
+                        </a>
+                    </li>
+                </ul>
+    
+                <div class="swiper-pagination"></div>
+                <div class="swiper-slide-button swiper-button-prev"></div>
+                <div class="swiper-slide-button swiper-button-next"></div>
             </div>
         </div>
-    </div>
-    <div class="carrusel container swiper">
-        <div class="card-wrapper">
-            <ul class="card-list swiper-wrapper">
-                <li class="card-item swiper-slide">
-                    <a href="#" class="card-link">
-                        <img src="{% static 'core/assets/img/Yara-Limon-500ml.jpg' %}" alt="Card Image"
-                            class="card-image">
-                        <hr>
-                        <p class="badge">YARÁ YERBA MATE Y LIMÓN 500 ML</p>
-                        <button class="card-button">
-                            VER PRODUCTO
-                        </button>
-                    </a>
-                </li>
-                <li class="card-item swiper-slide">
-                    <a href="#" class="card-link">
-                        <img src="{% static 'core/assets/img/Origen-Frente-Fondo-Blanco.jpg' %}" alt="Card Image"
-                            class="card-image">
-                        <hr>
-                        <p class="badge yerbaOrigenVerdeNegro">YERBA MATE ORIGEN X 500G</p>
-                        <button class="card-button">
-                            VER PRODUCTO
-                        </button>
-                    </a>
-                </li>
-                <li class="card-item swiper-slide">
-                    <a href="#" class="card-link">
-                        <img src="{% static 'core/assets/img/Yara-Frutos-Rojos-500ml.jpg' %}" alt="Card Image"
-                            class="card-image">
-                        <hr>
-                        <p class="badge YarafrutosRojos">YARÁ YERBA MATE Y FRUTOS ROJOS 500ML</p>
-                        <button class="card-button">
-                            VER PRODUCTO
-                        </button>
-                    </a>
-                </li>
-                <li class="card-item swiper-slide">
-                    <a href="#" class="card-link">
-                        <img src="{% static 'core/assets/img/Yara-Anaa-500ml.jpg' %}" alt="Card Image"
-                            class="card-image">
-                        <hr>
-                        <p class="badge yaraAnana">YARÁ YERBA MATE Y ANANA 500ML</p>
-                        <button class="card-button">
-                            VER PRODUCTO
-                        </button>
-                    </a>
-                </li>
-                <li class="card-item swiper-slide">
-                    <a href="#" class="card-link">
-                        <img src="{% static 'core/assets/img/Grito-Sagrado-Fondo-Blanco.jpg' %}" alt="Card Image"
-                            class="card-image">
-                        <hr>
-                        <p class="badge yerbaGritoSagradoAzul">YERBA MATE GRITO SAGRADO X 500 G - HECHO POR
-                            ORIGEN</p>
-                        <button class="card-button">
-                            VER PRODUCTO
-                        </button>
-                    </a>
-                </li>
-                <li class="card-item swiper-slide">
-                    <a href="#" class="card-link">
-                        <img src="{% static 'core/assets/img/Kits-2-Colores.jpg' %}" alt="Card Image"
-                            class="card-image">
-                        <hr>
-                        <p class="badge kitVerdeNegro">KIT MATERO ORIGEN</p>
-                        <button class="card-button">
-                            VER PRODUCTO
-                        </button>
-                    </a>
-                </li>
-                <li class="card-item swiper-slide">
-                    <a href="#" class="card-link">
-                        <img src="{% static 'core/assets/img/matebombilla.jpg' %}" alt="Card Image" class="card-image">
-                        <hr>
-                        <p class="badge kitBlancoNegro">MATE Y BOMBILLA ORIGEN</p>
-                        <button class="card-button">
-                            VER PRODUCTO
-                        </button>
-                    </a>
-                </li>
-                <li class="card-item swiper-slide">
-                    <a href="#" class="card-link">
-                        <img src="{% static 'core/assets/img/Bombilla-Origen-Caja.jpeg' %}" alt="Card Image"
-                            class="card-image">
-                        <hr>
-                        <p class="badge bombillaCaja">BOMBILLA GRABADA ORIGEN</p>
-                        <button class="card-button">
-                            VER PRODUCTO
-                        </button>
-                    </a>
-                </li>
-                <li class="card-item swiper-slide">
-                    <a href="#" class="card-link">
-                        <img src="{% static 'core/assets/img/mochila-matera-camuflada.jpg' %}" alt="Card Image"
-                            class="card-image">
-                        <hr>
-                        <p class="badge mochilaCamuflada">MOCHILA MATERA</p>
-                        <button class="card-button">
-                            VER PRODUCTO
-                        </button>
-                    </a>
-                </li>
-            </ul>
-
-            <div class="swiper-pagination"></div>
-            <div class="swiper-slide-button swiper-button-prev"></div>
-            <div class="swiper-slide-button swiper-button-next"></div>
-        </div>
-    </div>
-</section>
-<section class="compraEnvioPaga d-flex flex-column align-items-center pt-5">
-    <div class="div1CompraEnvioPaga d-flex justify-content-between">
-        <div class="card1 d-flex flex-row justify-content-around align-items-center">
-            <div class="img">
-                <img src="{% static 'core/assets/img/shield.png' %}" alt="" style="width: 64px;">
-            </div>
-            <div class="texto">
-                <h3><strong>COMPRÁ SEGURO</strong></h3>
-                <p>
-                    Tu dinero está protegido.
-                </p>
-            </div>
-        </div>
-        <div class="card2">
-            <a href="#" class="anclaCard2 d-flex flex-row justify-content-around align-items-center">
+    </section>
+    <section class="compraEnvioPaga d-flex flex-column align-items-center pt-5">
+        <div class="div1CompraEnvioPaga d-flex justify-content-between">
+            <div class="card1 d-flex flex-row justify-content-around align-items-center">
                 <div class="img">
-                    <img src="{% static 'core/assets/img/van.png' %}" alt="" style="width: 64px;">
+                    <img src="{% static 'core/assets/img/shield.png' %}" alt="" style="width: 64px;">
                 </div>
                 <div class="texto">
-                    <h3><strong>ENVÍOS A TODO EL PAÍS</strong></h3>
+                    <h3><strong>COMPRÁ SEGURO</strong></h3>
                     <p>
-                        Consultá el cuadro de envíos.
+                        Tu dinero está protegido.
                     </p>
                 </div>
-            </a>
-        </div>
-        <div class="card3 d-flex flex-row justify-content-around align-items-center">
-            <div class="img">
-                <img src="{% static 'core/assets/img/coins.png' %}" alt="" style="width: 64px;">
             </div>
-            <div class="texto">
-                <h3>PAGÁ CON TARJETA</h3>
-                <p>
-                    o con otros métodos con Mercado Pago
-                </p>
+            <div class="card2">
+                <a href="#" class="anclaCard2 d-flex flex-row justify-content-around align-items-center">
+                    <div class="img">
+                        <img src="{% static 'core/assets/img/van.png' %}" alt="" style="width: 64px;">
+                    </div>
+                    <div class="texto">
+                        <h3><strong>ENVÍOS A TODO EL PAÍS</strong></h3>
+                        <p>
+                            Consultá el cuadro de envíos.
+                        </p>
+                    </div>
+                </a>
             </div>
-        </div>
-    </div>
-    <div class="div2CompraEnvioPaga d-flex flex-row flex-wrap">
-        <div class="card21 d-flex flex-column align-items-center">
-            <div class="h-75 d-flex justify-content-center align-items-center w-75">
-                <div class="d-flex justify-content-center align-items-center">
-                    <h3 class="text-center">¿Querés vender origen?</h3>
+            <div class="card3 d-flex flex-row justify-content-around align-items-center">
+                <div class="img">
+                    <img src="{% static 'core/assets/img/coins.png' %}" alt="" style="width: 64px;">
                 </div>
-            </div>
-            <a href="#" class="divAnclaImagen1 mb-4 py-4 w-75 h-25 d-flex align-items-center justify-content-center">
-                Envíanos tus datos
-                <img class="ps-2" src="{% static 'core/assets/img/edit.png' %}" alt="edit">
-            </a>
-        </div>
-        <div class="card22 d-flex flex-column align-items-center">
-            <div class="h-75 d-flex justify-content-center align-items-center w-75">
-                <div class="d-flex justify-content-center align-items-center">
-                    <h3 class="text-center">Zona Mayoristas</h3>
-                </div>
-            </div>
-            <div class="divAnclaImagen2 mb-4 py-4 w-75 h-25 d-flex align-items-center justify-content-center">
-                <a href="javascript:void(0)" style="color: #ffffff89;">Próximamente</a>
-                <img class="ps-2" src="{% static 'core/assets/img/hour-glass.png' %}" alt="Reloj de arena">
-            </div>
-        </div>
-        <div class="card23 d-flex flex-column align-items-center">
-            <div class="h-75 d-flex justify-content-center align-items-center w-75">
-                <div class="d-flex justify-content-center align-items-center">
-                    <h3 class="text-center">¿dónde comprar?</h3>
-                </div>
-            </div>
-            <a href="#" class="divAnclaImagen3 mb-4 py-4 w-75 h-25 d-flex align-items-center justify-content-center">
-                ver mapa
-                <img class="ps-2" src="{% static 'core/assets/img/place.png' %}" alt="mapa">
-            </a>
-        </div>
-    </div>
-</section>
-<section class="Nuevo d-flex flex-column align-items-center justify-content-center pt-3 mb-5">
-    <div class="divImagenNuevo d-flex justify-content-center">
-        <img src="{% static 'core/assets/img/nuevo-sombra.svg' %}" alt="NUEVO" style="width: 120px;">
-    </div>
-    <div class="divPadre d-flex flex-row">
-        <div class="divTextos">
-            <div class="divHijoTextos ps-5">
-                <div class="tituloYara">
-                    <h4 class="fs-1">DESCUBRÍ</h4>
-                    <span class="spanYara">YARÁ</span>
-                </div>
-                <p class="p1 mt-3"><strong>YARÁ</strong> es una bebida desarrollada a base de <strong>Yerba Mate
-                        Origen.</strong></p>
-                <p class="p2 mt-2">Al estar producida a partir de una infusión real de yerba mate, conserva las
-                    características nutricionales y aportes saludables del mate tradicional.</p>
-                <ul class="mt-2">
-                    <li>Fuente de vitamina B12</li>
-                    <li>Estimulante Natural.</li>
-                    <li>Sin Azúcar</li>
-                    <li>Sin TACC</li>
-                </ul>
-                <div class="anclaCompraYara">
-                    <a class="anclaComprarYara" href="#">
-                        COMPRÁ YARÁ
-                        <img id="imgCarritoYara" src="{% static 'core/assets/img/carritoComprasBlanco.png' %}"
-                            alt="Carrito de compras blanco" style="width: 24px;">
-                    </a>
-                </div>
-                <div class="separadorYara mt-3">
-                    <hr>
-                    <span>x</span>
-                </div>
-                <div class="hashSomosYara">
-                    <a href="#">
-                        <p>#somosyara</p>
-                    </a>
+                <div class="texto">
+                    <h3>PAGÁ CON TARJETA</h3>
+                    <p>
+                        o con otros métodos con Mercado Pago
+                    </p>
                 </div>
             </div>
         </div>
-        <div class="divImagen">
-            <img src="{% static 'core/assets/img/Yara-Combo-Sabores-500ml.png' %}" alt="Combo Yara">
+        <div class="div2CompraEnvioPaga d-flex flex-row flex-wrap">
+            <div class="card21 d-flex flex-column align-items-center">
+                <div class="h-75 d-flex justify-content-center align-items-center w-75">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <h3 class="text-center">¿Querés vender origen?</h3>
+                    </div>
+                </div>
+                <a href="#" class="divAnclaImagen1 mb-4 py-4 w-75 h-25 d-flex align-items-center justify-content-center">
+                    Envíanos tus datos
+                    <img class="ps-2" src="{% static 'core/assets/img/edit.png' %}" alt="edit">
+                </a>
+            </div>
+            <div class="card22 d-flex flex-column align-items-center">
+                <div class="h-75 d-flex justify-content-center align-items-center w-75">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <h3 class="text-center">Zona Mayoristas</h3>
+                    </div>
+                </div>
+                <div class="divAnclaImagen2 mb-4 py-4 w-75 h-25 d-flex align-items-center justify-content-center">
+                    <a href="javascript:void(0)" style="color: #ffffff89;">Próximamente</a>
+                    <img class="ps-2" src="{% static 'core/assets/img/hour-glass.png' %}" alt="Reloj de arena">
+                </div>
+            </div>
+            <div class="card23 d-flex flex-column align-items-center">
+                <div class="h-75 d-flex justify-content-center align-items-center w-75">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <h3 class="text-center">¿dónde comprar?</h3>
+                    </div>
+                </div>
+                <a href="#" class="divAnclaImagen3 mb-4 py-4 w-75 h-25 d-flex align-items-center justify-content-center">
+                    ver mapa
+                    <img class="ps-2" src="{% static 'core/assets/img/place.png' %}" alt="mapa">
+                </a>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+    <section class="Nuevo d-flex flex-column align-items-center justify-content-center pt-3 mb-5">
+        <div class="divImagenNuevo d-flex justify-content-center">
+            <img src="{% static 'core/assets/img/nuevo-sombra.svg' %}" alt="NUEVO" style="width: 120px;">
+        </div>
+        <div class="divPadre d-flex flex-row">
+            <div class="divTextos">
+                <div class="divHijoTextos ps-5">
+                    <div class="tituloYara">
+                        <h4 class="fs-1">DESCUBRÍ</h4>
+                        <span class="spanYara">YARÁ</span>
+                    </div>
+                    <p class="p1 mt-3"><strong>YARÁ</strong> es una bebida desarrollada a base de <strong>Yerba Mate
+                            Origen.</strong></p>
+                    <p class="p2 mt-2">Al estar producida a partir de una infusión real de yerba mate, conserva las
+                        características nutricionales y aportes saludables del mate tradicional.</p>
+                    <ul class="mt-2">
+                        <li>Fuente de vitamina B12</li>
+                        <li>Estimulante Natural.</li>
+                        <li>Sin Azúcar</li>
+                        <li>Sin TACC</li>
+                    </ul>
+                    <div class="anclaCompraYara">
+                        <a class="anclaComprarYara" href="#">
+                            COMPRÁ YARÁ
+                            <img id="imgCarritoYara" src="{% static 'core/assets/img/carritoComprasBlanco.png' %}"
+                                alt="Carrito de compras blanco" style="width: 24px;">
+                        </a>
+                    </div>
+                    <div class="separadorYara mt-3">
+                        <hr>
+                        <span>x</span>
+                    </div>
+                    <div class="hashSomosYara">
+                        <a href="#">
+                            <p>#somosyara</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="divImagen">
+                <img src="{% static 'core/assets/img/Yara-Combo-Sabores-500ml.png' %}" alt="Combo Yara">
+            </div>
+        </div>
+    </section>
+</main>
 
 {% endblock content %}

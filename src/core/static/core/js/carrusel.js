@@ -36,19 +36,22 @@ new Swiper('.card-wrapper', {
   }
 });
 
+const IMG_PATH = "/static/core/assets/img/";
+const IMG_CARRITO_MARRON = `${IMG_PATH}carritoComprasMarron.png`;
+const IMG_CARRITO_BLANCO = `${IMG_PATH}carritoComprasBlanco.png`;
 
 const anclaCompraYara = document.querySelector('.anclaComprarYara');
 
 anclaCompraYara.addEventListener('mouseover',()=>{
   document.querySelector('.anclaComprarYara').innerHTML=`
   COMPRÁ YARÁ
-  <img id="imgCarritoYara" src="./assets/img/carritoComprasMarron.png" alt="" style="width: 24px;">
+  <img id="imgCarritoYara" src="${IMG_CARRITO_MARRON}" alt="" style="width: 24px;">
 `
 });
 
 anclaCompraYara.addEventListener('mouseout',()=>{
   document.querySelector('.anclaComprarYara').innerHTML = `
     COMPRÁ YARÁ
-    <img id="imgCarritoYara" src="./assets/img/carritoComprasBlanco.png" alt="" style="width: 24px;">
+    <img id="imgCarritoYara" src="${IMG_CARRITO_BLANCO}" alt="" style="width: 24px;">
   `
 })

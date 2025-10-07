@@ -13,10 +13,19 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-center fw-bold">
                         <li class="nav-item">
-                            <a class="home nav-link botonesNav active" href="./index.html">HOME</a>
+                            {% if active_page == 'home' %}
+                                
+                            <a class="home nav-link botonesNav active" href="{% url 'core:index' %}">HOME</a>
+                            {% else %}
+                            <a class="home nav-link botonesNav" href="{% url 'core:index' %}">HOME</a>
+                            {% endif %}
                         </li>
                         <li class="nav-item">
-                            <a class="productos nav-link botonesNav" href="./pages/shop.html">SHOP</a>
+                            {% if active_page == 'shop' %}
+                            <a class="productos nav-link botonesNav active" href="{% url 'core:shop' %}">SHOP</a>
+                            {% else %}
+                            <a class="productos nav-link botonesNav" href="{% url 'core:shop' %}">SHOP</a>
+                            {% endif %}
                         </li>
                         <li class="nav-item">
                             <a class="sucursales nav-link botonesNav" href="#">DÓNDE COMPRAR</a>

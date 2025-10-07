@@ -43,11 +43,19 @@
                 <div class="divHijo2">
                     <ul class="anclasFooter d-flex justify-content-evenly">
                         <li>
-                            <a class="nav-link active" href="#">HOME</a>
+                            {% if active_page == 'home' %}
+                            <a class="nav-link active" href="{% url 'core:index' %}">HOME</a>
+                            {% else %}
+                            <a class="nav-link" href="{% url 'core:index' %}">HOME</a>
+                            {% endif %}
                         </li>
                         <hr>
                         <li>
-                            <a class="nav-link" href="#">SHOP</a>
+                            {% if active_page == 'shop' %}
+                            <a class="nav-link active" href="{% url 'core:shop' %}">SHOP</a>
+                            {% else %}
+                            <a class="nav-link" href="{% url 'core:shop' %}">SHOP</a>
+                            {% endif %}
                         </li>
                         <hr>
                         <li>
