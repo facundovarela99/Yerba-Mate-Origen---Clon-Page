@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
@@ -954,6 +955,110 @@ header {
 }
 
 /* INDEX INDEX INDEX */
+.Carrusel {
+  position: relative;
+  overflow: hidden;
+}
+.Carrusel .carousel-inner {
+  height: 375px;
+}
+.Carrusel .carousel-item {
+  height: 100%;
+}
+.Carrusel .carousel-item .titulosCarrusel1 .parrafo1 p {
+  font-size: 2rem;
+}
+.Carrusel .carousel-item .titulosCarrusel1 .titulo1 {
+  padding: 15px 40px;
+  border: 1.5px solid #A37F41;
+}
+.Carrusel .carousel-item .titulosCarrusel1 .titulo1 h1 {
+  font-size: 4rem;
+  letter-spacing: 2.5px;
+}
+.Carrusel .carousel-item .titulosCarrusel1 .divAncla1 {
+  font-size: 1.6rem;
+}
+.Carrusel .carousel-item .titulosCarrusel1 .divAncla1 a {
+  text-decoration: none;
+  color: white;
+}
+
+.img1 {
+  background-image: linear-gradient(to right top, rgba(29, 29, 29, 0.5647058824), rgba(29, 29, 29, 0.5647058824)), url(../assets/img/banner-mochilas-1024x446.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.img2 {
+  background-image: linear-gradient(to right top, rgba(29, 29, 29, 0.5647058824), rgba(29, 29, 29, 0.5647058824)), url(../assets/img/banner_sorteo-1024x446.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.Carrusel img {
+  z-index: 3;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+@media (max-width: 768px) {
+  .Carrusel .carousel-inner {
+    height: 300px;
+  }
+}
+.carousel-control-prev,
+.carousel-control-next {
+  top: 50% !important;
+  bottom: 50% !important;
+  width: 40px !important;
+  height: 40px !important;
+  padding: 0.5rem !important;
+  background-color: rgba(26, 26, 26, 0.3176470588) !important; /* Fondo semitransparente */
+  transition: background-color 0s ease !important;
+}
+
+.carousel-control-prev {
+  margin-left: 20px;
+}
+
+.carousel-control-next {
+  margin-right: 20px;
+}
+
+/* Cambia el color del fondo al pasar el mouse */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: #1a1a1a !important;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon {
+  background-image: url(../assets/img/left-arrow-brown.png) !important;
+}
+
+.carousel-control-next:hover .carousel-control-next-icon {
+  background-image: url(../assets/img/right-arrow-brown.png) !important;
+}
+
+/* Ajusta el tamaño de los íconos */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 2rem;
+  height: 2rem;
+  background-size: 100% 100%;
+}
+
+.carousel-control-next-icon {
+  background-image: url(../assets/img/right-arrow-white.png) !important;
+}
+
+.carousel-control-prev-icon {
+  background-image: url(../assets/img/left-arrow-white.png) !important;
+}
+
 * {
   font-family: "Fjalla One";
   box-sizing: border-box;
