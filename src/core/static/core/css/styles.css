@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
@@ -965,6 +964,11 @@ header {
 .Carrusel .carousel-item {
   height: 100%;
 }
+.Carrusel .carousel-item .titulosCarrusel1 {
+  opacity: 0;
+  transform: translateX(15px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
 .Carrusel .carousel-item .titulosCarrusel1 .parrafo1 p {
   font-size: 2rem;
 }
@@ -976,12 +980,43 @@ header {
   font-size: 4rem;
   letter-spacing: 2.5px;
 }
-.Carrusel .carousel-item .titulosCarrusel1 .divAncla1 {
-  font-size: 1.6rem;
+.Carrusel .carousel-item .titulosCarrusel2 {
+  opacity: 0;
+  transform: translateX(15px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
-.Carrusel .carousel-item .titulosCarrusel1 .divAncla1 a {
+.Carrusel .carousel-item .titulosCarrusel2 .parrafo2 p {
+  font-size: 2rem;
+}
+.Carrusel .carousel-item .titulosCarrusel2 .titulo2 {
+  padding: 15px 40px;
+  border: 1.5px solid #A37F41;
+}
+.Carrusel .carousel-item .titulosCarrusel2 .titulo2 h1 {
+  font-size: 4rem;
+  letter-spacing: 2.5px;
+}
+.Carrusel .carousel-item .Ancla1, .Carrusel .carousel-item .Ancla2 {
+  font-size: 1.6rem;
+  background-color: #A37F41;
+  text-decoration: none;
+  border: 1.5px solid transparent;
+}
+.Carrusel .carousel-item .Ancla1 span, .Carrusel .carousel-item .Ancla2 span {
+  font-size: 1.4rem;
   text-decoration: none;
   color: white;
+}
+.Carrusel .carousel-item .Ancla1:hover, .Carrusel .carousel-item .Ancla2:hover {
+  background-color: #5e4a27;
+  box-shadow: 5px 5px 0px #a37f41;
+  border: 1.5px solid #a37f41;
+}
+
+.carousel-item.active .titulosCarrusel1,
+.carousel-item.active .titulosCarrusel2 {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .img1 {
@@ -1017,7 +1052,7 @@ header {
   width: 40px !important;
   height: 40px !important;
   padding: 0.5rem !important;
-  background-color: rgba(26, 26, 26, 0.3176470588) !important; /* Fondo semitransparente */
+  background-color: rgba(26, 26, 26, 0.3176470588) !important;
   transition: background-color 0s ease !important;
 }
 
@@ -1029,7 +1064,6 @@ header {
   margin-right: 20px;
 }
 
-/* Cambia el color del fondo al pasar el mouse */
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
   background-color: #1a1a1a !important;
@@ -1043,7 +1077,6 @@ header {
   background-image: url(../assets/img/right-arrow-brown.png) !important;
 }
 
-/* Ajusta el tamaño de los íconos */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   width: 2rem;
