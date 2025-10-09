@@ -609,6 +609,10 @@ header {
   line-height: 1em;
   letter-spacing: 2px;
   color: white;
+  text-transform: uppercase;
+}
+.parrafoYancla .bordeadoCarrusel2 a {
+  text-decoration: none;
 }
 
 .anclaCodigosPostales {
@@ -996,18 +1000,21 @@ header {
   font-size: 4rem;
   letter-spacing: 2.5px;
 }
-.Carrusel .carousel-item .Ancla1, .Carrusel .carousel-item .Ancla2 {
+.Carrusel .carousel-item .Ancla1,
+.Carrusel .carousel-item .Ancla2 {
   font-size: 1.6rem;
   background-color: #A37F41;
   text-decoration: none;
   border: 1.5px solid transparent;
 }
-.Carrusel .carousel-item .Ancla1 span, .Carrusel .carousel-item .Ancla2 span {
+.Carrusel .carousel-item .Ancla1 span,
+.Carrusel .carousel-item .Ancla2 span {
   font-size: 1.4rem;
   text-decoration: none;
   color: white;
 }
-.Carrusel .carousel-item .Ancla1:hover, .Carrusel .carousel-item .Ancla2:hover {
+.Carrusel .carousel-item .Ancla1:hover,
+.Carrusel .carousel-item .Ancla2:hover {
   background-color: #5e4a27;
   box-shadow: 5px 5px 0px #a37f41;
   border: 1.5px solid #a37f41;
@@ -1090,6 +1097,22 @@ header {
 
 .carousel-control-prev-icon {
   background-image: url(../assets/img/left-arrow-white.png) !important;
+}
+
+.divProductosDestacados {
+  width: 90%;
+}
+.divProductosDestacados .bordeadoCarrusel p {
+  margin-bottom: 0;
+  font-family: "The Foregen", Sans-serif;
+  font-weight: normal;
+  line-height: 1em;
+  letter-spacing: 2px;
+  color: white;
+  text-transform: uppercase;
+}
+.divProductosDestacados .bordeadoCarrusel a {
+  text-decoration: none;
 }
 
 * {

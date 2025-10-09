@@ -1,60 +1,71 @@
 .Carrusel {
   position: relative;
   overflow: hidden;
-  
+
   .carousel-inner {
-    height: 375px; 
+    height: 375px;
   }
-  .carousel-item{
+
+  .carousel-item {
     height: 100%;
 
-    .titulosCarrusel1{
-        opacity: 0;
-        transform: translateX(15px);
-        transition: opacity 0.4s ease, transform 0.4s ease;
-      .parrafo1 p{
-          font-size: 2rem;
-      }
-      .titulo1{
-        padding: 15px 40px;
-        border: 1.5px solid #A37F41;
-        h1{
-          font-size: 4rem;
-          letter-spacing: 2.5px;
-        }
-      }
+    .titulosCarrusel1 {
+      opacity: 0;
+      transform: translateX(15px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
 
-    }
-
-    .titulosCarrusel2{
-        opacity: 0;
-        transform: translateX(15px);
-        transition: opacity 0.4s ease, transform 0.4s ease;
-      .parrafo2 p{
+      .parrafo1 p {
         font-size: 2rem;
       }
-      .titulo2{
+
+      .titulo1 {
         padding: 15px 40px;
         border: 1.5px solid #A37F41;
-        h1{
+
+        h1 {
+          font-size: 4rem;
+          letter-spacing: 2.5px;
+        }
+      }
+
+    }
+
+    .titulosCarrusel2 {
+      opacity: 0;
+      transform: translateX(15px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+
+      .parrafo2 p {
+        font-size: 2rem;
+      }
+
+      .titulo2 {
+        padding: 15px 40px;
+        border: 1.5px solid #A37F41;
+
+        h1 {
           font-size: 4rem;
           letter-spacing: 2.5px;
         }
       }
     }
 
-    .Ancla1,.Ancla2{
+    .Ancla1,
+    .Ancla2 {
       font-size: 1.6rem;
       background-color: #A37F41;
       text-decoration: none;
       border: 1.5px solid transparent;
-      span{
+
+      span {
         font-size: 1.4rem;
         text-decoration: none;
         color: white;
       }
     }
-    .Ancla1:hover,.Ancla2:hover{
+
+    .Ancla1:hover,
+    .Ancla2:hover {
       background-color: #5e4a27;
       box-shadow: 5px 5px 0px #a37f41;
       border: 1.5px solid #a37f41;
@@ -87,14 +98,14 @@
 // }
 
 
-.img1{
+.img1 {
   background-image: linear-gradient(to right top, #1d1d1d90, #1d1d1d90), url(../assets/img/banner-mochilas-1024x446.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.img2{
+.img2 {
   background-image: linear-gradient(to right top, #1d1d1d90, #1d1d1d90), url(../assets/img/banner_sorteo-1024x446.jpg);
   background-size: cover;
   background-position: center;
@@ -125,11 +136,11 @@
   transition: background-color 0s ease !important;
 }
 
-.carousel-control-prev{
+.carousel-control-prev {
   margin-left: 20px;
 }
 
-.carousel-control-next{
+.carousel-control-next {
   margin-right: 20px;
 }
 
@@ -138,16 +149,16 @@
   background-color: #1a1a1a !important;
 }
 
-.carousel-control-prev:hover{
-  .carousel-control-prev-icon{
-  background-image: url(../assets/img/left-arrow-brown.png) !important;
-}
+.carousel-control-prev:hover {
+  .carousel-control-prev-icon {
+    background-image: url(../assets/img/left-arrow-brown.png) !important;
+  }
 }
 
-.carousel-control-next:hover{
-  .carousel-control-next-icon{
-  background-image: url(../assets/img/right-arrow-brown.png) !important;
-}
+.carousel-control-next:hover {
+  .carousel-control-next-icon {
+    background-image: url(../assets/img/right-arrow-brown.png) !important;
+  }
 }
 
 .carousel-control-prev-icon,
@@ -157,10 +168,30 @@
   background-size: 100% 100%;
 }
 
-.carousel-control-next-icon{
+.carousel-control-next-icon {
   background-image: url(../assets/img/right-arrow-white.png) !important;
 }
 
-.carousel-control-prev-icon{
+.carousel-control-prev-icon {
   background-image: url(../assets/img/left-arrow-white.png) !important;
+}
+
+.divProductosDestacados {
+  width: 90%;
+
+  .bordeadoCarrusel {
+    p {
+      margin-bottom: 0;
+      font-family: "The Foregen", Sans-serif;
+      font-weight: normal;
+      line-height: 1em;
+      letter-spacing: 2px;
+      color: white;
+      text-transform: uppercase;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
 }
