@@ -10,11 +10,11 @@ if (document.querySelector('.tarjetasProductos')){
 
         productos.forEach(prod => {
             const div = document.createElement('div');
-            div.classList.add('producto');
+            div.classList.add(`producto${prod.id}`);
             div.innerHTML = `
                 <h2>${prod.nombre}</h2>
-                <p>${prod.descripcion}</p>
                 <p><strong>$${prod.precio}</strong></p>
+                <img src="${prod.imagen_url}" alt="${prod.nombre}" style="width: 32px"/>
             `;
             contenedor.appendChild(div);
         });

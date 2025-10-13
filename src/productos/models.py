@@ -6,7 +6,7 @@ class Producto(models.Model):
     descripcion = models.TextField(blank=True, null=True, verbose_name='Descripcion')
     precio = models.DecimalField(max_digits=10, decimal_places=2)
     stock = models.PositiveIntegerField()
-    imagen = models.ImageField(upload_to="profile_images", null=True, blank=True)
+    imagen = models.ImageField(upload_to="products_images", null=True, blank=True)
 
     def __str__(self):
         base = f'{self.nombre} - ${self.precio}'
