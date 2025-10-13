@@ -8,13 +8,21 @@ if (document.querySelector('.tarjetasProductos')){
 
         const productos = await res.json();
 
+        function stock(value){
+            if (value<=0){
+                return 'SIN STOCK';
+            } return '';
+        }
+
         productos.forEach(prod => {
             const div = document.createElement('div');
             div.classList.add(`producto${prod.id}`);
             div.innerHTML = `
+                <img src="${prod.imagen_url}" alt="${prod.nombre}"/>
                 <h2>${prod.nombre}</h2>
                 <p><strong>$${prod.precio}</strong></p>
-                <img src="${prod.imagen_url}" alt="${prod.nombre}" style="width: 32px"/>
+                <button type="button">VER PRODUCTO</button>
+                <p>${stock(prod.stock)}</p>
             `;
             contenedor.appendChild(div);
         });

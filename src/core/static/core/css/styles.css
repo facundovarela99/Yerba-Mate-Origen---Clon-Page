@@ -1114,6 +1114,30 @@ header {
 .divProductosDestacados .bordeadoCarrusel a {
   text-decoration: none;
 }
+.divProductosDestacados .producto1,
+.divProductosDestacados .producto2,
+.divProductosDestacados .producto3,
+.divProductosDestacados .producto4,
+.divProductosDestacados .producto5,
+.divProductosDestacados .producto6,
+.divProductosDestacados .producto7,
+.divProductosDestacados .producto8,
+.divProductosDestacados .producto9 {
+  width: 25%;
+  margin: 90px 50px;
+}
+.divProductosDestacados .producto1 img,
+.divProductosDestacados .producto2 img,
+.divProductosDestacados .producto3 img,
+.divProductosDestacados .producto4 img,
+.divProductosDestacados .producto5 img,
+.divProductosDestacados .producto6 img,
+.divProductosDestacados .producto7 img,
+.divProductosDestacados .producto8 img,
+.divProductosDestacados .producto9 img {
+  width: 75%;
+  height: 75%;
+}
 
 * {
   font-family: "Fjalla One";
