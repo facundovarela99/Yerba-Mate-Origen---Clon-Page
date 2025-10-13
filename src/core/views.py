@@ -6,5 +6,3 @@ from django.http import HttpResponse
 def index(request):
     return render(request, 'core/main_templates/index.html', { 'active_page': 'home' })
 
-def shop(request):
-    return render (request, 'core/main_templates/shop.html', { 'active_page': 'shop' })
