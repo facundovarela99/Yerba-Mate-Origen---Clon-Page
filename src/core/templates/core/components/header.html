@@ -49,9 +49,9 @@
                         </li>
                         <li class="nav-item">
                             {% if active_page == 'loginCrearCuenta' %}
-                            <a class="acercaDe nav-link botonesNav active" href="#">INGRESAR/CREAR CUENTA</a>
+                            <a class="acercaDe nav-link botonesNav active" href="{% url 'usuarios:mi-cuenta' %}">INGRESAR/CREAR CUENTA</a>
                             {% else %}
-                            <a class="acercaDe nav-link botonesNav" href="#">INGRESAR/CREAR CUENTA</a>
+                            <a class="acercaDe nav-link botonesNav" href="{% url 'usuarios:mi-cuenta' %}">INGRESAR/CREAR CUENTA</a>
                             {% endif %}
                         </li>
                         <li class="nav-item dropdown">
