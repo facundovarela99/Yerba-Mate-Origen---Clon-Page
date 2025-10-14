@@ -59,7 +59,11 @@
                         </li>
                         <hr>
                         <li>
-                            <a class="nav-link" href="#">DÓNDE COMPRAR</a>
+                            {% if active_page == 'dondeComprar' %}
+                            <a class="nav-link active" href="{% url 'core:dondeComprar' %}">DÓNDE COMPRAR</a>
+                            {% else %}
+                            <a class="nav-link" href="{% url 'core:dondeComprar' %}">DÓNDE COMPRAR</a>
+                            {% endif %}
                         </li>
                         <hr>
                         <li>
