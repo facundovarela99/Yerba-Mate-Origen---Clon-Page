@@ -173,6 +173,31 @@ header {
   margin-bottom: 0 !important;
 }
 
+@media screen and (max-width: 600px) {
+  .divHijo1 {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 0 !important;
+  }
+  .divHijo1 .divContactos, .divHijo1 .logoCirculo, .divHijo1 .redes {
+    padding: 20px 0;
+  }
+  .fa-instagram, .fa-facebook {
+    font-size: 2rem !important;
+  }
+  .anclasFooter {
+    padding: 0 !important;
+    flex-wrap: wrap;
+  }
+  .anclasFooter hr {
+    width: 2px;
+    height: 20px;
+    margin: 0 !important;
+    transform: rotate(0);
+  }
+}
 .mainIndex {
   background-image: linear-gradient(to right top, rgba(0, 0, 0, 0.3137254902), rgba(0, 0, 0, 0.3137254902)), url(../assets/img/home-bg-3.jpg);
   background-size: 100%;
@@ -1123,8 +1148,10 @@ header {
 .divProductosDestacados .producto7,
 .divProductosDestacados .producto8,
 .divProductosDestacados .producto9 {
-  width: 25%;
+  width: -moz-fit-content;
+  width: fit-content;
   margin: 90px 50px;
+  border: 1px solid #1a1a1a;
 }
 .divProductosDestacados .producto1 img,
 .divProductosDestacados .producto2 img,
@@ -1135,8 +1162,8 @@ header {
 .divProductosDestacados .producto7 img,
 .divProductosDestacados .producto8 img,
 .divProductosDestacados .producto9 img {
-  width: 75%;
-  height: 75%;
+  width: 275px;
+  height: 275px;
 }
 
 * {

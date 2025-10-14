@@ -107,3 +107,31 @@
 .Parrafo p {
     margin-bottom: 0 !important;
 }
+
+@media screen and (max-width: 600px) {
+    .divHijo1{
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        padding: 0 !important;
+        .divContactos,.logoCirculo,.redes{
+            padding: 20px 0;
+        }
+    }
+
+    .fa-instagram,.fa-facebook{
+        font-size: 2rem !important;
+    }
+
+    .anclasFooter{
+        padding: 0 !important;
+        flex-wrap: wrap;
+        hr{
+            width: 2px;
+            height: 20px;
+            margin: 0 !important;
+            transform: rotate(0);
+        }
+    }    
+}

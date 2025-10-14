@@ -79,25 +79,6 @@
   transform: translateX(0);
 }
 
-
-// .carousel-item.active:first-child .titulosCarrusel1,
-// .carousel-item.active:first-child .titulosCarrusel2 {
-//   animation: fadeInStart 1s ease forwards;
-//   animation-delay: 0.3s; 
-// }
-
-// @keyframes fadeInStart {
-//   0% {
-//     opacity: 0;
-//     transform: translateX(15px);
-//   }
-//   100% {
-//     opacity: 1;
-//     transform: translateX(0);
-//   }
-// }
-
-
 .img1 {
   background-image: linear-gradient(to right top, #1d1d1d90, #1d1d1d90), url(../assets/img/banner-mochilas-1024x446.jpg);
   background-size: cover;
@@ -194,6 +175,7 @@
       text-decoration: none;
     }
   }
+
   .producto1,
   .producto2,
   .producto3,
@@ -203,11 +185,13 @@
   .producto7,
   .producto8,
   .producto9{
-    width: 25%;
+    width: fit-content;
     margin: 90px 50px;
+    border: 1px solid #1a1a1a;
     img{
-      width: 75%;
-      height: 75%;
+      width: 275px;
+      height: 275px;
     }
   }
 }
+

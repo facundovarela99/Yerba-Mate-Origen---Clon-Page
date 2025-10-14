@@ -3,7 +3,7 @@ if (document.querySelector('.tarjetasProductos')){
     const contenedor = document.querySelector('.tarjetasProductos');
 
     try {
-        const res = await fetch('/productos/api/productos/'); // 👈 URL completa
+        const res = await fetch('/productos/api/productos/');
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
         const productos = await res.json();
@@ -16,12 +16,12 @@ if (document.querySelector('.tarjetasProductos')){
 
         productos.forEach(prod => {
             const div = document.createElement('div');
-            div.classList.add(`producto${prod.id}`);
+            div.className = `producto${prod.id}`
             div.innerHTML = `
-                <img src="${prod.imagen_url}" alt="${prod.nombre}"/>
-                <h2>${prod.nombre}</h2>
-                <p><strong>$${prod.precio}</strong></p>
-                <button type="button">VER PRODUCTO</button>
+                <img class="imgProducto" src="${prod.imagen_url}" alt="${prod.nombre}"/>
+                <h2 class="nombreProducto">${prod.nombre}</h2>
+                <p class="precioProducto"><strong>$${prod.precio}</strong></p>
+                <button id="botonProducto${prod.id}" type="button">VER PRODUCTO</button>
                 <p>${stock(prod.stock)}</p>
             `;
             contenedor.appendChild(div);
