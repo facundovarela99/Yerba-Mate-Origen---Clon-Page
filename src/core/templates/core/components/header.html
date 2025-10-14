@@ -27,16 +27,32 @@
                             {% endif %}
                         </li>
                         <li class="nav-item">
-                            <a class="sucursales nav-link botonesNav" href="#">DÓNDE COMPRAR</a>
+                            {% if active_page == 'dondeComprar' %}
+                            <a class="sucursales nav-link botonesNav active" href="{% url 'core:dondeComprar' %}">DÓNDE COMPRAR</a>
+                            {% else %}
+                            <a class="sucursales nav-link botonesNav" href="{% url 'core:dondeComprar' %}">DÓNDE COMPRAR</a>
+                            {% endif %}
                         </li>
                         <li class="nav-item">
+                            {% if active_page == 'vendeOrigen' %}
+                            <a class="acercaDe nav-link botonesNav active" href="#">VENDÉ ORIGEN</a>
+                            {% else %}    
                             <a class="acercaDe nav-link botonesNav" href="#">VENDÉ ORIGEN</a>
+                            {% endif %}
                         </li>
                         <li class="nav-item">
+                            {% if active_page == 'contacto' %}
+                            <a class="contacto nav-link botonesNav active" href="#">CONTACTO</a>
+                            {% else %}
                             <a class="contacto nav-link botonesNav" href="#">CONTACTO</a>
+                            {% endif %}
                         </li>
                         <li class="nav-item">
+                            {% if active_page == 'loginCrearCuenta' %}
+                            <a class="acercaDe nav-link botonesNav active" href="#">INGRESAR/CREAR CUENTA</a>
+                            {% else %}
                             <a class="acercaDe nav-link botonesNav" href="#">INGRESAR/CREAR CUENTA</a>
+                            {% endif %}
                         </li>
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link position-relative dropdown-toggle" id="carritoDropdown"
