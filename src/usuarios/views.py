@@ -11,7 +11,7 @@ from django.contrib.auth.models import User
 # Create your views here.
 class CustomRegisterView(CreateView):
     form_class = CustomUserCreationForm
-    template_name = 'usuarios/miCuenta.html'
+    template_name = 'usuarios/registro.html'
     next_page = reverse_lazy('usuarios:miCuenta')
 
     def form_valid(self, form: CustomUserCreationForm) -> HttpResponse:
