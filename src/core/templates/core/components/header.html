@@ -74,7 +74,10 @@
                                     <button id="btnVaciarCarrito" class="btn btn-outline-danger btn-sm">Vaciar</button>
                                     <button id="sidebarButton" class="btn btn-primary btn-sm" type="button"
                                         data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-                                        aria-controls="offcanvasRight">Ver carrito</button>
+                                        aria-controls="offcanvasRight"><a href="{% url 'AppCarrito:carrito' %}" style="text-decoration: none; padding: 0;">Ver carrito</a></button>
+                                    <button id="sidebarButton" class="btn btn-success btn-sm" type="button"
+                                        data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                                        aria-controls="offcanvasRight"><a href="{% url 'AppCarrito:finalizarLaCompra' %}" style="text-decoration: none; padding: 0;">Finalizar compra</a></button>
                                 </li>
                             </ul>
                         </li>

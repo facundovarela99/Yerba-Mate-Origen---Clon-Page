@@ -3,7 +3,7 @@ if (document.querySelector('.tarjetasProductos')){
     const contenedor = document.querySelector('.tarjetasProductos');
 
     try {
-        const res = await fetch('/productos/api/productos/');
+        const res = await fetch('/api/productos/');
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
         const productos = await res.json();
