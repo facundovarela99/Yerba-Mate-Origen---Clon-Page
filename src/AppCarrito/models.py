@@ -29,7 +29,15 @@ class Compra(models.Model):
         super().save(*args, **kwargs)
         self.substraer_stock()
         subtotalcarrito.actualizar_subtotal()
+        usuarios_x_compras.objects.create(
+            usuario_id = self.usuario_comprador,
+            compra_id = self
+        )
 
+    def __str__(self):
+        return f'{self.producto_id.nombre} × {self.cantidad} - ${self.precio_total}'
+    
+    
 class subTotalCarrito(models.Model):
     usuario = models.ForeignKey(User, on_delete=models.CASCADE)
     subtotal = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
@@ -49,5 +57,11 @@ class subTotalCarrito(models.Model):
         verbose_name_plural = 'Subtotales Carrito'
  
 
+class usuarios_x_compras(models.Model):
+    usuario_id = models.ForeignKey(User, on_delete=models.CASCADE)
+    compra_id = models.ForeignKey(Compra, on_delete=models.CASCADE)
 
-    
+    def generar_compra(self, *args, **kwargs): #recibe como parámetros : usuario, compra, id
+        self.usuario_id = kwargs.get('usu_id')
+        self.compra_id = kwargs.get('com_id')
+        self.save()

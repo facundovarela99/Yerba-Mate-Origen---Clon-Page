@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Compra, subTotalCarrito
+from .models import Compra, subTotalCarrito, usuarios_x_compras
 
 # Register your models here.
 
@@ -15,3 +15,9 @@ class SubTotalCarritoAdmin(admin.ModelAdmin):
     list_display = ('usuario', 'subtotal', 'cantidad_total_productos')
     list_display_links = ('usuario',)
     search_fields = ['usuario']
+
+@admin.register(usuarios_x_compras)
+class vista_usuarios_x_compras_admin(admin.ModelAdmin):
+    list_display = ('usuario_id', 'compra_id')
+    list_display_links = ('usuario_id', 'compra_id')
+    search_fields = ('usuario_id', 'compra_id') 
