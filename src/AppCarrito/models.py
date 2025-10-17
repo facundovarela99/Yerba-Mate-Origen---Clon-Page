@@ -23,6 +23,7 @@ class Compra(models.Model):
     @transaction.atomic
     def save(self, *args, **kwargs):
         subtotalcarrito = subTotalCarrito.objects.get_or_create(usuario=self.usuario_comprador)[0]
+        carrito = Carrito.objects.get_or_create(usuario=self.usuario_comprador)[0]
         self.clean()
         self.precio_total = self.producto_id.precio * self.cantidad
         self.full_clean()
@@ -30,6 +31,10 @@ class Compra(models.Model):
         self.substraer_stock()
         subtotalcarrito.actualizar_subtotal()
         usuarios_x_compras.objects.create(
+            usuario_id = self.usuario_comprador,
+            compra_id = self
+        )
+        carrito.agregar_compra_al_carrito(
             usuario_id = self.usuario_comprador,
             compra_id = self
         )
@@ -65,3 +70,18 @@ class usuarios_x_compras(models.Model):
         self.usuario_id = kwargs.get('usu_id')
         self.compra_id = kwargs.get('com_id')
         self.save()
+
+class Carrito(models.Model):
+    usuario = models.ForeignKey(User, on_delete=models.CASCADE)
+    compras = models.ManyToManyField(Compra, blank=True)
+
+    def __str__(self):
+        return f'Carrito de {self.usuario.username}'
+    
+    def agregar_compra_al_carrito(self, *args, **kwargs):
+        usuario_id = kwargs.get('usuario_id')
+        compra_id = kwargs.get('compra_id')
+        carrito = Carrito.objects.get(usuario=usuario_id)
+        carrito.compras.add(compra_id)
+        carrito.save()
+

@@ -2,16 +2,18 @@
 {% load static %}
 
 {% block content %}
-    <h1><strong>{{ object.nombre }}</strong></h1>
+<h1><strong>{{ object.nombre }}</strong></h1>
 
-    <p><strong>{{ object.descripcion }}</strong></p>
+<p><strong>{{ object.descripcion }}</strong></p>
 
-    <p><strong>Precio: $ {{ object.precio }}</strong></p>
+<p><strong>Precio: $ {{ object.precio }}</strong></p>
 
-    <p><strong>Stock: {{ object.stock }}</strong></p>
+<p><strong>Stock: {{ object.stock }}</strong></p>
 
-    {% if object.imagen %}
-    <img src="{{ object.imagen.url }}" alt="{{object.nombre}}" style="width: 275px; height: 275px;">
-    {% endif %}
-
+{% if object.imagen %}
+<img src="{{ object.imagen.url }}" alt="{{object.nombre}}" style="width: 275px; height: 275px;">
+{% endif %}
+<div>
+    <button type="button">Agregar al carrito</button>
+</div>
 {% endblock content %}
