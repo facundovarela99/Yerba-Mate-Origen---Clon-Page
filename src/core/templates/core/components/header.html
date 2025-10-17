@@ -2,7 +2,7 @@
     <header class="position-sticky top-0 z-3">
         <nav class="navbar navbar-expand-lg bgHeader" data-bs-theme="dark">
             <div class="container-fluid pt-2 pb-2">
-                <a class="navbar-brand ms-5" href="../main_templates/index.html">
+                <a class="navbar-brand ms-5" href="{% url 'core:index' %}">
                     <img class="imgTitulo" src="{% static 'core/assets/img/logo-origen-solo-blanco.svg' %}" alt="Logo marca">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -47,13 +47,23 @@
                             <a class="contacto nav-link botonesNav" href="#">CONTACTO</a>
                             {% endif %}
                         </li>
+                        {% if user.is_authenticated %}
                         <li class="nav-item">
-                            {% if active_page == 'loginCrearCuenta' %}
+                            {% if active_page == 'mi-cuenta-menu' %}
+                            <a class="acercaDe nav-link botonesNav active" href="{% url 'usuarios:mi-cuenta-menu' %}">MI PERFIL</a>
+                            {% else %}
+                            <a class="acercaDe nav-link botonesNav" href="{% url 'usuarios:mi-cuenta-menu' %}">MI PERFIL</a>
+                            {% endif %}
+                        </li>
+                        {% else %}
+                        <li class="nav-item">
+                            {% if active_page == 'mi-cuenta' %}
                             <a class="acercaDe nav-link botonesNav active" href="{% url 'usuarios:mi-cuenta' %}">INGRESAR/CREAR CUENTA</a>
                             {% else %}
                             <a class="acercaDe nav-link botonesNav" href="{% url 'usuarios:mi-cuenta' %}">INGRESAR/CREAR CUENTA</a>
                             {% endif %}
                         </li>
+                        {% endif %}
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link position-relative dropdown-toggle" id="carritoDropdown"
                                 role="button" data-bs-toggle="dropdown" aria-expanded="false">

@@ -1,0 +1,18 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<ul>
+    <li><a href="#"><button type="button">DASHBOARD</button></a></li>
+    <li><a href="#"><button type="button">PEDIDOS</button></a></li>
+    <li><a href="#"><button type="button">DIRECCIONES</button></a></li>
+    <li><a href="{% url 'usuarios:perfil' %}"><button type="button">DETALLES DE LA CUENTA</button></a></li>
+    <!-- <li><a href="#"><button type="button">SALIR</button></a></li> -->
+    <li>
+        <form action="{% url 'usuarios:logout' %}" method="post">
+            {% csrf_token %}
+            <button class="btnLogout" type="submit">LOG OUT</button>
+        </form>
+    </li>
+</ul>
+{% endblock content %}

@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-    <div class="container py-5">
+<div class="container py-5">
     <div class="row justify-content-center">
         <div class="col-md-6 col-lg-5">
             <div class="card shadow-lg text-center">
@@ -15,11 +15,21 @@
                         {% csrf_token %}
                         {{ form.as_p }}
                         <div class="d-grid mt-4">
-                            <button id="botonLoguearse" type="submit" class="btn btn-primary btn-lg">REGISTRARSE</button>
+                            <button id="botonLoguearse" type="submit"
+                                class="btn btn-primary btn-lg">REGISTRARSE</button>
                         </div>
                     </form>
                     <hr>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row justify-content-center">
+    <div class="col-md-6 col-lg-5">
+        <div class="card shadow-lg text-center">
+            <div class="card-body p-5">
+                <a href="{% url 'usuarios:mi-cuenta' %}" style="color: white; text-decoration: none;"><button class="btn btn-primary btn-lg"><h2>VOLVER</h2></button></a>
             </div>
         </div>
     </div>

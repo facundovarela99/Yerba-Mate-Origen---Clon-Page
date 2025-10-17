@@ -74,9 +74,23 @@
                             <a class="nav-link" href="#">CONTACTO</a>
                         </li>
                         <hr>
+                        {% if user.is_authenticated %}
                         <li>
-                            <a class="nav-link" href="#">INGRESAR / CREAR CUENTA</a>
+                            {% if active_page == 'mi-cuenta-menu' %}
+                            <a class="acercaDe nav-link botonesNav active" href="{% url 'usuarios:mi-cuenta-menu' %}">MI PERFIL</a>
+                            {% else %}
+                            <a class="acercaDe nav-link botonesNav" href="{% url 'usuarios:mi-cuenta-menu' %}">MI PERFIL</a>
+                            {% endif %}        
                         </li>
+                        {% else %}
+                        <li>
+                            {% if active_page == 'mi-cuenta' %}
+                            <a class="acercaDe nav-link botonesNav active" href="{% url 'usuarios:mi-cuenta' %}">INGRESAR/CREAR CUENTA</a>
+                            {% else %}
+                            <a class="acercaDe nav-link botonesNav" href="{% url 'usuarios:mi-cuenta' %}">INGRESAR/CREAR CUENTA</a>
+                            {% endif %}
+                        </li>
+                        {% endif %}
                     </ul>
                 </div>
             </div>

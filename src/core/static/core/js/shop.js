@@ -23,7 +23,7 @@ if (document.querySelector('.tarjetasProductos')){
                 <img class="imgProducto" src="${prod.imagen_url}" alt="${prod.nombre}"/>
                 <h2 class="nombreProducto">${prod.nombre}</h2>
                 <p class="precioProducto"><strong>$${prod.precio}</strong></p>
-                ${boton.innerHTML = `<button type="button"><a href="/producto/${prod.id}/" style="text-decoration: none; padding: 0;">VER PRODUCTO</a></button>`}
+                ${boton.innerHTML = `<a href="/producto/${prod.id}/" style="text-decoration: none; padding: 0;"><button type="button">VER PRODUCTO</button></a>`}
                 <p>${stock(prod.stock)}</p>
             `;
             contenedor.appendChild(div);
