@@ -14,6 +14,8 @@ if (document.querySelector('.tarjetasProductos')){
             } return '';
         }
 
+        const boton = document.createElement("button");
+
         productos.forEach(prod => {
             const div = document.createElement('div');
             div.className = `producto${prod.id}`
@@ -21,7 +23,7 @@ if (document.querySelector('.tarjetasProductos')){
                 <img class="imgProducto" src="${prod.imagen_url}" alt="${prod.nombre}"/>
                 <h2 class="nombreProducto">${prod.nombre}</h2>
                 <p class="precioProducto"><strong>$${prod.precio}</strong></p>
-                <button id="botonProducto${prod.id}" type="button">VER PRODUCTO</button>
+                ${boton.innerHTML = `<button type="button"><a href="/producto/${prod.id}/" style="text-decoration: none; padding: 0;">VER PRODUCTO</a></button>`}
                 <p>${stock(prod.stock)}</p>
             `;
             contenedor.appendChild(div);

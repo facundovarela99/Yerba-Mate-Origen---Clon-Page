@@ -63,9 +63,11 @@
                 </div>
             </div>
             <div class="contenedorProductos w-100">
+                {% for producto in object_list %}
                 <div class="tarjetasProductos d-flex flex-wrap">
                     <!--PRODUCTOS AGREGADOS DINÁMICAMENTE EN SHOP.JS-->
                 </div>
+                {% endfor %}
             </div>
         </div>
     </section>

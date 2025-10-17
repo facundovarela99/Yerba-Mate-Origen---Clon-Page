@@ -9,7 +9,7 @@ class Producto(models.Model):
     imagen = models.ImageField(upload_to="products_images", null=True, blank=True)
 
     def __str__(self):
-        base = f'{self.nombre} - ${self.precio}'
+        base = f'{self.nombre}'
         return base
     
     class Meta:
