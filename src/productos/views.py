@@ -25,7 +25,7 @@ def api_productos(request):
 def productos_list(request: HttpRequest) -> HttpResponse:
     search = request.GET.get('query')
     if search:
-        queryset = Producto.objects.filter(name__icontains=request.GET.get('query'))
+        queryset = Producto.objects.filter(producto__icontains=request.GET.get('query'))
     else:
         queryset = Producto.objects.all()
     context = {'active_page': 'shop'}

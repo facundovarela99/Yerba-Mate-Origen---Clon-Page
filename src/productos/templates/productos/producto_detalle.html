@@ -2,18 +2,31 @@
 {% load static %}
 
 {% block content %}
-<h1><strong>{{ object.nombre }}</strong></h1>
-
-<p><strong>{{ object.descripcion }}</strong></p>
-
-<p><strong>Precio: $ {{ object.precio }}</strong></p>
-
-<p><strong>Stock: {{ object.stock }}</strong></p>
+<div class="divProducto">
+    <h1><strong>{{ object.nombre }}</strong></h1>
+    
+    <p><strong>{{ object.descripcion }}</strong></p>
+    
+    <p><strong>Precio: $ {{ object.precio }}</strong></p>
+    
+    <p><strong>Stock: {{ object.stock }}</strong></p>
+</div>
 
 {% if object.imagen %}
 <img src="{{ object.imagen.url }}" alt="{{object.nombre}}" style="width: 275px; height: 275px;">
 {% endif %}
 <div>
-    <button type="button">Agregar al carrito</button>
+    {% if user.is_authenticated %}
+    <form action="" method="post"> <!--Posible formulario para la creación de una compra-->
+        {% csrf_token %}
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" name="cantidad" value="1" min="1" max="{{object.stock}}">
+        <button type="submit">Agregar al carrito</button>
+    </form>
+    {% else %}
+    <a href="{% url 'usuarios:mi-cuenta' %}">
+        <button type="button">Agregar al carrito</button>
+    </a>
+    {% endif %}
 </div>
 {% endblock content %}

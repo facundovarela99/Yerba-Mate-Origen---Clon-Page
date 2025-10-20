@@ -65,7 +65,12 @@
             <div class="contenedorProductos w-100">
                 {% for producto in object_list %}
                 <div class="tarjetasProductos d-flex flex-wrap">
-                    <!--PRODUCTOS AGREGADOS DINÁMICAMENTE EN SHOP.JS-->
+                    <div class="producto{{producto.id}}">
+                        <img class="imgProducto" src="{{producto.imagen.url}}" alt="{{producto.nombre}}">
+                        <h2 class="nombreProducto">{{producto.nombre}}</h2>
+                        <p class="precioProducto"><strong>${{producto.precio}}</strong></p>
+                        <a href="{% url 'productos:producto_detalle' producto.id %}" style="text-decoration: none; padding: 0;"><button type="button">VER PRODUCTO</button></a>
+                    </div>
                 </div>
                 {% endfor %}
             </div>
