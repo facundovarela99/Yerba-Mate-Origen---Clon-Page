@@ -1,6 +1,6 @@
 from django.db import models
 from productos.models import Producto
-from usuarios.models import User
+from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.db import transaction
 
@@ -73,7 +73,7 @@ class usuarios_x_compras(models.Model):
 
 class Carrito(models.Model):
     usuario = models.ForeignKey(User, on_delete=models.CASCADE)
-    compras = models.ManyToManyField(Compra, blank=True)
+    compras = models.ManyToManyField(Compra, blank=True, related_name='carritos')
 
     def __str__(self):
         return f'Carrito de {self.usuario.username}'

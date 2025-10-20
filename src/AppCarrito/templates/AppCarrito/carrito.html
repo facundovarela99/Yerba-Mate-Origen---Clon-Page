@@ -2,5 +2,18 @@
 {% load static %}
 
 {% block content %}
-    <h1>CARRITO DE COMPRAS</h1>
+<h1>CARRITO DE COMPRAS</h1>
+
+{% for carrito in object_list %}
+
+<div>
+    <h2>{{ carrito.usuario }}</h2>
+    {% for compra in carrito.compras.all %}
+    <p>{{ compra.producto_id}} - {{ compra.cantidad }} - {{ compra.precio_total }}</p>
+    {% endfor %}
+</div>
+
+{% empty %}
+<h2>No data available</h2>
+{% endfor %}
 {% endblock content %}

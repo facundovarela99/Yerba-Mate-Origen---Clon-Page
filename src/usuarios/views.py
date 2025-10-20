@@ -16,6 +16,11 @@ class CustomRegisterView(CreateView):
 
     def form_valid(self, form: CustomUserCreationForm) -> HttpResponse:
         return super().form_valid(form)
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['active_page'] = 'mi-cuenta'
+        return context
 
 class CustomLoginView(LoginView):
     authentication_form = CustomAuthenticationForm

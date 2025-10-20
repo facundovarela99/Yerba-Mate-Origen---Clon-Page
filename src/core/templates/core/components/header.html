@@ -64,6 +64,7 @@
                             {% endif %}
                         </li>
                         {% endif %}
+                        {% if user.is_authenticated %}                            
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link position-relative dropdown-toggle" id="carritoDropdown"
                                 role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -91,6 +92,7 @@
                                 </li>
                             </ul>
                         </li>
+                        {% endif %}
                     </ul>
                 </div>
             </div>
