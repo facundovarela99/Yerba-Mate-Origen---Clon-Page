@@ -10,23 +10,24 @@
     <p><strong>Precio: $ {{ object.precio }}</strong></p>
     
     <p><strong>Stock: {{ object.stock }}</strong></p>
+
+    <p><strong>Descripcion larga: {{ object.descripcion_larga }}</strong></p>
 </div>
 
 {% if object.imagen %}
 <img src="{{ object.imagen.url }}" alt="{{object.nombre}}" style="width: 275px; height: 275px;">
 {% endif %}
-<div>
-    {% if user.is_authenticated %}
-    <form action="" method="post"> <!--Posible formulario para la creación de una compra-->
-        {% csrf_token %}
-        <label for="cantidad">Cantidad:</label>
-        <input type="number" id="cantidad" name="cantidad" value="1" min="1" max="{{object.stock}}">
-        <button type="submit">Agregar al carrito</button>
-    </form>
-    {% else %}
-    <a href="{% url 'usuarios:mi-cuenta' %}">
-        <button type="button">Agregar al carrito</button>
-    </a>
-    {% endif %}
+<div class="contenedorProducto">
+    <div class="divProducto{{object.id}}">
+        {% if user.is_authenticated %}
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="inputCantidad" name="cantidad" value="1" min="1" max="{{object.stock}}">
+            <button class="btnAgregarAlCarrito" type="submit" data-id="{{object.id}}" data-nombre="{{object.nombre}}" data-precio="{{object.precio}}">Agregar al carrito</button>
+        {% else %}
+        <a href="{% url 'usuarios:mi-cuenta' %}">
+            <button type="button">Agregar al carrito</button>
+        </a>
+        {% endif %}
+    </div>
 </div>
 {% endblock content %}
