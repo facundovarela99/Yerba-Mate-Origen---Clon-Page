@@ -14,30 +14,27 @@ class Compra(models.Model):
     usuario_comprador = models.ForeignKey(User, on_delete=models.CASCADE) 
     
     def clean(self):
-        # 1. Obtener la cantidad "vieja" que está en la base de datos
         old_cantidad = 0
-        if self.pk: # Si el objeto ya existe (es una edición)
+        if self.pk: 
             try:
-                # Obtenemos la versión de la DB, no 'self' que está en memoria
+                
                 old_cantidad = Compra.objects.get(pk=self.pk).cantidad
             except Compra.DoesNotExist:
-                pass # Es un objeto nuevo, old_cantidad es 0
-
-        # 2. Calcular la *diferencia* que se quiere agregar al stock
+                pass 
+        
         cantidad_a_validar = self.cantidad - old_cantidad
 
-        # 3. Validar solo la *diferencia* contra el stock disponible
-        if cantidad_a_validar > 0: # Solo chequear si estamos *agregando*
+        
+        if cantidad_a_validar > 0: 
             self.producto_id.refresh_from_db() # Asegurarse de tener el stock actualizado
             if cantidad_a_validar > self.producto_id.stock:
                 raise ValidationError(f'No hay suficiente stock. Solo puedes agregar {self.producto_id.stock} unidades más.')
     
     def substraer_stock(self, cantidad_a_substraer):
-        # Usamos F() para una resta atómica y segura
+        
         self.producto_id.stock = F('stock') - cantidad_a_substraer
         self.producto_id.save(update_fields=['stock'])
-        self.producto_id.refresh_from_db() # Actualiza el objeto producto
-
+        self.producto_id.refresh_from_db() 
     @transaction.atomic
     def save(self, *args, **kwargs):
         old_cantidad = 0
