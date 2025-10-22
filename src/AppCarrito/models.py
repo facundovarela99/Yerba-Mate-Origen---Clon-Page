@@ -14,7 +14,7 @@ class Compra(models.Model):
     
     def clean(self):
         if self.cantidad > self.producto_id.stock:
-            raise ValidationError('La cantidad no puede ser mayor al stock')
+            raise ValidationError('La cantidad no puede ser mayor al stock. Stock disponible: {}'.format(self.producto_id.stock))
     
     def substraer_stock(self):
         self.producto_id.stock -= self.cantidad

@@ -16,4 +16,7 @@
 {% empty %}
 <h2>No data available</h2>
 {% endfor %}
+
+<a href="{% url 'AppCarrito:finalizarLaCompra' %}"><button type="button" class="btn btn-primary btn-sm">Finalizar compra</button></a>
+
 {% endblock content %}
