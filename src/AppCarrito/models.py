@@ -22,6 +22,9 @@ class Compra(models.Model):
 
     @transaction.atomic
     def save(self, *args, **kwargs):
+        #si el usuario es diferente, se crea una nueva compra
+        #si no, si el usuario es el mismo y el producto es diferente, se crea una nueva compra
+        #Si no, si el usuario es el mismo y el producto es el mismo, se actualiza la cantidad y el precio total
         subtotalcarrito = subTotalCarrito.objects.get_or_create(usuario=self.usuario_comprador)[0]
         carrito = Carrito.objects.get_or_create(usuario=self.usuario_comprador)[0]
         self.clean()
@@ -47,6 +50,7 @@ class subTotalCarrito(models.Model):
     usuario = models.ForeignKey(User, on_delete=models.CASCADE)
     subtotal = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
     cantidad_total_productos = models.PositiveIntegerField(default=0)
+    compras = models.ManyToManyField(Compra, blank=True)
 
     def actualizar_subtotal(self):
         carrito_items = Compra.objects.filter(usuario_comprador=self.usuario) # Obtener todos los items del carrito del usuario
@@ -55,7 +59,7 @@ class subTotalCarrito(models.Model):
         self.save() # Guardar los cambios en el modelo
 
     def __str__(self):
-        return f'Subtotal del carrito: ${self.subtotal} - Cantidad total de productos: {self.cantidad_total_productos}'
+        return f'Subtotal del carrito: ${self.subtotal} de {self.usuario.username} - Cantidad total de productos: {self.cantidad_total_productos}'
     
     class Meta:
         verbose_name = 'Subtotal Carrito'
