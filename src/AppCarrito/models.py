@@ -3,44 +3,68 @@ from productos.models import Producto
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.db import transaction
+from django.db.models import F
 
 # Create your models here.
 
 class Compra(models.Model):
-    producto_id = models.ForeignKey(Producto, on_delete=models.CASCADE) #models.CASCADE para que si se borra el producto, se borre del carrito tambien
-    cantidad = models.PositiveIntegerField(default=1) #PositiveIntegerField para que no acepte negativos
-    precio_total = models.DecimalField(max_digits=10, decimal_places=2) #DecimalField para manejar precios con decimales
-    usuario_comprador = models.ForeignKey(User, on_delete=models.CASCADE) #Relacion con el usuario que agrega al carrito
+    producto_id = models.ForeignKey(Producto, on_delete=models.CASCADE) 
+    cantidad = models.PositiveIntegerField(default=1) 
+    precio_total = models.DecimalField(max_digits=10, decimal_places=2, default=0.00) 
+    usuario_comprador = models.ForeignKey(User, on_delete=models.CASCADE) 
     
     def clean(self):
-        if self.cantidad > self.producto_id.stock:
-            raise ValidationError('La cantidad no puede ser mayor al stock. Stock disponible: {}'.format(self.producto_id.stock))
+        # 1. Obtener la cantidad "vieja" que está en la base de datos
+        old_cantidad = 0
+        if self.pk: # Si el objeto ya existe (es una edición)
+            try:
+                # Obtenemos la versión de la DB, no 'self' que está en memoria
+                old_cantidad = Compra.objects.get(pk=self.pk).cantidad
+            except Compra.DoesNotExist:
+                pass # Es un objeto nuevo, old_cantidad es 0
+
+        # 2. Calcular la *diferencia* que se quiere agregar al stock
+        cantidad_a_validar = self.cantidad - old_cantidad
+
+        # 3. Validar solo la *diferencia* contra el stock disponible
+        if cantidad_a_validar > 0: # Solo chequear si estamos *agregando*
+            self.producto_id.refresh_from_db() # Asegurarse de tener el stock actualizado
+            if cantidad_a_validar > self.producto_id.stock:
+                raise ValidationError(f'No hay suficiente stock. Solo puedes agregar {self.producto_id.stock} unidades más.')
     
-    def substraer_stock(self):
-        self.producto_id.stock -= self.cantidad
-        self.producto_id.save()
+    def substraer_stock(self, cantidad_a_substraer):
+        # Usamos F() para una resta atómica y segura
+        self.producto_id.stock = F('stock') - cantidad_a_substraer
+        self.producto_id.save(update_fields=['stock'])
+        self.producto_id.refresh_from_db() # Actualiza el objeto producto
 
     @transaction.atomic
     def save(self, *args, **kwargs):
-        #si el usuario es diferente, se crea una nueva compra
-        #si no, si el usuario es el mismo y el producto es diferente, se crea una nueva compra
-        #Si no, si el usuario es el mismo y el producto es el mismo, se actualiza la cantidad y el precio total
-        subtotalcarrito = subTotalCarrito.objects.get_or_create(usuario=self.usuario_comprador)[0]
-        carrito = Carrito.objects.get_or_create(usuario=self.usuario_comprador)[0]
+        old_cantidad = 0
+        if self.pk:
+            try:
+                old_compra = Compra.objects.get(pk=self.pk)
+                old_cantidad = old_compra.cantidad
+            except Compra.DoesNotExist:
+                pass
+        cantidad_a_substraer = self.cantidad - old_cantidad
         self.clean()
         self.precio_total = self.producto_id.precio * self.cantidad
         self.full_clean()
         super().save(*args, **kwargs)
-        self.substraer_stock()
+
+        if cantidad_a_substraer != 0:
+            self.substraer_stock(cantidad_a_substraer)
+
+        subtotalcarrito, _ = subTotalCarrito.objects.get_or_create(usuario=self.usuario_comprador)
         subtotalcarrito.actualizar_subtotal()
-        usuarios_x_compras.objects.create(
-            usuario_id = self.usuario_comprador,
-            compra_id = self
-        )
-        carrito.agregar_compra_al_carrito(
-            usuario_id = self.usuario_comprador,
-            compra_id = self
-        )
+        
+        
+        if old_cantidad == 0 and self.cantidad > 0:
+            carrito, _ = Carrito.objects.get_or_create(usuario=self.usuario_comprador)
+            
+            carrito.compras.add(self)
+
 
     def __str__(self):
         return f'{self.producto_id.nombre} × {self.cantidad} - ${self.precio_total}'
@@ -64,16 +88,6 @@ class subTotalCarrito(models.Model):
     class Meta:
         verbose_name = 'Subtotal Carrito'
         verbose_name_plural = 'Subtotales Carrito'
- 
-
-class usuarios_x_compras(models.Model):
-    usuario_id = models.ForeignKey(User, on_delete=models.CASCADE)
-    compra_id = models.ForeignKey(Compra, on_delete=models.CASCADE)
-
-    def generar_compra(self, *args, **kwargs): #recibe como parámetros : usuario, compra, id
-        self.usuario_id = kwargs.get('usu_id')
-        self.compra_id = kwargs.get('com_id')
-        self.save()
 
 class Carrito(models.Model):
     usuario = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -81,11 +95,4 @@ class Carrito(models.Model):
 
     def __str__(self):
         return f'Carrito de {self.usuario.username}'
-    
-    def agregar_compra_al_carrito(self, *args, **kwargs):
-        usuario_id = kwargs.get('usuario_id')
-        compra_id = kwargs.get('compra_id')
-        carrito = Carrito.objects.get(usuario=usuario_id)
-        carrito.compras.add(compra_id)
-        carrito.save()
 
