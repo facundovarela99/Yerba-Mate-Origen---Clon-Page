@@ -11,9 +11,6 @@
                         <i class="fas fa-user-circle text-success fa-4x"></i>
                     </div>
                     <h2 class="fw-bold mb-3">Login</h2>
-                    {% for message in messages %}
-                    <div class="alert alert-info">{{ message }}</div>
-                    {% endfor %}
                     <form class="form" action="" method="post">
                         {% csrf_token %}
                         {{ form.as_p }}

@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from django.http import HttpRequest, HttpResponse
-from .models import Carrito, Producto, Compra
+from django.http import HttpRequest, HttpResponse, JsonResponse
+from .models import Carrito, Producto, Compra, subTotalCarrito
 from django.views.generic import ListView
 from django.contrib import messages
 from django.core.exceptions import ValidationError
@@ -12,6 +12,18 @@ def finalizarLaCompra(request):
 def carrito_list(request):
     mis_carritos = Carrito.objects.filter(usuario=request.user)
     return render(request, "AppCarrito/carrito.html", {"object_list": mis_carritos})
+
+def api_subtotales(request):
+    subtotales = subTotalCarrito.objects.filter(usuario=request.user)
+    data = [
+         {
+              'id':c.id,
+              'subtotal':c.subtotal,
+              'cantidad_total_productos':c.cantidad_total_productos
+         }
+         for c in subtotales
+    ]
+    return JsonResponse(data, safe=False)
 
 def agregar_al_carrito(request, producto_id):
     if request.method == "POST":
@@ -47,6 +59,9 @@ def agregar_al_carrito(request, producto_id):
 def vaciar_carrito(request: HttpRequest) -> HttpResponse: #Vista para vaciar el carrito de un usuario al hacer click en el botón "Vaciar carrito"
     query = Carrito.objects.filter(usuario=request.user).first()
     query.compras.all().delete()
+    query_subtotales = subTotalCarrito.objects.filter(usuario=request.user)
     if query:
         query.delete()
+    if query_subtotales:
+         query_subtotales.delete()
     return redirect('AppCarrito:carrito')

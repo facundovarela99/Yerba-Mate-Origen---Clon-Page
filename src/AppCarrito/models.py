@@ -62,6 +62,8 @@ class Compra(models.Model):
             
             carrito.compras.add(self)
 
+            carrito.actualizar_total_productos()
+
 
     def __str__(self):
         return f'{self.producto_id.nombre} × {self.cantidad} - ${self.precio_total}'
@@ -89,6 +91,12 @@ class subTotalCarrito(models.Model):
 class Carrito(models.Model):
     usuario = models.ForeignKey(User, on_delete=models.CASCADE)
     compras = models.ManyToManyField(Compra, blank=True, related_name='carritos')
+    cantidad_total_productos = models.PositiveIntegerField(default=0)
+
+    def actualizar_total_productos(self):
+        carrito_items = Compra.objects.filter(usuario_comprador=self.usuario)
+        self.cantidad_total_productos = sum(item.cantidad for item in carrito_items)
+        self.save()
 
     def __str__(self):
         return f'Carrito de {self.usuario.username}'

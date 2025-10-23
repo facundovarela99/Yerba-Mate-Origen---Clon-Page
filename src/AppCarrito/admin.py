@@ -54,7 +54,7 @@ class SubTotalCarritoAdmin(admin.ModelAdmin):
 
 @admin.register(Carrito)
 class CarritoAdmin(admin.ModelAdmin):
-    list_display = ('id', 'usuario',)
+    list_display = ('id', 'usuario','cantidad_total_productos')
     search_fields = ('usuario__username',)
 
     def get_form(self, request, obj=None, **kwargs): #Lógica para mostrar los productos del carrito discriminando por carrito de usuario
