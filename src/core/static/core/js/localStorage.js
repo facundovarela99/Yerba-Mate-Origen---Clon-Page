@@ -19,7 +19,7 @@ if (document.querySelector('.contenedorProducto')) {
             const inputCantidad = document.getElementById('inputCantidad');
             boton.addEventListener('click', () => {
 
-                if ((document.querySelector('.p-stock').textContent)>0){
+                if (Number(document.querySelector('.span-stock').textContent)>0){
                     const idProducto = boton.getAttribute('data-id');
                     const nombreProducto = boton.getAttribute('data-nombre');
                     const cantidad = inputCantidad.value;

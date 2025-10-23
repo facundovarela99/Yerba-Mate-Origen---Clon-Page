@@ -10,13 +10,22 @@
     <h2>{{ carrito.usuario }}</h2>
     {% for compra in carrito.compras.all %}
     <p>{{ compra.producto_id}} - {{ compra.cantidad }} - {{ compra.precio_total }}</p>
+    <img src="{{ compra.producto_id.imagen.url }}" alt="{{compra.producto_id.nombre}}" style="width: 150px; height: 150px;">
+    {% endfor %}
+    {% for mensaje in msg %}
+    <div class="alert alert-success">{{ mensaje }}</div>
     {% endfor %}
 </div>
+
+
+<a href="{% url 'AppCarrito:finalizarLaCompra' %}"><button type="button" class="btn btn-success btn-sm">Finalizar compra</button></a>
+<form action="{% url 'AppCarrito:vaciar-carrito' %}" method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-primary btn-sm">Vaciar carrito</button>
+</form>
 
 {% empty %}
 <h2>No data available</h2>
 {% endfor %}
-
-<a href="{% url 'AppCarrito:finalizarLaCompra' %}"><button type="button" class="btn btn-primary btn-sm">Finalizar compra</button></a>
 
 {% endblock content %}

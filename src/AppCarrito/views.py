@@ -44,4 +44,9 @@ def agregar_al_carrito(request, producto_id):
     return redirect('productos:producto_detalle', pk=producto_id)
 
 
-
+def vaciar_carrito(request: HttpRequest) -> HttpResponse: #Vista para vaciar el carrito de un usuario al hacer click en el botón "Vaciar carrito"
+    query = Carrito.objects.filter(usuario=request.user).first()
+    query.compras.all().delete()
+    if query:
+        query.delete()
+    return redirect('AppCarrito:carrito')
