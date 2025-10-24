@@ -45,12 +45,27 @@ header {
 @media screen and (max-width: 768px) {
   #navbarSupportedContent ul {
     margin-left: 0;
-    flex-direction: column;
-    align-items: start;
+    flex-direction: column !important;
+    align-items: start !important;
+  }
+  #navbarSupportedContent ul li {
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+  }
+}
+@media screen and (max-width: 1366px) {
+  #navbarSupportedContent ul {
+    margin-left: 0;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: wrap;
   }
   #navbarSupportedContent ul li {
     width: -moz-fit-content;
     width: fit-content;
+  }
+  #UlCarritoDropdown {
+    flex-wrap: nowrap !important;
   }
 }
 .imgTitulo {
@@ -213,36 +228,21 @@ header {
   padding-top: 50px;
 }
 
-.preparoUnos {
-  color: white;
-  font-size: 2vw;
-  text-align: center;
-  text-shadow: 5px 5px 0px #A37F41;
-  letter-spacing: 4px;
-  line-height: 1;
-}
-
-.mates {
-  color: white;
-  font-size: 10vw;
-  text-shadow: 5px 5px 0px #a37f41;
-  letter-spacing: 10px;
-  line-height: 1;
-}
-
+.preparoUnos,
 .luego {
   color: white;
-  text-align: center;
   font-size: 2vw;
+  text-align: center;
   text-shadow: 5px 5px 0px #A37F41;
   letter-spacing: 4px;
   line-height: 1;
 }
 
+.mates,
 .existo {
   color: white;
   font-size: 10vw;
-  text-shadow: 5px 5px 0px #A37F41;
+  text-shadow: 5px 5px 0px #a37f41;
   letter-spacing: 10px;
   line-height: 1;
 }
@@ -305,13 +305,13 @@ header {
 }
 
 .compraOnline:hover {
-  background-color: #71582d;
+  background-color: #584522;
   box-shadow: 5px 5px 0px #a37f41;
   transition: ease-in-out 0.21s;
   border: 1px solid #a37f41;
 }
 .compraOnline:hover span {
-  background-color: #71582d;
+  background-color: #584522;
   transition: ease-in-out 0.21s;
 }
 
@@ -342,13 +342,13 @@ header {
 }
 
 .conoceOrigen:hover {
-  background-color: #034139;
+  background-color: #033b34;
   box-shadow: 5px 5px 0px #03594d;
   transition: ease-in-out 0.21s;
   border: 1px solid #03594D;
 }
 .conoceOrigen:hover span {
-  background-color: #034139;
+  background-color: #033b34;
   transition: ease-in-out 0.21s;
 }
 
@@ -983,6 +983,239 @@ header {
 }
 
 /* INDEX INDEX INDEX */
+@media screen and (max-width: 768px) {
+  .mainIndex {
+    background-image: linear-gradient(to right top, rgba(0, 0, 0, 0.3137254902), rgba(0, 0, 0, 0.3137254902)), url(../assets/img/home-bg-3.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-attachment: fixed;
+  }
+  .mainIndex .seccionFondoPantallaMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .mainIndex .seccionFondoPantallaMain .palabrasGrandesMain {
+    width: 75% !important;
+  }
+  .mainIndex .seccionFondoPantallaMain .palabrasGrandesMain .preparoUnos,
+  .mainIndex .seccionFondoPantallaMain .palabrasGrandesMain .luego {
+    color: white;
+    font-size: 1.8rem;
+    text-align: center;
+    text-shadow: 5px 5px 0px #A37F41;
+    letter-spacing: 4px;
+    line-height: 1;
+  }
+  .mainIndex .seccionFondoPantallaMain .palabrasGrandesMain .mates,
+  .mainIndex .seccionFondoPantallaMain .palabrasGrandesMain .existo {
+    color: white;
+    font-size: 8rem;
+    text-shadow: 5px 5px 0px #a37f41;
+    letter-spacing: 10px;
+    line-height: 1;
+  }
+  .mainIndex .seccionFondoPantallaMain .palabrasGrandesMain .palabrasChicasMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .mainIndex .seccionFondoPantallaMain .palabrasGrandesMain .palabrasChicasMain .yerbaMateOrigen {
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.2em;
+    letter-spacing: 5px;
+    text-shadow: 0px 0px 11px #000000;
+    margin-bottom: 0 !important;
+  }
+  .mainIndex .seccionFondoPantallaMain .palabrasGrandesMain .palabrasChicasMain .verdaderamentePremium {
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1.2em;
+    letter-spacing: 5px;
+    text-shadow: 0px 0px 11px #000000;
+    margin-bottom: 0 !important;
+  }
+  .mainIndex .seccionFondoPantallaMain .botonesFondoPantallaMain {
+    width: 140% !important;
+  }
+  .mainIndex .SeccionInfoImagenBordeados {
+    background-color: #1A1A1A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .mainIndex .SeccionInfoImagenBordeados .infoOrigen {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .mainIndex .SeccionInfoImagenBordeados .infoOrigen .bordeado {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .mainIndex .SeccionInfoImagenBordeados .infoOrigen .bordeado img {
+    width: 100% !important;
+  }
+  .mainIndex .SeccionInfoImagenBordeados .infoOrigen .bordeado .parrafosInfo {
+    width: 80% !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .mainIndex .SeccionInfoImagenBordeados .infoOrigen .bordeado .parrafosInfo .sobre, .mainIndex .SeccionInfoImagenBordeados .infoOrigen .bordeado .parrafosInfo .origen {
+    margin-bottom: 0 !important;
+  }
+  .mainIndex .SeccionInfoImagenBordeados .infoOrigen .bordeado .parrafosInfo .sobre {
+    padding-top: 40px !important;
+    font-size: 1.6rem;
+  }
+  .mainIndex .SeccionInfoImagenBordeados .infoOrigen .bordeado .parrafosInfo .origen {
+    font-size: 2.6rem;
+    padding-bottom: 20px !important;
+  }
+  .mainIndex .SeccionInfoImagenBordeados .infoOrigen .bordeado .parrafosInfo .parrafoInfoOrigen {
+    font-size: 22px;
+  }
+  .mainIndex .SeccionInfoImagenBordeados .infoOrigen .bordeado .parrafosInfo .parrafosBajoSeparador #parrafo1, .mainIndex .SeccionInfoImagenBordeados .infoOrigen .bordeado .parrafosInfo .parrafosBajoSeparador #parrafo2, .mainIndex .SeccionInfoImagenBordeados .infoOrigen .bordeado .parrafosInfo .parrafosBajoSeparador #parrafo3, .mainIndex .SeccionInfoImagenBordeados .infoOrigen .bordeado .parrafosInfo .parrafosBajoSeparador #parrafo4 {
+    font-size: 15px;
+    font-weight: 300;
+  }
+  .mainIndex .SeccionInfoImagenBordeados .infoOrigen .bordeado .parrafosInfo .parrafosBajoSeparador #todoTieneSuOrigen {
+    font-size: 18px;
+    letter-spacing: 0;
+    margin: 20px 0;
+  }
+  .mainIndex .SeccionInfoImagenBordeados .iconos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 75%;
+    height: 75%;
+    background-color: #1A1A1A;
+  }
+  .mainIndex .SeccionInfoImagenBordeados .iconos div {
+    width: 35%;
+    height: 35%;
+    display: flex !important;
+    justify-content: center !important;
+  }
+  .mainIndex .SeccionInfoImagenBordeados .iconos div img {
+    width: 100%;
+    height: 100%;
+  }
+  .mainIndex .SeccionInfoImagenBordeados .iconos div p {
+    font-size: 0.7rem;
+    font-weight: 400;
+  }
+  .mainIndex .SeccionInfoImagenBordeados .metodoBarbacua .infoBarbacua {
+    padding: 0 20px !important;
+    padding-bottom: 20px !important;
+  }
+  .mainIndex .SeccionInfoImagenBordeados .metodoBarbacua .infoBarbacua .bordeadoBarbacua {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .mainIndex .SeccionInfoImagenBordeados .metodoBarbacua .infoBarbacua .bordeadoBarbacua .imagenFondoNextToTexto img {
+    width: 200px;
+    margin-bottom: 10px;
+  }
+  .mainIndex .SeccionInfoImagenBordeados .metodoBarbacua .infoBarbacua .bordeadoBarbacua .parrafosInfoBarbacua {
+    width: 80%;
+  }
+  .mainIndex .SeccionInfoImagenBordeados .metodoBarbacua .infoBarbacua .bordeadoBarbacua .parrafosInfoBarbacua .contenedorInfoBarbacua {
+    width: 100%;
+  }
+  .mainIndex .SeccionInfoImagenBordeados .metodoBarbacua .infoBarbacua .bordeadoBarbacua .parrafosInfoBarbacua .contenedorInfoBarbacua .metodo {
+    padding-top: 40px !important;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
+  .mainIndex .SeccionInfoImagenBordeados .metodoBarbacua .infoBarbacua .bordeadoBarbacua .parrafosInfoBarbacua .contenedorInfoBarbacua .barbacua {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+    padding-bottom: 20px;
+  }
+  .mainIndex .SeccionInfoImagenBordeados .metodoBarbacua .infoBarbacua .bordeadoBarbacua .parrafosInfoBarbacua .contenedorInfoBarbacua .parrafoInfoBarbacua {
+    width: 100%;
+    font-size: 21px;
+    margin-bottom: 0;
+  }
+  .mainIndex .SeccionInfoImagenBordeados .metodoBarbacua .infoBarbacua .bordeadoBarbacua .parrafosInfoBarbacua .contenedorInfoBarbacua .separador {
+    width: 100%;
+  }
+  .mainIndex .SeccionInfoImagenBordeados .metodoBarbacua .infoBarbacua .bordeadoBarbacua .parrafosInfoBarbacua .contenedorInfoBarbacua .parrafosBajoSeparador .p1, .mainIndex .SeccionInfoImagenBordeados .metodoBarbacua .infoBarbacua .bordeadoBarbacua .parrafosInfoBarbacua .contenedorInfoBarbacua .parrafosBajoSeparador .p2, .mainIndex .SeccionInfoImagenBordeados .metodoBarbacua .infoBarbacua .bordeadoBarbacua .parrafosInfoBarbacua .contenedorInfoBarbacua .parrafosBajoSeparador .p3 {
+    font-size: 14px;
+  }
+  .mainIndex .carruselProductos .divCarruselProductos {
+    padding-top: 0 !important;
+  }
+  .mainIndex .carruselProductos .divCarruselProductos .bordeadoCarrusel1 .tituloCarrusel {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding-top: 1.5rem !important;
+    padding-bottom: 0.25rem !important;
+  }
+  .mainIndex .carruselProductos .divCarruselProductos .bordeadoCarrusel1 .tituloCarrusel .divTituloCarrusel .tituloCarruselProductos {
+    font-size: 3rem;
+  }
+  .mainIndex .carruselProductos .divCarruselProductos .bordeadoCarrusel1 .tituloCarrusel .imagenFlechaCarrusel .imgFlechaDerecha {
+    width: 90px;
+  }
+  .mainIndex .carruselProductos .divCarruselProductos .bordeadoCarrusel1 .tituloCarrusel .divAnclaCarrusel {
+    text-align: center;
+  }
+  .mainIndex .carruselProductos .divCarruselProductos .bordeadoCarrusel1 .tituloCarrusel .divAnclaCarrusel .anclaCarruselParrafo {
+    font-size: 2.1rem;
+  }
+  .mainIndex .carruselProductos .divCarruselProductos .parrafoYancla {
+    margin-top: 0.75rem !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+    border: none !important;
+  }
+  .mainIndex .carruselProductos .divCarruselProductos .parrafoYancla .bordeadoCarrusel2 {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .mainIndex .carruselProductos .divCarruselProductos .parrafoYancla .bordeadoCarrusel2 .divParrafoEnvioAmba {
+    padding: 2px;
+  }
+  .mainIndex .carruselProductos .divCarruselProductos .parrafoYancla .bordeadoCarrusel2 .divParrafoEnvioAmba p {
+    font-size: 0.6rem;
+  }
+  .mainIndex .carruselProductos .divCarruselProductos .parrafoYancla .bordeadoCarrusel2 .divAnclaCodigosPostales {
+    width: 90%;
+    margin: 5px;
+    text-align: center;
+  }
+  .mainIndex .carruselProductos .divCarruselProductos .parrafoYancla .bordeadoCarrusel2 .divAnclaCodigosPostales .anclaCodigosPostales {
+    width: 100%;
+  }
+  .mainIndex .carruselProductos .divCarruselProductos .parrafoYancla .bordeadoCarrusel2 .divAnclaCodigosPostales .anclaCodigosPostales .spanAnclaCodigosPostales {
+    font-size: 12px;
+  }
+  .mainIndex .compraEnvioPaga .div1CompraEnvioPaga {
+    display: flex;
+    flex-direction: column;
+  }
+  .mainIndex .compraEnvioPaga .div1CompraEnvioPaga .card1, .mainIndex .compraEnvioPaga .div1CompraEnvioPaga .card3 {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}
 .Carrusel {
   position: relative;
   overflow: hidden;

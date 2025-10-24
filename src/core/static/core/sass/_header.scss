@@ -46,14 +46,29 @@ header {
 @media screen and (max-width: 768px) {
     #navbarSupportedContent ul {
         margin-left: 0;
-        flex-direction: column;
-        align-items: start;
-    }
-
-    #navbarSupportedContent ul li {
-        width: fit-content;
+        flex-direction: column !important;
+        align-items: start !important;
+        li{
+            width: fit-content !important;
+        }
     }
 }
+
+@media screen and (max-width: 1366px) {
+    #navbarSupportedContent ul{
+        margin-left: 0;
+        flex-direction: row;
+        justify-content: start;
+        flex-wrap: wrap;
+        li{
+            width: fit-content;
+        }
+    }
+    #UlCarritoDropdown{
+        flex-wrap: nowrap !important;
+    }
+}
+
 
 .imgTitulo {
     width: 150px;
