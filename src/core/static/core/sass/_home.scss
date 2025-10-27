@@ -646,7 +646,7 @@
 
 .div2CompraEnvioPaga {
     width: 90%;
-    background-color: #03594d;
+    // background-color: #03594d;
     margin-top: 40px;
 
     .card21,
@@ -1117,12 +1117,73 @@
 
         .compraEnvioPaga{
             .div1CompraEnvioPaga{
+                width: 100% !important;
                 display: flex;
                 flex-direction: column;
 
                 .card1,.card3{
                     display: flex !important;
                     flex-direction: column !important;
+                    align-items: center !important;
+                    padding-left: 0 !important;
+                    padding-right: 0 !important;
+                    .texto{
+                        padding-top: 10px;
+                        text-align: center !important;
+                        color: #000;
+                        p{
+                            font-weight: light !important;
+                            font-family: "Quicksand" !important;
+                        }
+                    }
+                    .img{
+                        img{
+                            width: 42px !important;
+                        }
+                    }
+                }
+                .card2{
+                    padding-left: 0 !important;
+                    padding-right: 0 !important;
+                    a{
+                        display: flex !important;
+                        flex-direction:  column !important;
+                        align-items: center !important;
+                    }
+                    .texto{
+                        text-align: center !important;
+                        p{
+                            font-weight: light !important;
+                            font-family: "Quicksand" !important;
+                        }
+                    }
+                    .img{
+                        img{
+                            width: 42px !important;
+                        }
+                    }
+                }
+            }
+
+            .div2CompraEnvioPaga{
+                display: flex;
+                flex-direction: column !important;
+                align-items: center !important;
+                width: 100% !important;
+                .card21, .card22, .card23{
+                    height: 195px !important;
+                    width: 100% !important;
+                    h3{
+                        font-size: 1.8rem;
+                    }
+                }
+                .divAnclaImagen1, .divAnclaImagen3{
+                    font-size: 1.1rem !important;
+                }
+                .divAnclaImagen2{
+                    a{
+                        font-size: 1.1rem !important;
+                    }
                 }
             }
         }

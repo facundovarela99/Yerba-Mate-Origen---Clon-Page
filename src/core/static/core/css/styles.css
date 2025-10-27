@@ -810,7 +810,6 @@ header {
 
 .div2CompraEnvioPaga {
   width: 90%;
-  background-color: #03594d;
   margin-top: 40px;
 }
 .div2CompraEnvioPaga .card21,
@@ -1208,12 +1207,66 @@ header {
     font-size: 12px;
   }
   .mainIndex .compraEnvioPaga .div1CompraEnvioPaga {
+    width: 100% !important;
     display: flex;
     flex-direction: column;
   }
   .mainIndex .compraEnvioPaga .div1CompraEnvioPaga .card1, .mainIndex .compraEnvioPaga .div1CompraEnvioPaga .card3 {
     display: flex !important;
     flex-direction: column !important;
+    align-items: center !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .mainIndex .compraEnvioPaga .div1CompraEnvioPaga .card1 .texto, .mainIndex .compraEnvioPaga .div1CompraEnvioPaga .card3 .texto {
+    padding-top: 10px;
+    text-align: center !important;
+    color: #000;
+  }
+  .mainIndex .compraEnvioPaga .div1CompraEnvioPaga .card1 .texto p, .mainIndex .compraEnvioPaga .div1CompraEnvioPaga .card3 .texto p {
+    font-weight: light !important;
+    font-family: "Quicksand" !important;
+  }
+  .mainIndex .compraEnvioPaga .div1CompraEnvioPaga .card1 .img img, .mainIndex .compraEnvioPaga .div1CompraEnvioPaga .card3 .img img {
+    width: 42px !important;
+  }
+  .mainIndex .compraEnvioPaga .div1CompraEnvioPaga .card2 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .mainIndex .compraEnvioPaga .div1CompraEnvioPaga .card2 a {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .mainIndex .compraEnvioPaga .div1CompraEnvioPaga .card2 .texto {
+    text-align: center !important;
+  }
+  .mainIndex .compraEnvioPaga .div1CompraEnvioPaga .card2 .texto p {
+    font-weight: light !important;
+    font-family: "Quicksand" !important;
+  }
+  .mainIndex .compraEnvioPaga .div1CompraEnvioPaga .card2 .img img {
+    width: 42px !important;
+  }
+  .mainIndex .compraEnvioPaga .div2CompraEnvioPaga {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+  .mainIndex .compraEnvioPaga .div2CompraEnvioPaga .card21, .mainIndex .compraEnvioPaga .div2CompraEnvioPaga .card22, .mainIndex .compraEnvioPaga .div2CompraEnvioPaga .card23 {
+    height: 195px !important;
+    width: 100% !important;
+  }
+  .mainIndex .compraEnvioPaga .div2CompraEnvioPaga .card21 h3, .mainIndex .compraEnvioPaga .div2CompraEnvioPaga .card22 h3, .mainIndex .compraEnvioPaga .div2CompraEnvioPaga .card23 h3 {
+    font-size: 1.8rem;
+  }
+  .mainIndex .compraEnvioPaga .div2CompraEnvioPaga .divAnclaImagen1, .mainIndex .compraEnvioPaga .div2CompraEnvioPaga .divAnclaImagen3 {
+    font-size: 1.1rem !important;
+  }
+  .mainIndex .compraEnvioPaga .div2CompraEnvioPaga .divAnclaImagen2 a {
+    font-size: 1.1rem !important;
   }
 }
 .Carrusel {
